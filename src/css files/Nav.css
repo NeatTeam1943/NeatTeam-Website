@@ -1,0 +1,64 @@
+.navbar {
+    margin-left: -12.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96.5%;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(90deg, #0040FF 0%, #002FBD 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 3.5px solid #002FBD;
+    max-height: 2rem;
+}
+
+.navbar .logo {
+    text-decoration: none;
+    font-size: 1.85rem;
+    color: #fd6e0f;
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.05);
+    color: #ffa14a;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    margin-left: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    padding-bottom: 4px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fd4e0a;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #fd4e0a;
+}

@@ -1,0 +1,95 @@
+.about-page {
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 12rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.7;
+}
+
+.about-intro,
+.about-mission,
+.about-values,
+.about-timeline,
+.about-members {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: #0040FF;
+    border-bottom: 4px solid #fd4e0a;
+    display: inline-block;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    color: #444;
+    max-width: 900px;
+}
+
+.about-mission h2,
+.about-values h2,
+.about-timeline h2,
+.about-members h2 {
+    font-size: 2rem;
+    color: #002FBD;
+    margin-bottom: 1rem;
+    border-left: 5px solid #fd6e0f;
+    padding-left: 1rem;
+}
+
+.about-mission p,
+.about-members p {
+    font-size: 1.05rem;
+    color: #555;
+    max-width: 850px;
+}
+
+.about-values ul,
+.about-timeline ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+.about-values ul li,
+.about-timeline ul li {
+    background-color: #f3f4f6;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.about-values ul li:hover,
+.about-timeline ul li:hover {
+    transform: scale(1.02);
+    background-color: #e0e7ff;
+}
+
+@media screen and (max-width: 768px) {
+    .about-page {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .about-title {
+        font-size: 2.2rem;
+    }
+
+    .about-mission h2,
+    .about-values h2,
+    .about-timeline h2,
+    .about-members h2 {
+        font-size: 1.6rem;
+    }
+}
