@@ -1,20 +1,20 @@
-import '../css files/Nav.css'
-import React from "react";
+import '../css files/Nav.css';
+import { Link } from "react-router-dom";
 
 export default function Nav() {
     return (
-        <section className={"navbar"}>
-            <a href="/" className="logo" style={{ cursor: 'pointer' }}>
+        <section className="navbar">
+            <Link to="/" className="logo" style={{ cursor: 'pointer', textDecoration: 'none' }}>
                 NeatTeam #1943
-            </a>
+            </Link>
             <nav>
-                <a href="About">About</a>
-                <a href="Robots">Robot</a>
-                <a href="Sponsors">Sponsors</a>
-                <a href="Sponsor-Us">Sponsor Us</a>
-                <a href="Posts">Posts</a>
-                <a href="Community">Our Community</a>
-                <a href="Contact-Us">Contact</a>
+                <Link to="/about">About</Link>
+                <Link to="/robot">Robot</Link>
+                <Link to="/sponsors">Sponsors</Link>
+                <Link to="/sponsor-us">Sponsor Us</Link>
+                <Link to="/posts">Posts</Link>
+                <Link to="/community">Our Community</Link>
+                <Link to="/contact-us">Contact</Link>
             </nav>
         </section>
     );

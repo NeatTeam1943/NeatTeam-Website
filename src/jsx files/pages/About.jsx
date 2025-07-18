@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css files/About.css';
-import Navbar from '../jsx files/Nav.jsx';
-import Footer from '../jsx files/Footer.jsx';
+import '../../css files/About.css';
+import Navbar from '../Nav.jsx';
+import Footer from '../Footer.jsx';
 
 export default function About() {
     return (

@@ -62,3 +62,19 @@ nav a:hover::after {
 nav a:hover {
     color: #fd4e0a;
 }
+
+.nav-button {
+    margin-left: 2rem;
+    background-color: #fd6e0f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #ffa14a;
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Landing from '../src/jsx files/Landing.jsx'
-import About from '../src/jsx files/About.jsx';
+import Landing from './jsx files/pages/Landing.jsx'
+import About from './jsx files/pages/About.jsx';
+
 
 function App() {
     return (

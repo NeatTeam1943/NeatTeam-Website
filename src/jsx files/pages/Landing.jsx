@@ -1,6 +1,6 @@
-import '../css files/Landing.css'
-import Navbar from '../jsx files/Nav.jsx'
-import Footer from '../jsx files/Footer.jsx'
+import '../../css files/Landing.css'
+import Navbar from '../Nav.jsx'
+import Footer from '../Footer.jsx'
 import React from "react";
 
 export default function Landing() {
@@ -12,7 +12,7 @@ export default function Landing() {
                     <about-short>
                         <div className="logo-wrapper">
                             <h1 class={"title"}>NeatTeam</h1>
-                            <img src="../../public/Niter.png" alt="NEATTEAM Logo"/>
+                            <img src="../../../public/Niter.png" alt="NEATTEAM Logo"/>
                         </div>
                         <h2 class={"title-underline subtitle"}>FIRST Robotics Competition Team 1943</h2>
                         <p>We are NeatTeam, Begin High School's award-winning FIRST Robotics team. We seek to impact young adults by cultivating skills in engineering, programming, and business through FIRST.</p>
@@ -21,13 +21,13 @@ export default function Landing() {
                 </div>
 
                 <div className="image">
-                    <img className={"img"} src="../../public/GroupPhoto.jpeg" alt="NEATTEAM Robot\" />
+                    <img className={"img"} src="../../../public/GroupPhoto.jpeg" alt="NEATTEAM Robot\" />
                 </div>
             </section>
 
             <section className="section-with-img" id="robot">
                 <div className="robot-image">
-                    <img className={"img"} src="../../public/Koren.jpg" alt="Latest Robot" />
+                    <img className={"img"} src="../../../public/Koren.jpg" alt="Latest Robot" />
                 </div>
                 <div className="robot-details">
                     <h1 className="robot-name">Koren</h1>
