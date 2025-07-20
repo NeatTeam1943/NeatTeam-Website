@@ -1,11 +1,12 @@
 import '../css files/Nav.css';
 import { Link } from "react-router-dom";
+import React from "react";
 
 export default function Nav() {
     return (
         <section className="navbar">
             <Link to="/" className="logo" style={{ cursor: 'pointer', textDecoration: 'none' }}>
-                NeatTeam #1943
+                <img src="../../../public/NeatTeam/NeatTeam-Banner.png" alt="NEATTEAM Logo"/>
             </Link>
             <nav>
                 <div className="dropdown">

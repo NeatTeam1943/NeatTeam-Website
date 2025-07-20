@@ -1,0 +1,40 @@
+.about-first-page {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    color: #222;
+    padding-top: 10rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-title {
+    font-size: 3rem;
+    color: #0040FF;
+    border-bottom: 4px solid #fd4e0a;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #0040FF;
+}
+
+.text,
+.program-list,
+.impact-section p,
+.cta-section p {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    margin-top: 1rem;
+}
+
+.program-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+a {
+    color: #fd4e0a;
+    text-decoration: underline;
+}

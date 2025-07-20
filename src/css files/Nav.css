@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     width: 96.5%;
+    z-index: 1000;
     padding: 1.5rem 2rem;
     background: linear-gradient(90deg, #0040FF 0%, #002FBD 100%);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -96,6 +97,10 @@
 .navbar .logo:hover {
     transform: scale(1.05);
     color: #ffa14a;
+}
+.navbar .logo img {
+    padding-top: 10px;
+    width: 225px;
 }
 
 nav {

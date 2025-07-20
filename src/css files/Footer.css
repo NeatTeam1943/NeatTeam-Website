@@ -4,6 +4,7 @@
     margin-bottom: -1rem;
     padding: 4rem 3rem;
     margin-left: -12.5rem;
+    position: absolute;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-right: -1rem;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);

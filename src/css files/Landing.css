@@ -5,7 +5,7 @@
 }
 
 .group-photo {
-  background-image: image("../../public/GroupPhoto.jpeg");
+  background-image: image("../../public/NeatTeam/GroupPhoto.jpeg");
   background-size: cover;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .title {
-  background-image: url("../../public/Niter.png");
+  background-image: url("../../public/NeatTeam/Niter.png");
   color: #002FBD;
   font-size: 3.5rem;
   font-weight: bolder;
@@ -66,7 +66,7 @@ button {
 }
 
 .logo-wrapper img {
-  width: 125px;
+  width: 500px;
   height: 125px;
   margin-left: -15px;
 }
@@ -160,7 +160,7 @@ button {
 .sponsor-track {
   display: flex;
   width: max-content;
-  animation: scrollLoop 30s linear infinite;
+  animation: scrollLoop 60s linear infinite;
 }
 
 .sponsor-strip {

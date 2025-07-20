@@ -1,5 +1,6 @@
 import '../../css files/Landing.css'
 import React from "react";
+import {Link} from "react-router-dom";
 
 export default function Landing() {
     return (
@@ -8,23 +9,22 @@ export default function Landing() {
                 <div className="text">
                     <about-short>
                         <div className="logo-wrapper">
-                            <h1 class={"title"}>NeatTeam</h1>
-                            <img src="../../../public/Niter.png" alt="NEATTEAM Logo"/>
+                            <img src="../../../public/NeatTeam/banner.png" alt="NEATTEAM Logo"/>
                         </div>
                         <h2 class={"title-underline subtitle"}>FIRST Robotics Competition Team 1943</h2>
                         <p>We are NeatTeam, Begin High School's award-winning FIRST Robotics team. We seek to impact young adults by cultivating skills in engineering, programming, and business through FIRST.</p>
                     </about-short>
-                    <a href={"About"} className="button-decoration">Discover More</a>
+                    <Link to={"/about/team"} className="button-decoration">Discover More</Link>
                 </div>
 
                 <div className="image">
-                    <img className={"img"} src="../../../public/GroupPhoto.jpeg" alt="NEATTEAM Robot\" />
+                    <img className={"img"} src="../../../public/NeatTeam/GroupPhoto.jpeg" alt="NEATTEAM Robot\" />
                 </div>
             </section>
 
             <section className="section-with-img" id="robot">
                 <div className="robot-image">
-                    <img className={"img"} src="../../../public/Koren.jpg" alt="Latest Robot" />
+                    <img className={"img"} src="../../../public/Robots/Koren.jpg" alt="Latest Robot" />
                 </div>
                 <div className="robot-details">
                     <h1 className="robot-name">Koren</h1>
@@ -32,7 +32,7 @@ export default function Landing() {
                     <div className="robot-description">
                         This is Koren our 2025 Robot, he was named after the fallen soldier Koren Bitan.
                     </div>
-                    <a href={"Robots"} className="button-decoration">Past Competition Robots</a>
+                    <Link to={"Robots"} className="button-decoration">Past Competition Robots</Link>
                 </div>
             </section>
 
@@ -42,18 +42,18 @@ export default function Landing() {
                     <div className="sponsor-track">
                         {[...Array(4)].map((_, i) => (
                             <div className="sponsor-strip" key={i}>
-                                <img src="public/sponsors/google.png" alt="Google" />
-                                <img src="public/sponsors/intel.png" alt="Intel" />
-                                <img src="public/sponsors/boeing.png" alt="Boeing" />
-                                <img src="public/sponsors/lockheed.png" alt="Lockheed Martin" />
-                                <img src="public/sponsors/nvidia.png" alt="NVIDIA" />
+                                <img src="public/Sponsors/Innoviz-Logo.png" alt="Innoviz" />
+                                <img src="public/Sponsors/FIRST-LOGO.png" alt="FIRST" />
+                                <img src="public/Sponsors/kornit-vertical-logo-01.png" alt="Kornit" />
+                                <img src="public/Sponsors/Rosh-Electroptics.png" alt="Rosh Electroptics" />
+                                <img src="public/Sponsors/IFEL-Logo.png" alt="IFEL" />
+                                <img src="public/Sponsors/ROSH-HAAIN-LOGO.png" alt="ROSH-HAAIN" />
+                                <img src="public/Sponsors/LOGO-EID.png" alt="EID" />
                             </div>
                         ))}
                     </div>
                 </div>
-                <a href="/Sponsor-Us" className="button-decoration">
-                    Sponsor Us!
-                </a>
+                <Link to="/Sponsor-Us" className="button-decoration"> Sponsor Us! </Link>
             </section>
         </body>
     );
