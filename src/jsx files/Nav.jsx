@@ -9,7 +9,7 @@ export default function Nav() {
             </Link>
             <nav>
                 <Link to="/about">About</Link>
-                <Link to="/robot">Robot</Link>
+                <Link to="/robot/koren2025">Robot</Link>
                 <Link to="/sponsors">Sponsors</Link>
                 <Link to="/sponsor-us">Sponsor Us</Link>
                 <Link to="/posts">Posts</Link>
