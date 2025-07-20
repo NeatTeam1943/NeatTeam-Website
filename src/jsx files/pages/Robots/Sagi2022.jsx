@@ -22,7 +22,7 @@ export default function Koren2025() {
                     <section className="robot-timeline">
                         <h2>Year Milestones</h2>
                         <ul>
-                            <li>Team Founded</li>
+                            <li>District Event Winner</li>
                         </ul>
                     </section>
                 </main>
