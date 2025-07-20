@@ -9,7 +9,7 @@ export default function Landing() {
                 <div className="text">
                     <about-short>
                         <div className="logo-wrapper">
-                            <img src="../../../public/NeatTeam/banner.png" alt="NEATTEAM Logo"/>
+                            <img src="../../../public/NeatTeam/NeatTeam-banner-dark.png" alt="NEATTEAM Logo"/>
                         </div>
                         <h2 class={"title-underline subtitle"}>FIRST Robotics Competition Team 1943</h2>
                         <p>We are NeatTeam, Begin High School's award-winning FIRST Robotics team. We seek to impact young adults by cultivating skills in engineering, programming, and business through FIRST.</p>
