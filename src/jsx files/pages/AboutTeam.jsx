@@ -7,7 +7,7 @@ export default function About() {
     return (
         <body className="about-page">
             <section className="about-intro">
-                <h1 className="about-title">NeatTeam's Story</h1>
+                <h1 className="about-title">Our's Story</h1>
                 <p className="about-description">
                     Since 2006, the high school robotics team  NeatTeam #1943 from Rosh HaAyin's Begin High School has represented Israel with pride in the international FIRST Robotics Competition. Mazal Nagar started the team, which has since developed into an enthusiastic group of students that design, construct, and compete with cutting-edge robots on national and international arenas, taking home numerous honors and making it to the world championship.                </p>
                 <p className="about-description">
@@ -20,6 +20,8 @@ export default function About() {
                 <h2>Team Milestones</h2>
                 <ul>
                     <li><strong>2025:</strong> District Event Finalist</li>
+                    <li><strong>2024:</strong> OffSeason Event Winner</li>
+                    <li><strong>2023:</strong> OffSeason Event Finalist</li>
                     <li><strong>2023:</strong> District Event Finalist</li>
                     <li><strong>2023:</strong> District Event Finalist</li>
                     <li><strong>2022:</strong> District Event Winner</li>
