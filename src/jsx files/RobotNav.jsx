@@ -8,17 +8,8 @@ export default function RobotNav() {
             <nav>
                 <Link to={"/robot/koren2025"}>Koren2025</Link>
                 <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
-                <Link to={"/robot/Melody2024"}>Melody2024</Link>
+
+                <Link to={"/robot/sagi2022"}>Sagi2022</Link>
 
             </nav>
         </section>

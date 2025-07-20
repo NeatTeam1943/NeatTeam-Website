@@ -9,23 +9,26 @@ export default function Koren2025() {
     return (
         <body className="robot-page">
             <Nav />
-            <div className='robot-nav'>
+            <div style={{ display: 'flex', alignItems: 'flex-start', top: 20 }}>
                 <RobotNav />
-            </div>
-            <section className="robot-intro">
-                <h1 className="robot-title">Year's Story</h1>
-                <p className="robot-description">
-                    bla bla bla bla
-                </p>
-            </section>
+                <main style={{ flex: 1 }}>
+                    <section className="robot-intro">
+                        <h1 className="robot-title">Year's Story</h1>
+                        <p className="robot-description">
+                            bla bla bla bla
+                        </p>
+                    </section>
 
-            <section className="robot-timeline">
-                <h2>Year Milestones</h2>
-                <ul>
-                    <li><strong>2006:</strong> Team Founded</li>
-                </ul>
-            </section>
+                    <section className="robot-timeline">
+                        <h2>Year Milestones</h2>
+                        <ul>
+                            <li><strong>2006:</strong> Team Founded</li>
+                        </ul>
+                    </section>
+                </main>
+            </div>
             <Footer />
+
         </body>
     );
 }
