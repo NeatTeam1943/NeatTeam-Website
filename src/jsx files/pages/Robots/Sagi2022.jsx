@@ -13,7 +13,7 @@ export default function Koren2025() {
                 <RobotNav />
                 <main style={{ flex: 1 }}>
                     <section className="robot-intro">
-                        <h1 className="robot-title">Year's Story</h1>
+                        <h1 className="robot-title">2022 Year's Story: Sagi</h1>
                         <p className="robot-description">
                             bla bla bla bla
                         </p>
@@ -22,7 +22,7 @@ export default function Koren2025() {
                     <section className="robot-timeline">
                         <h2>Year Milestones</h2>
                         <ul>
-                            <li><strong>2006:</strong> Team Founded</li>
+                            <li>Team Founded</li>
                         </ul>
                     </section>
                 </main>
