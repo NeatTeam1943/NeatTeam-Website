@@ -1,11 +1,7 @@
 .homepage {
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: auto;
   line-height: 1.75lh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: black;
-  padding-left: 12rem;
 }
 
 .group-photo {

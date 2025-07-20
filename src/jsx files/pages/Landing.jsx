@@ -1,12 +1,9 @@
 import '../../css files/Landing.css'
-import Navbar from '../Nav.jsx'
-import Footer from '../Footer.jsx'
 import React from "react";
 
 export default function Landing() {
     return (
         <body className={"homepage"}>
-            <Navbar />
             <section className="section-with-img">
                 <div className="text">
                     <about-short>
@@ -58,7 +55,6 @@ export default function Landing() {
                     Sponsor Us!
                 </a>
             </section>
-            <Footer />
         </body>
     );
 }
