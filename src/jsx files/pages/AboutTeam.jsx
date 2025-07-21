@@ -1,11 +1,11 @@
 import React from 'react';
-import '../../css files/AboutTeam.css';
+import '../../css files/pages/AboutTeam.css';
 import Navbar from '../Nav.jsx';
 import Footer from '../Footer.jsx';
 
 export default function About() {
     return (
-        <body className="about-page">
+        <div className="about-page">
             <section className="about-intro">
                 <h1 className="about-title">Our's Story</h1>
                 <p className="about-description">
@@ -35,6 +35,6 @@ export default function About() {
                     <li><strong>2006:</strong> Team Founded</li>
                 </ul>
             </section>
-        </body>
+        </div>
     );
 }

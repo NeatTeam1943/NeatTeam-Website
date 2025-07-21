@@ -1,10 +1,10 @@
-import '../../css files/Landing.css'
+import '../../css files/pages/Landing.css'
 import React from "react";
 import {Link} from "react-router-dom";
 
 export default function Landing() {
     return (
-        <body className={"homepage"}>
+        <div className={"homepage"}>
             <section className="section-with-img">
                 <div className="text">
                     <about-short>
@@ -55,6 +55,6 @@ export default function Landing() {
                 </div>
                 <Link to="/Sponsor-Us" className="button-decoration"> Sponsor Us! </Link>
             </section>
-        </body>
+        </div>
     );
 }

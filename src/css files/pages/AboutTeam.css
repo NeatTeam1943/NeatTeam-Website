@@ -3,6 +3,8 @@
     background-color: #ffffff;
     color: #333;
     line-height: 1.7;
+    place-items: center;
+
 }
 
 .about-intro {

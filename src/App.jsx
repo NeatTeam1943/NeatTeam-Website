@@ -12,20 +12,17 @@ import NotFound from './jsx files/pages/NotFound.jsx';
 function App() {
     return (
         <Router >
-            <div className='default'>
-                
-                <Nav />
+            <Nav />
 
-                <Routes>
-                    <Route path="/" element={<Landing />} />
-                    <Route path="/about/team" element={<AboutTeam />} />
-                    <Route path="/about/first" element={<AboutFirst />} />
+            <Routes>
+                <Route path="/" element={<Landing />} />
+                <Route path="/about/team" element={<AboutTeam />} />
+                <Route path="/about/first" element={<AboutFirst />} />
 
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
-                
-                <Footer />
-            </div>
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+
+            <Footer />
         </Router>
     );
 }

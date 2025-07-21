@@ -2,10 +2,11 @@
   line-height: 1.75lh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: black;
+  place-items: center;
 }
 
 .group-photo {
-  background-image: image("../../public/NeatTeam/GroupPhoto.jpeg");
+  background-image: image("../../../public/NeatTeam/GroupPhoto.jpeg");
   background-size: cover;
 }
 
@@ -35,7 +36,7 @@
 }
 
 .title {
-  background-image: url("../../public/NeatTeam/Niter.png");
+  background-image: url("../../../public/NeatTeam/Niter.png");
   color: #002FBD;
   font-size: 3.5rem;
   font-weight: bolder;
@@ -137,7 +138,9 @@ button {
  }
 
 .sponsor-section {
-  margin-left: -12rem;
+  width: 98.51%;
+  /*max-width: 100%;*/
+  place-items: center;
   background-color: #f9f9f9;
   padding: 4rem 2rem;
   text-align: center;
@@ -152,7 +155,7 @@ button {
 }
 
 .sponsor-marquee {
-  width: 100%;
+  /*width: 100%;*/
   overflow: hidden;
   position: relative;
 }

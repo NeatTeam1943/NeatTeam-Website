@@ -1,9 +1,14 @@
 .about-first-page {
-    padding: 4rem 2rem;
+    /*padding: 4rem 2rem;*/
     max-width: 1000px;
     color: #222;
     padding-top: 10rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about {
+    place-items: center;
+    padding-bottom: 15rem;
 }
 
 .main-title {
