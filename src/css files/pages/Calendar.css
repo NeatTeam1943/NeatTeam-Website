@@ -1,0 +1,85 @@
+/*For some reason the items dosent want to center when i put anywhere else and this worked sooooo*/
+.calendar {
+    place-items: center;
+    padding-top: 20rem;
+    padding-bottom: 25rem;
+}
+
+.calendar-wrapper {
+    max-width: 1400px;
+    /*margin: 3rem auto;*/
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.calendar-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.75rem;
+    margin-bottom: 2rem;
+    color: #0040FF;
+    font-weight: 800;
+    border-bottom: 4px solid #fd4e0a;
+    /*display: inline-block;*/
+    padding-bottom: 0.5rem;
+}
+
+/* Calendar Buttons */
+.fc .fc-button {
+    background-color: #0040FF;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+.fc .fc-button:hover {
+    background-color: #002fbd;
+}
+
+/* Calendar Layout */
+.fc {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+}
+
+/* Header / Toolbar */
+.fc .fc-toolbar {
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+/* Day Cells */
+.fc-daygrid-day-number {
+    font-weight: 600;
+    color: #222;
+}
+
+.fc-daygrid-day {
+    background-color: #f9f9f9;
+    transition: background-color 0.2s ease;
+}
+.fc-daygrid-day:hover {
+    background-color: #f0f4ff;
+}
+
+/* Events */
+.fc-event {
+    background-color: #0040FF;
+    color: white;
+    font-size: 0.85rem;
+    padding: 4px 6px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+}
+.fc-event:hover {
+    filter: brightness(1.1);
+    background-color: #002FBD;
+}
+
+.fc-daygrid-event-dot {
+    display: none;
+}

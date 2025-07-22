@@ -21,7 +21,7 @@ export default function Nav() {
                 <Link to="/sponsor-us">Sponsor Us</Link>
                 <Link to="/posts">Posts</Link>
                 <Link to="/community">Our Community</Link>
-                <Link to="/contact-us">Contact</Link>
+                <Link to="/calendar">Calendar</Link>
             </nav>
         </section>
     );
