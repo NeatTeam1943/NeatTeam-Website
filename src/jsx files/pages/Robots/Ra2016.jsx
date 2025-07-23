@@ -5,7 +5,7 @@ import Footer from '../../Footer.jsx';
 import RobotNav from '../../RobotNav.jsx'
 import "../../../css files/Robot.css"
 
-export default function Sagi2022() {
+export default function Ra2016() {
     return (
         <body className="robot-page">
             <Nav />
@@ -13,7 +13,7 @@ export default function Sagi2022() {
                 <RobotNav />
                 <main style={{ flex: 1 }}>
                     <section className="robot-intro">
-                        <h1 className="robot-title">2022 Year's Story: Sagi</h1>
+                        <h1 className="robot-title">2016 Year's Story: Ra</h1>
                         <p className="robot-description">
                             bla bla bla bla
                         </p>
@@ -22,7 +22,7 @@ export default function Sagi2022() {
                     <section className="robot-timeline">
                         <h2>Year Milestones</h2>
                         <ul>
-                            <li>District Event Winner</li>
+                            <li>OffSeason Event Winner</li>
                         </ul>
                     </section>
                 </main>

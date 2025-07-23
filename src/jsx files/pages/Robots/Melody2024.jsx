@@ -5,7 +5,7 @@ import Footer from '../../Footer.jsx';
 import RobotNav from '../../RobotNav.jsx'
 import "../../../css files/Robot.css"
 
-export default function Koren2025() {
+export default function Melody2024() {
     return (
         <body className="robot-page">
             <Nav />
