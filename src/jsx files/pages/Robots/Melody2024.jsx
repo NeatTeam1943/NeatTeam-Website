@@ -35,7 +35,7 @@ export default function Melody2024() {
                     </section>
 
                     <section className='robot-image'>
-                        <h1>2025 Group and Robot (Koren)</h1>
+                        <h1>2024 Group and Robot (Melody)</h1>
                         <img src="../../../../public/2024Group.jpeg" />
                     </section>
 
