@@ -29,7 +29,10 @@ export default function Koren2025() {
                             Drivers control the robots to collect coral and algae and score them in various goals. <br />
                             3. Endgame (last 30 seconds): <br />
                             Robots try to climb a central structure or hang inside special cages. This part is crucial for earning bonus points and can change the outcome of the match. <br />
+                            <br /><br /><br /><br />
+
                         </p>
+
                     </section>
                     <section className='robot-image'>
                         <h1>2025 Group and Robot (Koren)</h1>
