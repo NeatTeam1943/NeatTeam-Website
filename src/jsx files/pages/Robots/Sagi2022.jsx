@@ -15,7 +15,25 @@ export default function Sagi2022() {
                     <section className="robot-intro">
                         <h1 className="robot-title">2022 Year's Story: Sagi</h1>
                         <p className="robot-description">
-                            bla bla bla bla
+                            Rapid React - FRC 2022 Game Summary <br />
+                            Objective: <br />
+                            Robots balls called Cargo and score them into the Hub, a central structure with two levels: <br />
+                            Lower Hub - easier to reach, fewer points <br />
+                            Upper Hub - more difficult, more points <br />
+                            Teams aim to score as much Cargo as possible and climb a Hangar structure at the end for major bonus points. <br />
+                            Match Structure: <br />
+                            1. Autonomous Period (first 15 seconds): <br />
+                            Robots follow pre-programmed commands to: <br />
+                            Score Cargo into the Hub <br />
+                            Move out of the starting area (Taxi) <br />
+                            Successful actions earn early points and can give an edge in the match. <br />
+                            2. Teleoperated Period (next 2 minute and 15 seconds): <br />
+                            Drivers take control to: Collect Cargo from the field and Score them into the Lower and Upper Hub
+                            Work with their alliance to reach a total of 20 Cargo scored (with some coming from auto) to activate a Ranking Point bonus <br />
+                            3. Endgame (final 30 seconds): <br />
+                            Robots climb on the Hangar, a tiered set of horizontal bars: (Low → Mid → High → Traversal) <br />
+                            Higher bars are worth more points <br />
+                            Traversal is the most difficult but scores the most and can earn Ranking Points <br />
                         </p>
                     </section>
 

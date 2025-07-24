@@ -13,11 +13,34 @@ export default function Melody2024() {
                 <RobotNav />
                 <main style={{ flex: 1 }}>
                     <section className="robot-intro">
-                        <h1 className="robot-title">2024 Year's Story: Melody</h1>
+                        <h1 className="robot-title">2024 Year's Competition:</h1>
                         <p className="robot-description">
-                            bla bla bla bla
+                            Crescendo - FRC 2024 Game Summary <br />
+                            Objective: <br />
+                            Robots collect and score foam rings called Notes into three different scoring areas to earn points: <br />
+                            Amp - a low goal on the side of the field <br />
+                            Speaker - a high goal near the alliance wall <br />
+                            Trap - a special high goal under the Stage, only available during Endgame <br />
+                            Scoring in both the Amp and Speaker can help activate a special stage element for bonus points. <br />
+                            Match Structure: <br />
+                            1. Autonomous Period (first 15 seconds): <br />
+                            Robots run pre-programmed actions without driver control. They can score Notes and leave their starting zones for early points. <br />
+                            2. Teleoperated Period (next 2 minute and 15 seconds): <br />
+                            Drivers control the robots to pick up Notes from the field and score them in the Amp or Speaker. Teams can also activate a Co-Op Bonus or power up their Stage for the endgame. <br />
+                            3. Endgame (last 30 seconds): <br />
+                            Robots race to the Stage to: <br />
+                            Climb onto chains <br />
+                            Optionally score a final Note in the Trap for more bonus points. <br />
                         </p>
                     </section>
+
+                    <section className='robot-image'>
+                        <h1>2025 Group and Robot (Koren)</h1>
+                        <img src="../../../../public/2024Group.jpeg" />
+                    </section>
+
+
+
 
                     <section className="robot-timeline">
                         <h2>Year Milestones</h2>

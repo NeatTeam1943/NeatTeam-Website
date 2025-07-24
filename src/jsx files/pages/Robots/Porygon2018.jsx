@@ -22,7 +22,7 @@ export default function Porygon2018() {
                     <section className="robot-timeline">
                         <h2>Year Milestones</h2>
                         <ul>
-                            <li>OffSeason Event Winner</li>
+                            <li>None</li>
                         </ul>
                     </section>
                 </main>

@@ -22,7 +22,7 @@ export default function Migraine2017() {
                     <section className="robot-timeline">
                         <h2>Year Milestones</h2>
                         <ul>
-                            <li>OffSeason Event Winner</li>
+                            <li>District Event Finalist</li>
                         </ul>
                     </section>
                 </main>
