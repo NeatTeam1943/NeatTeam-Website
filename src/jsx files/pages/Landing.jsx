@@ -55,7 +55,7 @@ export default function Landing() {
                         ))}
                     </div>
                 </div>
-                <Link to="/Sponsor-Us" className="button-decoration"> Sponsor Us! </Link>
+                <Link to="/sponsor-us" className="button-decoration"> Sponsor Us! </Link>
             </section>
         </div>
     );

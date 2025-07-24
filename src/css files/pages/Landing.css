@@ -196,19 +196,6 @@ button {
   }
 }
 
-.button-decoration {
-  display: inline-block;
-  margin-top: 2.5rem;
-  padding: 0.75rem 2.25rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  background-color: #0040FF;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
 
 .button-decoration:hover {
   background-color: #002FBD;
