@@ -1,5 +1,7 @@
 import '../css files/Footer.css'
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function Footer() {
     return (
@@ -23,7 +25,7 @@ export default function Footer() {
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="About">About</a></li>
-                        <li><a href="Robots">Our Robot</a></li>
+                        <li><Link to={"/robot/koren2025"}>our robots</Link></li>
                         <li><a href="Sponsors">Sponsors</a></li>
                         <li><a href="Community">Our Community</a></li>
                     </ul>
