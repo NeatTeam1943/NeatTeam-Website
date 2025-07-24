@@ -5,6 +5,10 @@
   place-items: center;
 }
 
+.homepage_container {
+  max-width: 1200px;
+}
+
 .group-photo {
   background-image: image("../../../public/NeatTeam/GroupPhoto.jpeg");
   background-size: cover;

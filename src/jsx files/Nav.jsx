@@ -17,11 +17,11 @@ export default function Nav() {
                     </div>
                 </div>
                 <Link to="/robot">Robot</Link>
+                <Link to="/posts">Posts</Link>
+                <Link to="/calendar">Calendar</Link>
                 <Link to="/sponsors">Sponsors</Link>
                 <Link to="/sponsor-us">Sponsor Us</Link>
-                <Link to="/posts">Posts</Link>
-                <Link to="/community">Our Community</Link>
-                <Link to="/calendar">Calendar</Link>
+                <Link to="/contact-us">Contact Us</Link>
             </nav>
         </section>
     );

@@ -1,0 +1,151 @@
+.page-layout {
+    display: flex;
+    /*max-width: 1200px;*/
+    /*margin: 2rem auto;*/
+    padding-top: 10rem;
+    padding-bottom: 20rem;
+    padding-left: 2rem;
+    gap: 2rem;
+    font-family: sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.team-info h3 {
+    margin-top: 0;
+}
+
+.team-info p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.mini-calendar {
+    margin-top: 2rem;
+}
+
+.mini-calendar ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.mini-calendar li {
+    margin-bottom: 0.5rem;
+}
+
+.mini-calendar button {
+    background: #1877f2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Posts Section */
+.posts-section {
+    flex: 2;
+    padding-right: 5rem;
+    place-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+/* Modal view */
+.post-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.post-modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.post-modal-content img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.post-modal-content h2 {
+    margin-top: 0;
+}
+
+.post-modal-content p {
+    margin: 1rem 0;
+}
+
+.post-modal-content span {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.post-row {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-row img {
+    width: 150px;
+    object-fit: cover;
+}
+
+.post-text {
+    padding: 1rem;
+    flex: 1;
+}
+
+.post-text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.post-text p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.post-text span {
+    font-size: 0.8rem;
+    color: gray;
+}

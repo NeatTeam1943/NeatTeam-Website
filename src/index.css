@@ -1,6 +1,7 @@
-html {
+html, body, #root {
     /*margin-left: 12rem;*/
-
+    height: 100%;
+    margin: 0;
 }
 
 * {

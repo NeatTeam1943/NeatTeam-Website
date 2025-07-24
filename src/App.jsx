@@ -8,6 +8,7 @@ import AboutTeam from './jsx files/pages/AboutTeam.jsx';
 import AboutFirst from './jsx files/pages/AboutFirst.jsx';
 import NotFound from './jsx files/pages/NotFound.jsx';
 import Calendar from './jsx files/pages/Calendar.jsx';
+import Posts from './jsx files/pages/Posts.jsx';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/about/team" element={<AboutTeam />} />
                 <Route path="/about/first" element={<AboutFirst />} />
                 <Route path="/calendar" element={<Calendar />}></Route>
+                <Route path="/posts" element={<Posts />}></Route>
 
                 <Route path="*" element={<NotFound />} />
             </Routes>
