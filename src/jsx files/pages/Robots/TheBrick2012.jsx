@@ -13,7 +13,7 @@ export default function TheBrick2012() {
                 <RobotNav />
                 <main style={{ flex: 1 }}>
                     <section className="robot-intro">
-                        <h1 className="robot-title">2012 Year's Story: TheBrick</h1>
+                        <h1 className="robot-title">2012 Year's Competition:</h1>
                         <p className="robot-description">
                             bla bla bla bla
                         </p>

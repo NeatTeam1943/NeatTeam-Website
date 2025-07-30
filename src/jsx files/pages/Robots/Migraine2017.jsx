@@ -13,7 +13,7 @@ export default function Migraine2017() {
                 <RobotNav />
                 <main style={{ flex: 1 }}>
                     <section className="robot-intro">
-                        <h1 className="robot-title">2017 Year's Story: Migraine</h1>
+                        <h1 className="robot-title">2017 Year's Competition:</h1>
                         <p className="robot-description">
                             bla bla bla bla
                         </p>

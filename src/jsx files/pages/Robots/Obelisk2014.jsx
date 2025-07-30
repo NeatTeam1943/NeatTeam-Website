@@ -13,7 +13,7 @@ export default function Obelisk2014() {
                 <RobotNav />
                 <main style={{ flex: 1 }}>
                     <section className="robot-intro">
-                        <h1 className="robot-title">2014 Year's Story: Obelisk</h1>
+                        <h1 className="robot-title">2014 Year's Competition:</h1>
                         <p className="robot-description">
                             bla bla bla bla
                         </p>
