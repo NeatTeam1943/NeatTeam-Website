@@ -23,7 +23,7 @@ export default function Freddy2023() {
                             These are scored onto a grid structure made up of nodes at different heights (low, middle, and high rows). <br />
                             Teams build “Links” (rows of 3 scored game pieces) for extra points and to energize the grid. <br />
                             Match Structure: <br />
-                            1. Autonomous Period (first 15 seconds): <br />
+                            1. Autonomous Period (15 seconds): <br />
                             Robots act autonomously to score game pieces and leave their starting zone (called the community) for points. <br />
                             2. Teleoperated Period (1 minutes and 45 seconds): <br />
                             Drivers control the robots to: <br />
