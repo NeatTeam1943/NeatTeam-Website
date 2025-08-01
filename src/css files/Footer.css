@@ -2,10 +2,8 @@
     background-color: #002FBD;
     color: white;
     padding: 4rem 3rem;
-    width: 97.175%;
-    position: absolute;
+    width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-right: -1rem;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
     font-size: 0.95rem;
 }

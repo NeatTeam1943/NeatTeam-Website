@@ -6,18 +6,18 @@ export default function Sponsors() {
     const navigate = useNavigate();
 
     const sponsors = [
-        { name: "Rosh Haayin", logo: 'public/Sponsors/ROSH-HAAIN-LOGO.png' },
-        { name: "Innoviz", logo: 'public/Sponsors/Innoviz-LOGO.png' },
-        { name: "Begin High School", logo: 'public/Sponsors/logo-final-01-1.png' },
-        { name: "FIRST", logo: 'public/Sponsors/FIRST-LOGO.png' },
-        { name: "IFEL", logo: 'public/Sponsors/IFEL-LOGO.png' },
-        { name: "Kornit", logo: 'public/Sponsors/kornit-vertical-logo-01.png' },
-        { name: "Rosh Electronics", logo: 'public/Sponsors/Rosh-Electroptics.png' },
-        { name: "EID", logo: 'public/Sponsors/LOGO-EID.png' },
+        { id: 1, name: "Rosh Haayin", logo: '/Sponsors/ROSH-HAAIN-LOGO.png' },
+        { id: 2, name: "Innoviz", logo: '/Sponsors/Innoviz-Logo.png' },
+        { id: 3, name: "Begin High School", logo: '/Sponsors/logo-final-01-1.png' },
+        { id: 4, name: "FIRST", logo: '/Sponsors/FIRST-LOGO.png' },
+        { id: 5, name: "IFEL", logo: '/Sponsors/IFEL-Logo.png' },
+        { id: 6, name: "Kornit", logo: '/Sponsors/kornit-vertical-logo-01.png' },
+        { id: 7, name: "Rosh Electronics", logo: '/Sponsors/Rosh-Electroptics.png' },
+        { id: 8, name: "EID", logo: '/Sponsors/LOGO-EID.png' },
     ];
 
     return (
-        <div className={'page'}>
+        <div className="page">
             <div className="sponsors-page">
                 <h1>Thank You to Our Sponsors!</h1>
                 <h3>
@@ -25,10 +25,10 @@ export default function Sponsors() {
                 </h3>
 
                 <div className="sponsor-grid">
-                    {sponsors.map((s, index) => (
-                        <div className="sponsor-card" key={index}>
-                            <img src={s.logo} alt={s.name} />
-                            <p>{s.name}</p>
+                    {sponsors.map((sponsor) => (
+                        <div className="sponsor-card" key={sponsor.id}>
+                            <img src={sponsor.logo} alt={sponsor.name} />
+                            <p>{sponsor.name}</p>
                         </div>
                     ))}
                 </div>

@@ -3,7 +3,6 @@ import '../../css files/pages/AboutFirst.css';
 
 export default function AboutFirst() {
     return (
-        // it's stupid
         <div className="about">
             <div className="about-first-page">
                 <section className="intro-section">
@@ -14,8 +13,8 @@ export default function AboutFirst() {
                 </section>
 
                 <section className="mission-section">
-                    <h2 className="section-title">Our Mission</h2>
-                    <p className={"text"}>
+                    <h2 className="section-title">First's Mission</h2>
+                    <p className="text">
                         The mission of FIRST is to inspire young people to be science and technology leaders and innovators by engaging them in exciting mentor-based programs that build STEM skills, inspire innovation, and foster well-rounded life capabilities like self-confidence, communication, and leadership.
                     </p>
                 </section>
@@ -31,8 +30,8 @@ export default function AboutFirst() {
 
                 <section className="impact-section">
                     <h2 className="section-title">Global Impact</h2>
-                    <p className={"text"}>
-                        With over 700,000 students in more than 100 countries, FIRST has become the world’s leading youth-serving nonprofit advancing STEM education. FIRST alumni are significantly more likely to pursue STEM careers and have access to millions of dollars in scholarships.
+                    <p className="text">
+                        With over 700,000 students in more than 100 countries, FIRST has become the world's leading youth-serving nonprofit advancing STEM education. FIRST alumni are significantly more likely to pursue STEM careers and have access to millions of dollars in scholarships.
                     </p>
                 </section>
 
