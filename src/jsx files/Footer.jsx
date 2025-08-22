@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <section className="footer" id="contact">
+        <section className="footer">
             <div className="footer-columns">
                 <div className="footer-col">
                     <h3>NeatTeam #1943</h3>
@@ -23,17 +23,18 @@ export default function Footer() {
 
                 <div className="footer-col">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="About">About</a></li>
-                        <li><Link to={"/robot/koren2025"}>our robots</Link></li>
-                        <li><a href="Sponsors">Sponsors</a></li>
-                        <li><a href="Community">Our Community</a></li>
-                    </ul>
+      
+                    <div className={"links"}>
+                        <a href="/about/team">About</a>
+                        <li><Link to={"/robot/koren2025"}>Our robots</Link></li>
+                        <a href="/sponsors">Sponsors</a>
+                        <a href="/community">Our Community</a>
+                    </div>
                 </div>
 
                 <div className="footer-col">
                     <h4>Follow Us</h4>
-                    <div className="footer-socials">
+                    <div className="links">
                         <a href="https://www.instagram.com/neatteam_1943/" target="_blank" rel="noreferrer">Instagram</a>
                         <a href="https://github.com/NeatTeam1943" target="_blank" rel="noreferrer">GitHub</a>
                         <a href="https://www.facebook.com/NeatTeam1943/" target="_blank" rel="noreferrer">Facebook</a>

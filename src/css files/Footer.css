@@ -1,11 +1,9 @@
 .footer {
     background-color: #002FBD;
     color: white;
-    margin-bottom: -1rem;
     padding: 4rem 3rem;
-    margin-left: -12.5rem;
+    width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-right: -1rem;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
     font-size: 0.95rem;
 }
@@ -56,9 +54,9 @@
     color: #fd4e0a;
 }
 
-.footer-socials a {
+.links a {
     display: block;
-    margin-bottom: 0.4rem;
+    margin-bottom: 1rem;
 }
 
 .footer-bottom {
