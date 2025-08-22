@@ -1,0 +1,28 @@
+.robotnav {
+    top: 60px;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #002FBD;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.robotnav nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.robotnav nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.robotnav nav a:hover {
+    color: #61dafb;
+    transform: translateX(5px);
+}

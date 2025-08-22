@@ -142,7 +142,7 @@ export default function Nav() {
                         </Link>
                     </div>
                 </div>
-                <Link to="/robot" onClick={closeMobileMenu}>Robot</Link>
+                <Link to="/robots/2025koren" onClick={closeMobileMenu}>Robot</Link>
                 <div className="mobile-dropdown">
                     <button 
                         className="mobile-dropdown-trigger"
