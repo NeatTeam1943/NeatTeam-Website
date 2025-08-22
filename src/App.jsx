@@ -9,6 +9,7 @@ import NotFound from './jsx files/pages/NotFound.jsx';
 import Calendar from './jsx files/pages/Calendar.jsx';
 import Posts from './jsx files/pages/Posts.jsx';
 import Sponsors from './jsx files/pages/Sponsors.jsx';
+import Community from "./jsx files/pages/Community.jsx";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/calendar" element={<Calendar />} />
                     <Route path="/posts" element={<Posts />} />
                     <Route path="/sponsors" element={<Sponsors />} />
+                    <Route path="/community" element={<Community />} />
 
                     <Route path="*" element={<NotFound />} />
                 </Routes>
