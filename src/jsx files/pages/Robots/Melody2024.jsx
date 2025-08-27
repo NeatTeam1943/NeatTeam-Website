@@ -7,11 +7,9 @@ import "../../../css files/Robot.css"
 
 export default function Melody2024() {
     return (
-        <body className="robot-page">
-            <Nav />
-            <div style={{ display: 'flex', alignItems: 'flex-start', top: 20 }}>
-                <RobotNav />
-                <main style={{ flex: 1 }}>
+        <div className="robot-page">
+            <RobotNav />
+            <main>
                     <section className="robot-intro">
                         <h1 className="robot-title">2024 Year's Competition:</h1>
                         <p className="robot-description">
@@ -36,7 +34,7 @@ export default function Melody2024() {
 
                     <section className='robot-image'>
                         <h1>2024 Group and Robot (Melody)</h1>
-                        <img src="../../../../public/2024Group.jpeg" />
+                        <img src="/2024Group.jpeg" alt="2024 Group and Robot (Melody)" />
                     </section>
 
 
@@ -49,10 +47,7 @@ export default function Melody2024() {
                         </ul>
                     </section>
                 </main>
-            </div>
-            <Footer />
-
-        </body>
+        </div>
     );
 }
 

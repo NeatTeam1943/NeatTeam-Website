@@ -7,11 +7,9 @@ import "../../../css files/Robot.css"
 
 export default function Sagi2022() {
     return (
-        <body className="robot-page">
-            <Nav />
-            <div style={{ display: 'flex', alignItems: 'flex-start', top: 20 }}>
-                <RobotNav />
-                <main style={{ flex: 1 }}>
+        <div className="robot-page">
+            <RobotNav />
+            <main>
                     <section className="robot-intro">
                         <h1 className="robot-title">2022 Year's Competition:</h1>
                         <p className="robot-description">
@@ -37,7 +35,7 @@ export default function Sagi2022() {
 
                     <section className='robot-image'>
                         <h1>2022 Group and Robot (Sagi)</h1>
-                        <img src="../../../../public/Sagi2022.jpg" />
+                        <img src="/Sagi2022.jpg" alt="2022 Group and Robot (Sagi)" />
                     </section>
 
                     <section className="robot-timeline">
@@ -47,10 +45,7 @@ export default function Sagi2022() {
                         </ul>
                     </section>
                 </main>
-            </div>
-            <Footer />
-
-        </body>
+        </div>
     );
 }
 

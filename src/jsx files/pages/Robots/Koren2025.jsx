@@ -8,11 +8,9 @@ import "../../../css files/Robot.css"
 
 export default function Koren2025() {
     return (
-        <body className="robot-page">
-            <Nav />
-            <div style={{ display: 'flex', alignItems: 'flex-start', top: 20 }}>
-                <RobotNav />
-                <main style={{ flex: 1 }}>
+        <div className="robot-page">
+            <RobotNav />
+            <main>
                     <section className="robot-intro">
                         <h1 className="robot-title">2025 Year's Competition:</h1>
                         <p className="robot-description">
@@ -40,7 +38,7 @@ export default function Koren2025() {
                     </section>
                     <section className='robot-image'>
                         <h1>2025 Group and Robot (Koren)</h1>
-                        <img src="../../../../public/GroupPhoto.jpeg" />
+                        <img src="/NeatTeam/GroupPhoto.jpeg" alt="2025 Group and Robot (Koren)" />
                     </section>
 
                     <section className="robot-timeline">
@@ -50,10 +48,7 @@ export default function Koren2025() {
                         </ul>
                     </section>
                 </main>
-            </div>
-            <Footer />
-
-        </body>
+        </div>
     );
 }
 
