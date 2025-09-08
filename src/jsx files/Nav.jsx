@@ -51,20 +51,20 @@ export default function Nav() {
         <>
             <section className="navbar">
                 <Link to="/" className="logo">
-                    <img src="/NeatTeam/NeatTeam-Banner.png" alt="NEATTEAM Logo"/>
+                    <img src="/NeatTeam/NeatTeam-Banner.png" alt="NEATTEAM Logo" />
                 </Link>
-                
+
                 {/* Desktop Navigation */}
                 <nav>
                     <div className="dropdown" onMouseLeave={closeDesktopDropdown}>
-                        <button 
+                        <button
                             className="nav-link like-link dropdown-trigger"
                             onMouseEnter={() => setDesktopDropdownOpen(true)}
                         >
                             About
                             <span className={`dropdown-arrow ${desktopDropdownOpen ? 'open' : ''}`}>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                    <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </span>
                         </button>
@@ -79,14 +79,14 @@ export default function Nav() {
                     </div>
                     <Link to="/robot/koren2025">Robot</Link>
                     <div className="dropdown" onMouseLeave={closeTeamNewsDropdown}>
-                        <button 
+                        <button
                             className="nav-link like-link dropdown-trigger"
                             onMouseEnter={() => setTeamNewsDropdownOpen(true)}
                         >
                             Team News
                             <span className={`dropdown-arrow ${teamNewsDropdownOpen ? 'open' : ''}`}>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                    <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </span>
                         </button>
@@ -108,7 +108,7 @@ export default function Nav() {
                 </nav>
 
                 {/* Mobile Menu Button */}
-                <button 
+                <button
                     className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`}
                     onClick={toggleMobileMenu}
                     aria-label="Toggle mobile menu"
@@ -122,14 +122,14 @@ export default function Nav() {
             {/* Mobile Menu */}
             <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
                 <div className="mobile-dropdown">
-                    <button 
+                    <button
                         className="mobile-dropdown-trigger"
                         onClick={toggleMobileDropdown}
                     >
                         <span>About</span>
                         <span className={`mobile-dropdown-arrow ${mobileDropdownOpen ? 'open' : ''}`}>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </span>
                     </button>
@@ -144,14 +144,14 @@ export default function Nav() {
                 </div>
                 <Link to="/robot/koren2025" onClick={closeMobileMenu}>Robots</Link>
                 <div className="mobile-dropdown">
-                    <button 
+                    <button
                         className="mobile-dropdown-trigger"
                         onClick={toggleMobileTeamNewsDropdown}
                     >
                         <span>Team News</span>
                         <span className={`mobile-dropdown-arrow ${mobileTeamNewsDropdownOpen ? 'open' : ''}`}>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </span>
                     </button>
