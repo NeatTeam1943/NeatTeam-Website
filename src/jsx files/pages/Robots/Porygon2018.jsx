@@ -7,11 +7,9 @@ import "../../../css files/Robot.css"
 
 export default function Porygon2018() {
     return (
-        <body className="robot-page">
-            <Nav />
-            <div style={{ display: 'flex', alignItems: 'flex-start', top: 20 }}>
-                <RobotNav />
-                <main style={{ flex: 1 }}>
+        <div className="robot-page">
+            <RobotNav />
+                <main>
                     <section className="robot-intro">
                         <h1 className="robot-title">2018 Year's Competition:</h1>
                         <p className="robot-description">
@@ -52,10 +50,7 @@ export default function Porygon2018() {
                         </ul>
                     </section>
                 </main>
-            </div>
-            <Footer />
-
-        </body>
+        </div>
     );
 }
 

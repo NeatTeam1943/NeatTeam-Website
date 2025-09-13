@@ -77,7 +77,7 @@ export default function Nav() {
                             </Link>
                         </div>
                     </div>
-                    <Link to="/robot">Robot</Link>
+                    <Link to="/robot/koren2025">Robot</Link>
                     <div className="dropdown" onMouseLeave={closeTeamNewsDropdown}>
                         <button 
                             className="nav-link like-link dropdown-trigger"
@@ -142,7 +142,7 @@ export default function Nav() {
                         </Link>
                     </div>
                 </div>
-                <Link to="/robots/2025koren" onClick={closeMobileMenu}>Robot</Link>
+                <Link to="/robot/koren2025" onClick={closeMobileMenu}>Robots</Link>
                 <div className="mobile-dropdown">
                     <button 
                         className="mobile-dropdown-trigger"

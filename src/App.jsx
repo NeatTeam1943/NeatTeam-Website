@@ -22,6 +22,7 @@ import Ra2016 from './jsx files/pages/Robots/Ra2016.jsx';
 import Slifer20215 from './jsx files/pages/Robots/Slifer2015.jsx';
 import Obelisk2014 from './jsx files/pages/Robots/Obelisk2014.jsx';
 import TheBrick2012 from './jsx files/pages/Robots/TheBrick2012.jsx';
+import Community from "./jsx files/pages/Community.jsx";
 
 function App() {
     return (
@@ -47,6 +48,7 @@ function App() {
                     <Route path="/calendar" element={<Calendar />} />
                     <Route path="/posts" element={<Posts />} />
                     <Route path="/sponsors" element={<Sponsors />} />
+                    <Route path="/community" element={<Community />} />
 
                     <Route path="*" element={<NotFound />} />
                 </Routes>

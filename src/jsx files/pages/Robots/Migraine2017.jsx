@@ -7,15 +7,15 @@ import "../../../css files/Robot.css"
 
 export default function Migraine2017() {
     return (
-        <body className="robot-page">
-            <Nav />
-            <div style={{ display: 'flex', alignItems: 'flex-start', top: 20 }}>
-                <RobotNav />
-                <main style={{ flex: 1 }}>
+        <div className="robot-page">
+            <RobotNav />
+            <main>
                     <section className="robot-intro">
                         <h1 className="robot-title">2017 Year's Competition:</h1>
-                        <p className="robot-description">
-                            bla bla bla bla
+                        <p className="robot-description coming-soon">
+                            We're working hard to bring you the complete story of our 2017 robot!<br/>
+                            Stay tuned for competition details, robot specifications, and team achievements.<br/>
+                            <strong>Coming Soon!</strong>
                         </p>
                     </section>
 
@@ -26,10 +26,7 @@ export default function Migraine2017() {
                         </ul>
                     </section>
                 </main>
-            </div>
-            <Footer />
-
-        </body>
+        </div>
     );
 }
 

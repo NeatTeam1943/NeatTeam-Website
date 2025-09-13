@@ -7,11 +7,9 @@ import "../../../css files/Robot.css"
 
 export default function Guido2020() {
     return (
-        <body className="robot-page">
-            <Nav />
-            <div style={{ display: 'flex', alignItems: 'flex-start', top: 20 }}>
-                <RobotNav />
-                <main style={{ flex: 1 }}>
+        <div className="robot-page">
+            <RobotNav />
+            <main>
                     <section className="robot-intro">
                         <h1 className="robot-title">2020 Year's Competition:</h1>
                         <p className="robot-description">
@@ -59,10 +57,7 @@ export default function Guido2020() {
                         </ul>
                     </section>
                 </main>
-            </div>
-            <Footer />
-
-        </body>
+        </div>
     );
 }
 

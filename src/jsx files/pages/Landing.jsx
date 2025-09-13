@@ -31,7 +31,7 @@ export default function Landing() {
                         <div className="robot-description">
                             This is Koren, our 2025 Robot. He was named after the fallen soldier Koren Bitan.
                         </div>
-                        <Link to="/robots" className="button-decoration">Past Competition Robots</Link>
+                        <Link to="/robot/koren2025" className="button-decoration">Past Competition Robots</Link>
                     </div>
                 </section>
 
@@ -41,7 +41,7 @@ export default function Landing() {
                     <h2>Our Amazing Sponsors</h2>
                     <p>We're grateful for the support of these incredible organizations that make our robotics journey possible</p>
                 </div>
-                
+
                 <div className="sponsor-marquee">
                     <div className="sponsor-track">
                         <div className="sponsor-item">
@@ -65,7 +65,7 @@ export default function Landing() {
                         <div className="sponsor-item">
                             <img src="/Sponsors/LOGO-EID.png" alt="EID" />
                         </div>
-                        
+
                         {/* Duplicate items for seamless loop */}
                         <div className="sponsor-item">
                             <img src="/Sponsors/Innoviz-Logo.png" alt="Innoviz" />
