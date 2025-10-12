@@ -13,7 +13,7 @@ export default function Guido2020() {
                 <section className="robot-intro">
                     <h1 className="robot-title">2020 Year's Competition:</h1>
                     <p className="robot-description">
-                        Infinity Recharge - FRC 2021 <br />
+                        Infinity Recharge - FRC 2020 <br />
                         Objective: <br />
                         Robots manipulate Power Cells (yellow foam balls) and score them into the Power Port, a goal with three scoring zones: <br />
                         • Bottom Port - easiest to score, lowest points. <br />
@@ -25,7 +25,6 @@ export default function Guido2020() {
                         Robots run pre-programmed actions to: <br />
                         • Score Power Cells into the Power Port. <br />
                         • Move off the Initiation Line for bonus points. <br />
-                        Successful actions in auto earn points and help in reaching bonus thresholds faster. <br />
                         2. Teleoperated Period (2 minute 15 seconds): <br />
                         Drivers take over to: <br />
                         • Collect Power Cells from field locations and score them into their zones. <br />
@@ -34,7 +33,8 @@ export default function Guido2020() {
                         • Rotate it to a specific color (Position Control). <br />
                         • Completing stages and control panel tasks earns Ranking Points. <br />
                         3. Endgame (30 seconds): <br />
-                        Robots race to the Shield Generator Switch to climb onto the Rendezvous Point bar. <br />
+                        Robots race to the Shield Generator Switch to climb onto the Rendezvous Point bar.
+                        Teams also aim to make their Rendezvous Point bar and make it scales. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>
                 </section>
