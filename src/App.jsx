@@ -51,8 +51,8 @@ function App() {
                     <Route path="/posts" element={<Posts />} />
                     <Route path="/sponsors" element={<Sponsors />} />
                     <Route path="/community" element={<Community />} />
-                    <Route path='/sponsor-us' element={<SponsorUs />} />
-                    <Route path='/contact-us' element={<ContactUs />} />
+                    <Route path="/sponsor-us" element={<SponsorUs />} />
+                    <Route path="/contact-us" element={<ContactUs />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Layout>

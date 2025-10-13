@@ -51,6 +51,7 @@
     transform: translateY(20px);
     opacity: 0;
     animation: slideUpFade 0.8s ease-out 0.4s forwards;
+    margin-top: 0.5rem;
 }
 
 .sponsor-grid {
