@@ -1,0 +1,339 @@
+/* Modern Premium About FIRST Design */
+.about {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding-bottom: 6rem;
+}
+
+.about-first-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #1e293b;
+    padding-top: 12rem;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.intro-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    padding: 6rem 4rem;
+    border-radius: 50px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #0040FF, #002FBD);
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: translate(100px, -100px);
+}
+
+.intro-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #fd4e0a, #ea580c);
+    border-radius: 50%;
+    opacity: 0.1;
+    transform: translate(-75px, 75px);
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #0040FF;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease-out 0.2s forwards;
+}
+
+.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #fd4e0a, #ea580c);
+    border-radius: 2px;
+}
+
+.text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #475569;
+    max-width: 900px;
+    margin: 0 auto;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease-out 0.4s forwards;
+}
+
+.mission-section,
+.programs-section,
+.impact-section,
+.cta-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    padding: 4rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.mission-section:hover,
+.programs-section:hover,
+.impact-section:hover,
+.cta-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0, 64, 255, 0.15);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #002FBD;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #0040FF, #fd4e0a);
+    border-radius: 2px;
+}
+
+.program-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.program-list li {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #0040FF;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.program-list li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 64, 255, 0.05), rgba(253, 78, 10, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.program-list li:hover::before {
+    opacity: 1;
+}
+
+.program-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgba(0, 64, 255, 0.15);
+    border-left-color: #fd4e0a;
+}
+
+.program-list li strong {
+    color: #0040FF;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.program-list li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.impact-section p,
+.cta-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #475569;
+    margin: 1rem 0;
+}
+
+.cta-section {
+    text-align: center;
+    background: linear-gradient(135deg, #0040FF 0%, #002FBD 100%);
+    color: white;
+}
+
+.cta-section .section-title {
+    color: white;
+}
+
+.cta-section .section-title::after {
+    background: linear-gradient(90deg, #fd4e0a, #ea580c);
+}
+
+.cta-section p {
+    color: #e2e8f0;
+    font-size: 1.2rem;
+}
+
+a {
+    color: #fd4e0a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #fd4e0a, #ea580c);
+    transition: width 0.3s ease;
+    border-radius: 1px;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+a:hover {
+    color: #ea580c;
+}
+
+@keyframes slideUpFade {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-first-page {
+        padding-top: 10rem;
+    }
+
+    .intro-section {
+        padding: 4rem 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .text {
+        font-size: 1.1rem;
+    }
+
+    .mission-section,
+    .programs-section,
+    .impact-section,
+    .cta-section {
+        padding: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-first-page {
+        padding: 8rem 1.5rem 0 1.5rem;
+    }
+
+    .intro-section {
+        padding: 3rem 2rem;
+        border-radius: 30px;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .mission-section,
+    .programs-section,
+    .impact-section,
+    .cta-section {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .program-list li {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-first-page {
+        padding: 6rem 1rem 0 1rem;
+    }
+
+    .intro-section {
+        padding: 2rem 1.5rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .mission-section,
+    .programs-section,
+    .impact-section,
+    .cta-section {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .program-list li {
+        padding: 1.25rem;
+    }
+}

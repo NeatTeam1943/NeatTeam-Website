@@ -1,0 +1,170 @@
+/* Modern Premium Robot Navigation Design */
+.robotnav {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-right: 2px solid #e2e8f0;
+    min-height: 100vh;
+    width: 280px;
+    position: sticky;
+    top: 100px;
+    overflow-y: auto;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+}
+
+.robotnav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
+
+.robotnav nav {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.robotnav nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid transparent;
+}
+
+.robotnav nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 64, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.robotnav nav a:hover::before {
+    left: 100%;
+}
+
+.robotnav nav a:hover {
+    color: #0040FF;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+    border-color: #0040FF;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 64, 255, 0.15);
+}
+
+.robotnav nav a:active {
+    transform: translateX(3px);
+}
+
+/* Active state for current robot */
+.robotnav nav a.active {
+    background: linear-gradient(135deg, #0040FF 0%, #002FBD 100%);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 64, 255, 0.3);
+}
+
+.robotnav nav a.active:hover {
+    background: linear-gradient(135deg, #002FBD 0%, #001f8b 100%);
+    transform: translateX(5px);
+}
+
+/* Scrollbar styling */
+.robotnav::-webkit-scrollbar {
+    width: 6px;
+}
+
+.robotnav::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.robotnav::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #0040FF, #002FBD);
+    border-radius: 3px;
+}
+
+.robotnav::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #002FBD, #001f8b);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .robotnav {
+        width: 250px;
+    }
+    
+    .robotnav nav {
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .robotnav nav a {
+        padding: 0.875rem 1.25rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .robotnav {
+        width: 100%;
+        min-height: auto;
+        position: relative;
+        top: 0;
+        border-right: none;
+        border-bottom: 2px solid #e2e8f0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    .robotnav nav {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+    
+    .robotnav nav a {
+        white-space: nowrap;
+        min-width: fit-content;
+        text-align: center;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .robotnav nav a:hover {
+        transform: translateY(-2px);
+    }
+    
+    .robotnav nav a:active {
+        transform: translateY(-1px);
+    }
+    
+    .robotnav nav a.active:hover {
+        transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 480px) {
+    .robotnav nav {
+        padding: 0.75rem;
+        gap: 0.5rem;
+    }
+    
+    .robotnav nav a {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+}
