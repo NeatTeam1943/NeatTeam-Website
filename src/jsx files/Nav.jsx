@@ -8,6 +8,8 @@ export default function Nav() {
     const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
     const [teamNewsDropdownOpen, setTeamNewsDropdownOpen] = useState(false);
     const [mobileTeamNewsDropdownOpen, setMobileTeamNewsDropdownOpen] = useState(false);
+    const BASE_URL = import.meta.env.BASE_URL;
+
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -51,7 +53,7 @@ export default function Nav() {
         <>
             <section className="navbar">
                 <Link to="/" className="logo">
-                    <img src="/NeatTeam/NeatTeam-Banner.png" alt="NEATTEAM Logo" />
+                    <img src={BASE_URL + `NeatTeam/NeatTeam-Banner.png`} alt="NEATTEAM Logo" />
                 </Link>
 
                 {/* Desktop Navigation */}

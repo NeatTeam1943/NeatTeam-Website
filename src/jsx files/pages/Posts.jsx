@@ -11,6 +11,7 @@ export default function Posts() {
     const [notificationType, setNotificationType] = useState('success');
     const [currentPage, setCurrentPage] = useState(1);
     const postsPerPage = 6;
+    const BASE_URL = import.meta.env.BASE_URL;
 
     const events = [
         {
@@ -34,7 +35,7 @@ export default function Posts() {
         // {
         //     id: 1,
         //     title: 'District 3',
-        //     text: 'Cool cool cool cool cool cool cool cool no doubt no doubt no doubt no doubt no doubt no',
+        //     text:
         //     date: 'March 9 - 10, 2025',
         //     image: '/NeatTeam/GroupPhoto.jpeg',
         // },
@@ -45,7 +46,7 @@ export default function Posts() {
             text: 'At Eshel Elementary School, we visit once a week and present our magazine, “First Steps,” to the 5th-grade students.\n' +
                 'The goal of this volunteer activity is to raise awareness of STEM fields among younger students and inspire the next generation to explore science and technology.',
             date: 'October 28, 2025',
-            image: '/Volunteering/2025 october 28.jpeg',
+            image: BASE_URL + 'Volunteering/2025 october 28.jpeg',
         },
 
     ];

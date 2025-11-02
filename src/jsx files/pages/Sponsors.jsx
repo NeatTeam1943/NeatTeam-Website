@@ -8,13 +8,13 @@ export default function Sponsors() {
 
     const sponsors = [
         { id: 1, name: "Rosh Haayin", logo: BASE_URL + 'Sponsors/ROSH-HAAIN-LOGO.png' },
-        { id: 2, name: "Innoviz", logo: '/Sponsors/Innoviz-Logo.png' },
-        { id: 3, name: "Begin High School", logo: '/Sponsors/logo-final-01-1.png' },
-        { id: 4, name: "FIRST", logo: '/Sponsors/FIRST-LOGO.png' },
-        { id: 5, name: "IFEL", logo: '/Sponsors/IFEL-Logo.png' },
-        { id: 6, name: "Kornit", logo: '/Sponsors/kornit-vertical-logo-01.png' },
-        { id: 7, name: "Rosh Electronics", logo: '/Sponsors/Rosh-Electroptics.png' },
-        { id: 8, name: "EID", logo: '/Sponsors/LOGO-EID.png' },
+        { id: 2, name: "Innoviz", logo: BASE_URL + 'Sponsors/Innoviz-Logo.png' },
+        { id: 3, name: "Begin High School", logo: BASE_URL + 'Sponsors/logo-final-01-1.png' },
+        { id: 4, name: "FIRST", logo: BASE_URL + 'Sponsors/FIRST-LOGO.png' },
+        { id: 5, name: "IFEL", logo: BASE_URL + 'Sponsors/IFEL-Logo.png' },
+        { id: 6, name: "Kornit", logo: BASE_URL + 'Sponsors/kornit-vertical-logo-01.png' },
+        { id: 7, name: "Rosh Electronics", logo: BASE_URL + 'Sponsors/Rosh-Electroptics.png' },
+        { id: 8, name: "EID", logo: BASE_URL + 'Sponsors/LOGO-EID.png' },
     ];
 
     return (
