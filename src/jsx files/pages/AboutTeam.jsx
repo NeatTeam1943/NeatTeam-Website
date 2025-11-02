@@ -20,16 +20,17 @@ export default function AboutTeam() {
             <section className="about-timeline">
                 <h2>Team Milestones</h2>
                 <ul>
-                    <li><strong>2025:</strong> District Event Finalist</li>
+                    <li><strong>2025:</strong> District 1 Event Finalist</li>
                     <li><strong>2024:</strong> OffSeason Event Winner</li>
                     <li><strong>2023:</strong> OffSeason Event Finalist</li>
-                    <li><strong>2023:</strong> District Event Finalist</li>
-                    <li><strong>2023:</strong> District Event Finalist</li>
+                    <li><strong>2023:</strong> District 3 Event Finalist</li>
+                    <li><strong>2023:</strong> District 1 Event Finalist</li>
                     <li><strong>2022:</strong> District Event Winner</li>
                     <li><strong>2017:</strong> District Event Finalist</li>
                     <li><strong>2013:</strong> FIRST Dean's List Finalist (Shai Ludvinovsky)</li>
                     <li><strong>2011:</strong> FIRST Dean's List Finalist Award (Lior Milo)</li>
                     <li><strong>2008:</strong> Chrysler Team Spirit Award</li>
+                    <li><strong>2008:</strong> Woodie Flowers Winner Award (Mazal Nagar)</li>
                     <li><strong>2007:</strong> Autodesk Visualization Award</li>
                     <li><strong>2006:</strong> Regional Finalist</li>
                     <li><strong>2006:</strong> Rookie Inspiration Award</li>

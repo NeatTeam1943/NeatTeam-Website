@@ -41,6 +41,11 @@
     transition: color 0.3s ease;
 }
 
+.footer a {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
 .footer ul {
     list-style: none;
     padding: 0;
