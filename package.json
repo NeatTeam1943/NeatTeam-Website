@@ -1,7 +1,7 @@
 {
   "name": "neatteam-website",
   "private": true,
-  "homepage": "http://NeatTeam1943.github.io/NeatTeam-Website",
+  "homepage": "https://github.com/NeatTeam1943/NeatTeam-Website#readme",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -48,6 +48,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NeatTeam1943/NeatTeam-Website/issues"
-  },
-  "homepage": "https://github.com/NeatTeam1943/NeatTeam-Website#readme"
+  }
 }
