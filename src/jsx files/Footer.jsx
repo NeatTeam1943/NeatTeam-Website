@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 
 export default function Footer() {
+
     return (
         <section className="footer">
             <div className="footer-columns">
@@ -17,7 +18,7 @@ export default function Footer() {
 
                 <div className="footer-col">
                     <h4>Contact Us</h4>
-                    <p>Email: <a href="mailto:neatteamrh1943@gmail.com">neatteamrh1943@gmail.com</a></p>
+                    <p>Email: <span>neatteamrh1943@gmail.com</span></p>
                     <p>Location: Rosh Haayin, Israel</p>
                 </div>
 
@@ -26,7 +27,7 @@ export default function Footer() {
       
                     <div className={"links"}>
                         <a href="/about/team">About</a>
-                        <li><Link to={"/robot/koren2025"}>Our robots</Link></li>
+                        <a href="/robot/koren2025">Our Robots</a>
                         <a href="/sponsors">Sponsors</a>
                         <a href="/community">Our Community</a>
                     </div>
