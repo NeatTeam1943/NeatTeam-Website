@@ -12,47 +12,68 @@ export default function Calendar() {
             title: "Team Meeting",
             date: "2025-01-05",
             time: "17:00",
+            endTime: "21:00",
             type: "weekly",
             days: [0, 3], // Sunday and Wednesday
             description: "Weekly team meeting and planning session",
-            category: "meeting"
+            category: "meeting",
+            excludePeriod: {
+                startDate: "2026-01-11",
+                endDate: "2026-03-18"
+            }
         },
         {
             id: 2,
-            title: "Robot Testing",
-            date: "2025-01-10",
-            time: "15:00",
+            title: "Season Kickoff",
+            date: "2026-01-10",
+            time: "19:00",
             type: "single",
-            description: "Testing robot systems and subsystems",
-            category: "technical"
-        },
-        {
-            id: 3,
-            title: "Strategy Planning",
-            date: "2025-01-15",
-            time: "16:00",
-            type: "single",
-            description: "Planning strategies for upcoming competitions",
+            description: "Kickoff event to start the season",
             category: "planning"
         },
         {
+            id: 3,
+            title: "Team Meeting",
+            date: "2026-01-11",
+            endDate: "2026-03-17",
+            time: "16:00",
+            endTime: "00:00",
+            type: "range",
+            excludedDays: [5, 6], // Exclude Friday (5) and Saturday (6)
+            excludedDates: ["2026-03-11", "2026-03-12"], // Exclude District 2 Competition dates
+            description: "Daily team meeting during season",
+            category: "meeting",
+        },
+        {
             id: 4,
-            title: "Community Outreach",
-            date: "2025-01-20",
-            time: "14:00",
-            type: "single",
-            description: "Visiting local schools to inspire future engineers",
-            category: "outreach"
+            title: "District 2 Competition",
+            date: "2026-03-11",
+            endDate: "2026-03-12",
+            time: "07:00 - 19:00",
+            type: "range",
+            description: "FIRST Robotics District 2 competition",
+            category: "competition"
         },
         {
             id: 5,
-            title: "Competition Prep",
-            date: "2025-01-25",
-            time: "18:00",
-            type: "single",
-            description: "Final preparations for competition",
+            title: "District 4 Competition",
+            date: "2026-03-18",
+            endDate: "2026-03-19",
+            time: "07:00 - 19:00",
+            type: "range",
+            description: "FIRST Robotics District 4 competition",
             category: "competition"
-        }
+        },
+        {
+            id: 6,
+            title: "District Championship",
+            date: "2026-03-30",
+            endDate: "2026-03-31",
+            time: "08:00",
+            type: "range",
+            description: "FIRST Robotics District Championship",
+            category: "competition"
+        },
     ];
 
     // Get current month/year
@@ -97,14 +118,50 @@ export default function Calendar() {
         if (!date) return [];
         
         const dayOfWeek = date.getDay();
-        const dateString = date.toISOString().split('T')[0];
+        // Format date as YYYY-MM-DD using local timezone to avoid UTC conversion issues
+        const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
         
         return events.filter(event => {
+            // Handle weekly recurring events
             if (event.type === 'weekly' && event.days.includes(dayOfWeek)) {
+                // Check if date falls within an exclusion period
+                if (event.excludePeriod) {
+                    const [excludeStartYear, excludeStartMonth, excludeStartDay] = event.excludePeriod.startDate.split('-').map(Number);
+                    const [excludeEndYear, excludeEndMonth, excludeEndDay] = event.excludePeriod.endDate.split('-').map(Number);
+                    const excludeStartDate = new Date(excludeStartYear, excludeStartMonth - 1, excludeStartDay);
+                    const excludeEndDate = new Date(excludeEndYear, excludeEndMonth - 1, excludeEndDay);
+                    const currentDateObj = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+                    
+                    // Skip if within exclusion period
+                    if (currentDateObj >= excludeStartDate && currentDateObj <= excludeEndDate) {
+                        return false;
+                    }
+                }
                 return true;
             }
-            if (event.date === dateString) {
+            // Handle single date events
+            if (event.type === 'single' && event.date === dateString) {
                 return true;
+            }
+            // Handle date range events
+            if (event.type === 'range' && event.date && event.endDate) {
+                // Parse dates as local dates (YYYY-MM-DD format)
+                const [startYear, startMonth, startDay] = event.date.split('-').map(Number);
+                const [endYear, endMonth, endDay] = event.endDate.split('-').map(Number);
+                const startDate = new Date(startYear, startMonth - 1, startDay);
+                const endDate = new Date(endYear, endMonth - 1, endDay);
+                const currentDateObj = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+                
+                // Check if date is within range (comparing dates only, not time)
+                if (currentDateObj >= startDate && currentDateObj <= endDate) {
+                    // Check if day of week is not excluded
+                    if (!event.excludedDays || !event.excludedDays.includes(dayOfWeek)) {
+                        // Check if specific date is not excluded
+                        if (!event.excludedDates || !event.excludedDates.includes(dateString)) {
+                            return true;
+                        }
+                    }
+                }
             }
             return false;
         });
@@ -225,7 +282,9 @@ export default function Calendar() {
                                 getEventsForDate(selectedDate).map((event, index) => (
                                     <div key={index} className="event-item">
                                         <div className="event-header">
-                                            <div className="event-time">{event.time}</div>
+                                            <div className="event-time">
+                                                {event.endTime ? `${event.time} - ${event.endTime}` : event.time}
+                                            </div>
                                             <div 
                                                 className="event-category"
                                                 style={{ backgroundColor: getCategoryColor(event.category) }}

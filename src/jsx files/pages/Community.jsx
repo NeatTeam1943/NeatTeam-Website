@@ -76,16 +76,12 @@ export default function Community() {
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Mosaic Community Center</span>
-                                        </div>
-                                        <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
                                             <span className="info-value">Every Tuesday, 4:00 PM</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Sarah, David, Maya</span>
+                                            <span className="info-value">Or, David, Liat, Mayan, Noam, Ido</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -114,16 +110,12 @@ export default function Community() {
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Beit Afek Hostel</span>
-                                        </div>
-                                        <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
                                             <span className="info-value">Every Wednesday, 3:30 PM</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Alex, Rachel, Daniel</span>
+                                            <span className="info-value">Orian, Itay, Harel, Yahely, Maya, Ofri</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -150,16 +142,12 @@ export default function Community() {
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Community Center</span>
-                                        </div>
-                                        <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
                                             <span className="info-value">Every Thursday, 2:00 PM</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Tomer, Itai, Yarom</span>
+                                            <span className="info-value">Itai Bashari, Itai Ranan, Yarom, Noam</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -195,16 +183,12 @@ export default function Community() {
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Our Workshop</span>
-                                        </div>
-                                        <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
                                             <span className="info-value">Every Sunday, 5:00 PM</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Ethan, Sophia, Liam</span>
+                                            <span className="info-value">Gil, Yahel, Inon, Shai, Or</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -227,14 +211,13 @@ export default function Community() {
 
                             <div className="org-card">
                                 <div className="org-header">
-                                    <h3>Yitzhak Navon Elementary School</h3>
+                                    <h3>Eshkol Elementary School</h3>
                                     <span className="org-icon">🏫</span>
                                 </div>
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Yitzhak Navon School</span>
+
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
@@ -242,7 +225,7 @@ export default function Community() {
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Emma, Noah, Ava</span>
+                                            <span className="info-value">Atalya, Tomer, Almog, Alon, Yam</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -284,11 +267,11 @@ export default function Community() {
 
                 {activeTab === 'magazine' && (
                     <div className="magazine-section">
-                        <h2>Annual Magazine - "The Name"</h2>
+                        <h2>Annual Magazine - "First Steps"</h2>
                         <div className="magazine-content">
                             <p>
                                 Together with the Cypher robotics team, 4661 and the Falcons robotics team, 4338, 
-                                we established our annual magazine - "The Name"
+                                we established our annual magazine - "First Steps"
                             </p>
                             <p>
                                 Our magazine focuses on various STEM topics and is specifically designed for elementary school students 
@@ -333,7 +316,7 @@ export default function Community() {
                             </div>
                             <div className="peak-activity">
                                 <span className="activity-icon">🕯️</span>
-                                <span className="activity-name">Memory in the Living Room</span>
+                                <span className="activity-name">Zikaron BaSalon</span>
                             </div>
                         </div>
                     </div>

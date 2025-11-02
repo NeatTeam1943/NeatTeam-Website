@@ -30,13 +30,24 @@ export default function Posts() {
     ];
 
     const posts = [
+        // how its suppose to look
+        // {
+        //     id: 1,
+        //     title: 'District 3',
+        //     text: 'Cool cool cool cool cool cool cool cool no doubt no doubt no doubt no doubt no doubt no',
+        //     date: 'March 9 - 10, 2025',
+        //     image: '/NeatTeam/GroupPhoto.jpeg',
+        // },
+
         {
             id: 1,
-            title: 'District 3',
-            text: 'Cool cool cool cool cool cool cool cool no doubt no doubt no doubt no doubt no doubt no',
-            date: 'March 9 - 10, 2025',
-            image: '/NeatTeam/GroupPhoto.jpeg',
+            title: 'Mosaic Meeting',
+            text: 'At Eshel Elementary School, we visit once a week and present our magazine, “First Steps,” to the 5th-grade students.\n' +
+                'The goal of this volunteer activity is to raise awareness of STEM fields among younger students and inspire the next generation to explore science and technology.',
+            date: 'October 28, 2025',
+            image: '/Volunteering/2025 october 28.jpeg',
         },
+
     ];
 
     // Handler functions for modal actions
@@ -173,13 +184,15 @@ export default function Posts() {
                         <div className="post-card" key={post.id} onClick={() => setExpandedPost(post)}>
                             <div className="post-image-container">
                                 <img 
-                                    src={post.image} 
+                                    src={encodeURI(post.image)} 
                                     alt={post.title}
                                     className="post-image"
                                     onError={(e) => {
+                                        console.error('Image failed to load:', post.image);
                                         e.target.style.display = 'none';
                                         e.target.nextSibling.style.display = 'flex';
                                     }}
+                                    onLoad={() => console.log('Image loaded successfully:', post.image)}
                                 />
                                 <div className="post-image-fallback">
                                     <div className="fallback-icon">📸</div>
@@ -272,13 +285,15 @@ export default function Posts() {
 
                         <div className="modal-image-section">
                             <img 
-                                src={expandedPost.image} 
+                                src={encodeURI(expandedPost.image)} 
                                 alt={expandedPost.title}
                                 className="modal-image"
                                 onError={(e) => {
+                                    console.error('Modal image failed to load:', expandedPost.image);
                                     e.target.style.display = 'none';
                                     e.target.nextSibling.style.display = 'flex';
                                 }}
+                                onLoad={() => console.log('Modal image loaded successfully:', expandedPost.image)}
                             />
                             <div className="modal-image-fallback">
                                 <div className="fallback-icon-large">📸</div>
