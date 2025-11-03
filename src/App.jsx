@@ -31,7 +31,7 @@ function App() {
         <Router>
             <Layout>
                 <Routes>
-                    <Route path="/" element={<Landing />} />
+                    <Route path="/base" element={<Landing />} />
                     <Route path="/robot/koren2025" element={<Koren2025 />} />
                     <Route path='/robot/melody2024' element={<Melody2024 />} />
                     <Route path='/robot/freddy2023' element={<Freddy2023 />} />
@@ -53,7 +53,7 @@ function App() {
                     <Route path="/community" element={<Community />} />
                     <Route path="/sponsor-us" element={<SponsorUs />} />
                     <Route path="/contact-us" element={<ContactUs />} />
-                    <Route path="*" element={<NotFound />} />
+                    {/*<Route path="" element={<NotFound />} />*/}
                 </Routes>
             </Layout>
         </Router>
