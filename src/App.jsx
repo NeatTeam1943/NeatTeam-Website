@@ -31,7 +31,9 @@ function App() {
         <Router>
             <Layout>
                 <Routes>
-                    <Route path="/base" element={<Landing />} />
+                    <title>NeatTeam #1943</title>
+
+                    <Route path="/" element={<Landing />} />
                     <Route path="/robot/koren2025" element={<Koren2025 />} />
                     <Route path='/robot/melody2024' element={<Melody2024 />} />
                     <Route path='/robot/freddy2023' element={<Freddy2023 />} />

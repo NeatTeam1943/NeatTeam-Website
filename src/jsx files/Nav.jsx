@@ -52,7 +52,7 @@ export default function Nav() {
     return (
         <>
             <section className="navbar">
-                <Link to="/base" className="logo">
+                <Link to="/" className="logo">
                     <img src={BASE_URL + `NeatTeam/NeatTeam-Banner.png`} alt="NEATTEAM Logo" />
                 </Link>
 
