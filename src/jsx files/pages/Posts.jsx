@@ -35,7 +35,7 @@ export default function Posts() {
         // {
         //     id: 1,
         //     title: 'District 3',
-        //     text:
+        //     text: 'Cool cool cool cool cool cool cool cool no doubt no doubt no doubt no doubt no doubt no',
         //     date: 'March 9 - 10, 2025',
         //     image: '/NeatTeam/GroupPhoto.jpeg',
         // },
@@ -46,7 +46,7 @@ export default function Posts() {
             text: 'At Eshel Elementary School, we visit once a week and present our magazine, “First Steps,” to the 5th-grade students.\n' +
                 'The goal of this volunteer activity is to raise awareness of STEM fields among younger students and inspire the next generation to explore science and technology.',
             date: 'October 28, 2025',
-            image: BASE_URL + 'Volunteering/2025 october 28.jpeg',
+            image: 'Volunteering/2025 october 28.jpeg',
         },
 
     ];
@@ -286,7 +286,7 @@ export default function Posts() {
 
                         <div className="modal-image-section">
                             <img 
-                                src={encodeURI(expandedPost.image)} 
+                                src={BASE_URL + encodeURI(expandedPost.image)}
                                 alt={expandedPost.title}
                                 className="modal-image"
                                 onError={(e) => {
