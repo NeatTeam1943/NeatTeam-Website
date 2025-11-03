@@ -185,7 +185,7 @@ export default function Posts() {
                         <div className="post-card" key={post.id} onClick={() => setExpandedPost(post)}>
                             <div className="post-image-container">
                                 <img 
-                                    src={encodeURI(post.image)} 
+                                    src={BASE_URL + encodeURI(post.image)} 
                                     alt={post.title}
                                     className="post-image"
                                     onError={(e) => {
