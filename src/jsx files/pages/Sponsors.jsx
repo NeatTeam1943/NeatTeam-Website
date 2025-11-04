@@ -34,7 +34,7 @@ export default function Sponsors() {
                     ))}
                 </div>
 
-                <button className="button-decoration" onClick={() => navigate('/NeatTeam-Website/sponsor-us')}>
+                <button className="button-decoration" onClick={() => navigate('/sponsor-us')}>
                     Donate and become a sponsor
                 </button>
             </div>

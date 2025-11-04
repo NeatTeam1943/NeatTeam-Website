@@ -14,7 +14,6 @@ export default function Posts() {
     const [editingTags, setEditingTags] = useState(null);
     const [newTagInput, setNewTagInput] = useState('');
     const postsPerPage = 6;
-    const BASE_URL = import.meta.env.BASE_URL;
 
     const events = [
         {
@@ -214,7 +213,7 @@ export default function Posts() {
                     <h4>Upcoming Events</h4>
                     <ul>
                         {events.map((event) => (
-                            <li key={event.id} onClick={() => navigate(BASE_URL + 'calendar')} className="event-item">
+                            <li key={event.id} onClick={() => navigate('/calendar')} className="event-item">
                                 <div className="event-header">
                                     <strong>{event.date}</strong>
                                     <span className="event-time">{event.time}</span>
@@ -224,7 +223,7 @@ export default function Posts() {
                             </li>
                         ))}
                     </ul>
-                    <button onClick={() => navigate(BASE_URL + 'calendar')}>
+                    <button onClick={() => navigate('/calendar')}>
                         View Full Calendar
                     </button>
                 </div>
@@ -245,18 +244,23 @@ export default function Posts() {
                     {currentPosts.map(post => (
                         <div className="post-card" key={post.id} onClick={() => setExpandedPost(post)}>
                             <div className="post-image-container">
-                                <img 
-                                    src={BASE_URL + encodeURI(post.image)} 
-                                    alt={post.title}
-                                    className="post-image"
-                                    onError={(e) => {
-                                        console.error('Image failed to load:', post.image);
-                                        e.target.style.display = 'none';
-                                        e.target.nextSibling.style.display = 'flex';
-                                    }}
-                                    onLoad={() => console.log('Image loaded successfully:', post.image)}
-                                />
-                                <div className="post-image-fallback">
+                                {post.image && (
+                                    <img 
+                                        src={encodeURI(post.image)} 
+                                        alt={post.title}
+                                        className="post-image"
+                                        onError={(e) => {
+                                            console.error('Image failed to load:', post.image);
+                                            e.target.style.display = 'none';
+                                            const fallback = e.target.nextElementSibling;
+                                            if (fallback) {
+                                                fallback.style.display = 'flex';
+                                            }
+                                        }}
+                                        onLoad={() => console.log('Image loaded successfully:', post.image)}
+                                    />
+                                )}
+                                <div className="post-image-fallback" style={{ display: post.image ? 'none' : 'flex' }}>
                                     <div className="fallback-icon">📸</div>
                                     <span>Team Photo</span>
                                 </div>
@@ -348,7 +352,7 @@ export default function Posts() {
 
                         <div className="modal-image-section">
                             <img 
-                                src={BASE_URL + encodeURI(expandedPost.image)}
+                                src={encodeURI(expandedPost.image)}
                                 alt={expandedPost.title}
                                 className="modal-image"
                                 onError={(e) => {

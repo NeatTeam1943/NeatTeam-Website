@@ -15,7 +15,7 @@ export default function Landing() {
                         </div>
                         <h2 className="title-underline subtitle">FIRST Robotics Competition Team 1943</h2>
                         <p>We are NeatTeam, Begin High School's award-winning FIRST Robotics team. We seek to impact young adults by cultivating skills in engineering, programming, and business through FIRST.</p>
-                        <Link to="/NeatTeam-Website/about/team" className="button-decoration">Discover More</Link>
+                        <Link to="/about/team" className="button-decoration">Discover More</Link>
                     </div>
 
                     <div className="image">
@@ -33,7 +33,7 @@ export default function Landing() {
                         <div className="robot-description">
                             This is Koren, our 2025 Robot. He was named after the fallen soldier Koren Bitan.
                         </div>
-                        <Link to="/NeatTeam-Website/robot/koren2025" className="button-decoration">Past Competition Robots</Link>
+                        <Link to="/robot/koren2025" className="button-decoration">Past Competition Robots</Link>
                     </div>
                 </section>
 
@@ -97,7 +97,7 @@ export default function Landing() {
                     <div className="cta-content">
                         <h3>Join Our Sponsors</h3>
                         <p>Support the next generation of engineers and innovators</p>
-                        <Link to="/NeatTeam-Website/sponsor-us" className="button-decoration">Become a Sponsor</Link>
+                        <Link to="/sponsor-us" className="button-decoration">Become a Sponsor</Link>
                     </div>
                 </div>
             </section>
