@@ -225,3 +225,42 @@
         max-width: 1400px;
     }
 }
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+    .sponsors-page {
+        padding: 5rem 1rem 3rem 1rem;
+    }
+
+    .sponsors-page h1 {
+        font-size: 2rem;
+    }
+
+    .sponsors-page h3 {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .sponsor-grid {
+        gap: 1rem;
+    }
+
+    .sponsor-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .sponsor-card img {
+        max-height: 60px;
+        margin-bottom: 0.75rem;
+    }
+
+    .sponsor-card p {
+        font-size: 0.95rem;
+    }
+
+    .sponsors-page .button-decoration {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.75rem 1.5rem;
+    }
+}

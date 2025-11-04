@@ -109,12 +109,15 @@ export default function Nav() {
                     <Link to="/contact-us">Contact Us</Link>
                 </nav>
 
-                {/* Mobile Menu Button */}
+                {/* Mobile Menu Button - Top Right */}
                 <button
                     className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`}
                     onClick={toggleMobileMenu}
                     aria-label="Toggle mobile menu"
                 >
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </section>
 

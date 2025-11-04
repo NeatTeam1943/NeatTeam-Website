@@ -603,3 +603,74 @@
     max-width: 1600px;
   }
 }
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+  .homepage_container {
+    padding: 0 0.75rem;
+  }
+
+  .section-with-img {
+    padding: 4rem 0.75rem 3rem 0.75rem;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .section-with-img#robot {
+    padding: 3rem 0.75rem;
+    border-radius: 20px;
+    margin: 1.5rem 0;
+  }
+
+  .logo-wrapper img {
+    max-width: 250px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .text p {
+    font-size: 0.95rem;
+  }
+
+  .robot-name {
+    font-size: 2rem;
+  }
+
+  .robot-title {
+    font-size: 1.25rem;
+  }
+
+  .robot-description {
+    font-size: 0.95rem;
+  }
+
+  .sponsor-section {
+    padding: 3rem 0.75rem;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .sponsor-section h2 {
+    font-size: 2rem;
+  }
+
+  .sponsor-header p {
+    font-size: 1rem;
+  }
+
+  .sponsor-item {
+    min-width: 100px;
+    padding: 0.5rem;
+  }
+
+  .sponsor-item img {
+    height: 40px;
+  }
+
+  .button-decoration {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}

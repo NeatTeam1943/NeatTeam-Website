@@ -21,7 +21,14 @@ body {
     color: #1a1a1a;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
 }
 
 #root {
@@ -33,6 +40,18 @@ main {
     padding-top: 100px;
     /* Account for fixed navbar height */
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding-top: 70px;
+    }
 }
 
 /* App container */
@@ -255,6 +274,37 @@ p {
     .button-decoration {
         padding: 0.75rem 1.25rem;
         font-size: 0.95rem;
+        min-height: 44px; /* Better touch target */
+    }
+}
+
+/* Mobile Image Optimization */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Better Touch Targets for Mobile */
+@media (max-width: 768px) {
+    button,
+    a.button-decoration,
+    .nav-button {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Prevent Horizontal Scrolling */
+@media (max-width: 768px) {
+    * {
+        max-width: 100%;
+    }
+    
+    .app {
+        overflow-x: hidden;
     }
 }
 
