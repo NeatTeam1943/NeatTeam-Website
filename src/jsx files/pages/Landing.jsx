@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 export default function Landing() {
     const BASE_URL = import.meta.env.BASE_URL;
+
     return (
         <div className="homepage">
             <div className="homepage_container">

@@ -9,6 +9,8 @@ export default function Nav() {
     const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
     const [teamNewsDropdownOpen, setTeamNewsDropdownOpen] = useState(false);
     const [mobileTeamNewsDropdownOpen, setMobileTeamNewsDropdownOpen] = useState(false);
+    const BASE_URL = import.meta.env.BASE_URL;
+
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
