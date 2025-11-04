@@ -9,7 +9,7 @@ import NotFound from './jsx files/pages/NotFound.jsx';
 import Calendar from './jsx files/pages/Calendar.jsx';
 import Posts from './jsx files/pages/Posts.jsx';
 import Sponsors from './jsx files/pages/Sponsors.jsx';
-import Koren2025 from './jsx files/pages/Robots/koren2025.jsx';
+import Koren2025 from './jsx files/pages/Robots/Koren2025.jsx';
 import Melody2024 from './jsx files/pages/Robots/Melody2024.jsx';
 import Freddy2023 from './jsx files/pages/Robots/Freddy2023.jsx'
 import Sagi2022 from './jsx files/pages/Robots/Sagi2022.jsx';
