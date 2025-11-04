@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
 export default function Nav() {
+    const BASE_URL = import.meta.env.BASE_URL;
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
     const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
@@ -52,8 +53,8 @@ export default function Nav() {
     return (
         <>
             <section className="navbar">
-                <Link to="/" className="logo">
-                    <img src={BASE_URL + `NeatTeam/NeatTeam-Banner.png`} alt="NEATTEAM Logo" />
+                <Link to={BASE_URL} className="logo">
+                    <img src={BASE_URL + "/NeatTeam/NeatTeam-Banner.png"} alt="NEATTEAM Logo" />
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -71,15 +72,15 @@ export default function Nav() {
                             </span>
                         </button>
                         <div className={`dropdown-content ${desktopDropdownOpen ? 'open' : ''}`}>
-                            <Link to="/about/team" onClick={closeDesktopDropdown} className="dropdown-item">
+                            <Link to={BASE_URL + "about/team"} onClick={closeDesktopDropdown} className="dropdown-item">
                                 <span className="dropdown-item-title">About the Team</span>
                             </Link>
-                            <Link to="/about/first" onClick={closeDesktopDropdown} className="dropdown-item">
+                            <Link to={BASE_URL + "about/first"} onClick={closeDesktopDropdown} className="dropdown-item">
                                 <span className="dropdown-item-title">About FIRST</span>
                             </Link>
                         </div>
                     </div>
-                    <Link to="/robot/koren2025">Robot</Link>
+                    <Link to={BASE_URL + "robot/koren2025"}>Robot</Link>
                     <div className="dropdown" onMouseLeave={closeTeamNewsDropdown}>
                         <button
                             className="nav-link like-link dropdown-trigger"
@@ -93,20 +94,20 @@ export default function Nav() {
                             </span>
                         </button>
                         <div className={`dropdown-content ${teamNewsDropdownOpen ? 'open' : ''}`}>
-                            <Link to="/posts" onClick={closeTeamNewsDropdown} className="dropdown-item">
+                            <Link to={BASE_URL + "posts"} onClick={closeTeamNewsDropdown} className="dropdown-item">
                                 <span className="dropdown-item-title">Posts</span>
                             </Link>
-                            <Link to="/calendar" onClick={closeTeamNewsDropdown} className="dropdown-item">
+                            <Link to={BASE_URL + "calendar"} onClick={closeTeamNewsDropdown} className="dropdown-item">
                                 <span className="dropdown-item-title">Calendar</span>
                             </Link>
-                            <Link to="/community" onClick={closeTeamNewsDropdown} className="dropdown-item">
+                            <Link to={BASE_URL + "community"} onClick={closeTeamNewsDropdown} className="dropdown-item">
                                 <span className="dropdown-item-title">Our Community</span>
                             </Link>
                         </div>
                     </div>
-                    <Link to="/sponsors">Sponsors</Link>
-                    <Link to="/sponsor-us">Sponsor Us</Link>
-                    <Link to="/contact-us">Contact Us</Link>
+                    <Link to={BASE_URL + "sponsors"}>Sponsors</Link>
+                    <Link to={BASE_URL + "sponsor-us"}>Sponsor Us</Link>
+                    <Link to={BASE_URL + "contact-us"}>Contact Us</Link>
                 </nav>
 
                 {/* Mobile Menu Button */}
@@ -115,9 +116,6 @@ export default function Nav() {
                     onClick={toggleMobileMenu}
                     aria-label="Toggle mobile menu"
                 >
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </button>
             </section>
 
@@ -136,15 +134,15 @@ export default function Nav() {
                         </span>
                     </button>
                     <div className={`mobile-dropdown-content ${mobileDropdownOpen ? 'open' : ''}`}>
-                        <Link to="/about/team" onClick={closeMobileMenu} className="mobile-dropdown-item">
+                        <Link to={BASE_URL + "about/team"} onClick={closeMobileMenu} className="mobile-dropdown-item">
                             <span className="mobile-dropdown-item-title">About the Team</span>
                         </Link>
-                        <Link to="/about/first" onClick={closeMobileMenu} className="mobile-dropdown-item">
+                        <Link to={BASE_URL + "about/first"} onClick={closeMobileMenu} className="mobile-dropdown-item">
                             <span className="mobile-dropdown-item-title">About FIRST</span>
                         </Link>
                     </div>
                 </div>
-                <Link to="/robot/koren2025" onClick={closeMobileMenu}>Robots</Link>
+                <Link to={BASE_URL + "robot/koren2025"} onClick={closeMobileMenu}>Robots</Link>
                 <div className="mobile-dropdown">
                     <button
                         className="mobile-dropdown-trigger"
@@ -158,20 +156,20 @@ export default function Nav() {
                         </span>
                     </button>
                     <div className={`mobile-dropdown-content ${mobileTeamNewsDropdownOpen ? 'open' : ''}`}>
-                        <Link to="/posts" onClick={closeMobileMenu} className="mobile-dropdown-item">
+                        <Link to={BASE_URL + "posts"} onClick={closeMobileMenu} className="mobile-dropdown-item">
                             <span className="mobile-dropdown-item-title">Posts</span>
                         </Link>
-                        <Link to="/calendar" onClick={closeMobileMenu} className="mobile-dropdown-item">
+                        <Link to={BASE_URL + "calendar"} onClick={closeMobileMenu} className="mobile-dropdown-item">
                             <span className="mobile-dropdown-item-title">Calendar</span>
                         </Link>
-                        <Link to="/our-community" onClick={closeMobileMenu} className="mobile-dropdown-item">
+                        <Link to={BASE_URL + "community"} onClick={closeMobileMenu} className="mobile-dropdown-item">
                             <span className="mobile-dropdown-item-title">Our Community</span>
                         </Link>
                     </div>
                 </div>
-                <Link to="/sponsors" onClick={closeMobileMenu}>Sponsors</Link>
-                <Link to="/sponsor-us" onClick={closeMobileMenu}>Sponsor Us</Link>
-                <Link to="/contact-us" onClick={closeMobileMenu}>Contact Us</Link>
+                <Link to={BASE_URL + "sponsors"} onClick={closeMobileMenu}>Sponsors</Link>
+                <Link to={BASE_URL + "sponsor-us"} onClick={closeMobileMenu}>Sponsor Us</Link>
+                <Link to={BASE_URL + "contact-us"} onClick={closeMobileMenu}>Contact Us</Link>
             </div>
         </>
     );

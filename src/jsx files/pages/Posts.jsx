@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css files/pages/Posts.css';
 import { useNavigate } from 'react-router-dom';
 
 export default function Posts() {
     const navigate = useNavigate();
+    const BASE_URL = import.meta.env.BASE_URL;
     const [expandedPost, setExpandedPost] = useState(null);
     const [savedPosts, setSavedPosts] = useState([]);
     const [showNotification, setShowNotification] = useState(false);
     const [notificationMessage, setNotificationMessage] = useState('');
     const [notificationType, setNotificationType] = useState('success');
     const [currentPage, setCurrentPage] = useState(1);
+    const [editingTags, setEditingTags] = useState(null);
+    const [newTagInput, setNewTagInput] = useState('');
     const postsPerPage = 6;
     const BASE_URL = import.meta.env.BASE_URL;
 
@@ -30,7 +33,7 @@ export default function Posts() {
         }
     ];
 
-    const posts = [
+    const [posts, setPosts] = useState([
         // how its suppose to look
         // {
         //     id: 1,
@@ -38,18 +41,20 @@ export default function Posts() {
         //     text: 'Cool cool cool cool cool cool cool cool no doubt no doubt no doubt no doubt no doubt no',
         //     date: 'March 9 - 10, 2025',
         //     image: '/NeatTeam/GroupPhoto.jpeg',
+        //     tags: ['Competition', 'Robotics'],
         // },
 
         {
             id: 1,
             title: 'Mosaic Meeting',
-            text: 'At Eshel Elementary School, we visit once a week and present our magazine, “First Steps,” to the 5th-grade students.\n' +
+            text: 'At Eshel Elementary School, we visit once a week and present our magazine, "First Steps," to the 5th-grade students.\n' +
                 'The goal of this volunteer activity is to raise awareness of STEM fields among younger students and inspire the next generation to explore science and technology.',
             date: 'October 28, 2025',
-            image: 'Volunteering/2025 october 28.jpeg',
+            image: BASE_URL + '/Volunteering/2025 october 28.jpeg',
+            tags: ['Team', 'Robotics', 'Volunteering'],
         },
 
-    ];
+    ]);
 
     // Handler functions for modal actions
     const handleSavePost = (post) => {
@@ -128,6 +133,62 @@ export default function Posts() {
         return savedPosts.find(saved => saved.id === post.id) !== undefined;
     };
 
+    // Tag editing functions
+    const handleAddTag = (postId, tag) => {
+        if (!tag.trim()) return;
+        const trimmedTag = tag.trim();
+        setPosts(posts.map(post => {
+            if (post.id === postId) {
+                const updatedTags = post.tags || [];
+                if (!updatedTags.includes(trimmedTag)) {
+                    return { ...post, tags: [...updatedTags, trimmedTag] };
+                }
+            }
+            return post;
+        }));
+        setNewTagInput('');
+        showNotificationMessage('Tag added successfully!', 'success');
+    };
+
+    const handleRemoveTag = (postId, tagToRemove) => {
+        setPosts(posts.map(post => {
+            if (post.id === postId) {
+                return { ...post, tags: (post.tags || []).filter(tag => tag !== tagToRemove) };
+            }
+            return post;
+        }));
+        showNotificationMessage('Tag removed successfully!', 'info');
+    };
+
+    const handleStartEditingTags = (postId) => {
+        setEditingTags(postId);
+        setNewTagInput('');
+    };
+
+    const handleStopEditingTags = () => {
+        setEditingTags(null);
+        setNewTagInput('');
+    };
+
+    const handleTagInputKeyPress = (e, postId) => {
+        if (e.key === 'Enter' && newTagInput.trim()) {
+            handleAddTag(postId, newTagInput);
+        } else if (e.key === 'Escape') {
+            handleStopEditingTags();
+        }
+    };
+
+    // Sync expandedPost with posts state when posts change
+    useEffect(() => {
+        if (expandedPost) {
+            const updatedPost = posts.find(p => p.id === expandedPost.id);
+            if (updatedPost && JSON.stringify(updatedPost) !== JSON.stringify(expandedPost)) {
+                setExpandedPost(updatedPost);
+            }
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [posts]);
+
     // Pagination logic
     const totalPages = Math.ceil(posts.length / postsPerPage);
     const startIndex = (currentPage - 1) * postsPerPage;
@@ -153,7 +214,7 @@ export default function Posts() {
                     <h4>Upcoming Events</h4>
                     <ul>
                         {events.map((event) => (
-                            <li key={event.id} onClick={() => navigate('/calendar')} className="event-item">
+                            <li key={event.id} onClick={() => navigate(BASE_URL + 'calendar')} className="event-item">
                                 <div className="event-header">
                                     <strong>{event.date}</strong>
                                     <span className="event-time">{event.time}</span>
@@ -163,7 +224,7 @@ export default function Posts() {
                             </li>
                         ))}
                     </ul>
-                    <button onClick={() => navigate('/calendar')}>
+                    <button onClick={() => navigate(BASE_URL + 'calendar')}>
                         View Full Calendar
                     </button>
                 </div>
@@ -228,8 +289,9 @@ export default function Posts() {
                                 
                                 <div className="post-footer">
                                     <div className="post-tags">
-                                        <span className="tag">Team</span>
-                                        <span className="tag">Robotics</span>
+                                        {(post.tags || []).map((tag, index) => (
+                                            <span key={index} className="tag">{tag}</span>
+                                        ))}
                                     </div>
                                     <div className="post-read-time">3 min read</div>
                                 </div>
@@ -331,6 +393,63 @@ export default function Posts() {
                             
                             <div className="modal-text">
                                 <p>{expandedPost.text}</p>
+                            </div>
+
+                            <div className="modal-tags-section">
+                                <div className="modal-tags-header">
+                                    <h4>Tags</h4>
+                                    {editingTags === expandedPost.id ? (
+                                        <button 
+                                            className="tag-edit-btn"
+                                            onClick={() => handleStopEditingTags()}
+                                        >
+                                            Done
+                                        </button>
+                                    ) : (
+                                        <button 
+                                            className="tag-edit-btn"
+                                            onClick={() => handleStartEditingTags(expandedPost.id)}
+                                        >
+                                            Edit Tags
+                                        </button>
+                                    )}
+                                </div>
+                                <div className="modal-tags-container">
+                                    {(expandedPost.tags || []).map((tag, index) => (
+                                        <span key={index} className="modal-tag">
+                                            {tag}
+                                            {editingTags === expandedPost.id && (
+                                                <button 
+                                                    className="tag-remove-btn"
+                                                    onClick={() => handleRemoveTag(expandedPost.id, tag)}
+                                                    title="Remove tag"
+                                                >
+                                                    ×
+                                                </button>
+                                            )}
+                                        </span>
+                                    ))}
+                                    {editingTags === expandedPost.id && (
+                                        <div className="tag-input-container">
+                                            <input
+                                                type="text"
+                                                className="tag-input"
+                                                placeholder="Add new tag..."
+                                                value={newTagInput}
+                                                onChange={(e) => setNewTagInput(e.target.value)}
+                                                onKeyDown={(e) => handleTagInputKeyPress(e, expandedPost.id)}
+                                                autoFocus
+                                            />
+                                            <button 
+                                                className="tag-add-btn"
+                                                onClick={() => handleAddTag(expandedPost.id, newTagInput)}
+                                                disabled={!newTagInput.trim()}
+                                            >
+                                                Add
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
 
                             <div className="modal-footer">

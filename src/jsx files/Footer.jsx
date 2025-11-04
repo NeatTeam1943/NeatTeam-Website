@@ -26,10 +26,10 @@ export default function Footer() {
                     <h4>Quick Links</h4>
       
                     <div className={"links"}>
-                        <a href="/about/team">About</a>
-                        <a href="/robot/koren2025">Our Robots</a>
-                        <a href="/sponsors">Sponsors</a>
-                        <a href="/community">Our Community</a>
+                        <a href="/NeatTeam-Website/about/team">About</a>
+                        <a href="/NeatTeam-Website/robot/koren2025">Our Robots</a>
+                        <a href="/NeatTeam-Website/sponsors">Sponsors</a>
+                        <a href="/NeatTeam-Website/community">Our Community</a>
                     </div>
                 </div>
 

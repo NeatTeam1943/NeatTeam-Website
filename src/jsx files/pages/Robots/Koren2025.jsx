@@ -7,6 +7,7 @@ import "../../../css files/Robot.css"
 
 
 export default function Koren2025() {
+    const BASE_URL = import.meta.env.BASE_URL;
     return (
         <div className="robot-page">
             <RobotNav />
@@ -38,7 +39,7 @@ export default function Koren2025() {
                     </section>
                     <section className='robot-image'>
                         <h1>2025 Group and Robot (Koren)</h1>
-                        <img src="/NeatTeam/GroupPhoto.jpeg" alt="2025 Group and Robot (Koren)" />
+                        <img src={BASE_URL + "/NeatTeam/GroupPhoto.jpeg"} alt="2025 Group and Robot (Koren)" />
                     </section>
 
                     <section className="robot-timeline">
