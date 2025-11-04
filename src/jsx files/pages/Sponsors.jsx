@@ -7,7 +7,7 @@ export default function Sponsors() {
     const BASE_URL = import.meta.env.BASE_URL;
 
     const sponsors = [
-        { id: 1, name: "Rosh Haayin", logo: BASE_URL + 'Sponsors/ROSH-HAAIN-LOGO.png' },
+        { id: 1, name: "Rosh Haayin", logo: BASE_URL + '/Sponsors/ROSH-HAAIN-LOGO.png' },
         { id: 2, name: "Innoviz", logo: BASE_URL +  '/Sponsors/Innoviz-Logo.png' },
         { id: 3, name: "Begin High School", logo: BASE_URL +  '/Sponsors/logo-final-01-1.png' },
         { id: 4, name: "FIRST", logo: BASE_URL + '/Sponsors/FIRST-LOGO.png' },
