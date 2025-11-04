@@ -31,6 +31,7 @@ function App() {
         <Router basename="/NeatTeam-Website">
             <Layout>
                 <Routes>
+                    <title>NeatTeam #1943</title>
                     <Route path="/" element={<Landing />} />
                     <Route path="/robot/koren2025" element={<Koren2025 />} />
                     <Route path='/robot/melody2024' element={<Melody2024 />} />
