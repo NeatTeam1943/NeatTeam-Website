@@ -9,7 +9,7 @@ export default function SponsorUs() {
                 <h3>If you were impressed by our robots and our story we'll be happy if you will help us and sponsor us! Mail to neatteamrh1943@gmail.com to get mor details.</h3>
 
                 <h4>If you were impressed by our robots and our story and you want to help us but you aren't able to sponsor us u can contact us too:</h4>
-                <button className="button-decoration" onClick={() => window.location.href='/contact-us'}>Contact Us</button>
+                <button className="button-decoration" onClick={() => window.location.href='/NeatTeam-Website/contact-us'}>Contact Us</button>
             </div>
         </div>
     );

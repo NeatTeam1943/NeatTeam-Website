@@ -750,6 +750,146 @@
     margin: 0;
 }
 
+.modal-tags-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 64, 255, 0.1);
+}
+
+.modal-tags-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal-tags-header h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.tag-edit-btn {
+    background: linear-gradient(135deg, #0040FF 0%, #002FBD 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.tag-edit-btn:hover {
+    background: linear-gradient(135deg, #002FBD 0%, #001f8b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 64, 255, 0.3);
+}
+
+.modal-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.modal-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(0, 64, 255, 0.1), rgba(253, 78, 10, 0.1));
+    color: #0040FF;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 64, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.modal-tag:hover {
+    background: linear-gradient(135deg, rgba(0, 64, 255, 0.15), rgba(253, 78, 10, 0.15));
+    border-color: rgba(0, 64, 255, 0.3);
+}
+
+.tag-remove-btn {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    padding: 0;
+    margin-left: 0.25rem;
+}
+
+.tag-remove-btn:hover {
+    background: rgba(239, 68, 68, 0.3);
+    transform: scale(1.1);
+}
+
+.tag-input-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.tag-input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(0, 64, 255, 0.2);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1e293b;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.tag-input:focus {
+    outline: none;
+    border-color: #0040FF;
+    box-shadow: 0 0 0 3px rgba(0, 64, 255, 0.1);
+}
+
+.tag-add-btn {
+    background: linear-gradient(135deg, #0040FF 0%, #002FBD 100%);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tag-add-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #002FBD 0%, #001f8b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 64, 255, 0.3);
+}
+
+.tag-add-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .modal-footer {
     display: flex;
     justify-content: flex-end;

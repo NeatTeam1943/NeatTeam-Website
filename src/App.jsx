@@ -31,28 +31,28 @@ function App() {
         <Router>
             <Layout>
                 <Routes>
-                    <Route path="/" element={<Landing />} />
-                    <Route path="/robot/koren2025" element={<Koren2025 />} />
-                    <Route path='/robot/melody2024' element={<Melody2024 />} />
-                    <Route path='/robot/freddy2023' element={<Freddy2023 />} />
-                    <Route path='/robot/sagi2022' element={<Sagi2022 />} />
-                    <Route path='/robot/randall2021' element={<Randall2021 />} />
-                    <Route path='/robot/guido2020' element={<Guido2020 />} />
-                    <Route path='/robot/deoys2019' element={<Deoys2019 />} />
-                    <Route path='/robot/porygon2018' element={<Porygon2018 />} />
-                    <Route path='/robot/migraine2017' element={<Migraine2017 />} />
-                    <Route path='/robot/ra2016' element={<Ra2016 />} />
-                    <Route path='/robot/slifer2015' element={<Slifer20215 />} />
-                    <Route path='/robot/obelisk2014' element={<Obelisk2014 />} />
-                    <Route path='/robot/thebrick2012' element={<TheBrick2012 />} />
-                    <Route path="/about/team" element={<AboutTeam />} />
-                    <Route path="/about/first" element={<AboutFirst />} />
-                    <Route path="/calendar" element={<Calendar />} />
-                    <Route path="/posts" element={<Posts />} />
-                    <Route path="/sponsors" element={<Sponsors />} />
-                    <Route path="/community" element={<Community />} />
-                    <Route path="/sponsor-us" element={<SponsorUs />} />
-                    <Route path="/contact-us" element={<ContactUs />} />
+                    <Route path="/NeatTeam-Website/" element={<Landing />} />
+                    <Route path="/NeatTeam-Website/robot/koren2025" element={<Koren2025 />} />
+                    <Route path='/NeatTeam-Website/robot/melody2024' element={<Melody2024 />} />
+                    <Route path='/NeatTeam-Website/robot/freddy2023' element={<Freddy2023 />} />
+                    <Route path='/NeatTeam-Website/robot/sagi2022' element={<Sagi2022 />} />
+                    <Route path='/NeatTeam-Website/robot/randall2021' element={<Randall2021 />} />
+                    <Route path='/NeatTeam-Website/robot/guido2020' element={<Guido2020 />} />
+                    <Route path='/NeatTeam-Website/robot/deoys2019' element={<Deoys2019 />} />
+                    <Route path='/NeatTeam-Website/robot/porygon2018' element={<Porygon2018 />} />
+                    <Route path='/NeatTeam-Website/robot/migraine2017' element={<Migraine2017 />} />
+                    <Route path='/NeatTeam-Website/robot/ra2016' element={<Ra2016 />} />
+                    <Route path='/NeatTeam-Website/robot/slifer2015' element={<Slifer20215 />} />
+                    <Route path='/NeatTeam-Website/robot/obelisk2014' element={<Obelisk2014 />} />
+                    <Route path='/NeatTeam-Website/robot/thebrick2012' element={<TheBrick2012 />} />
+                    <Route path="/NeatTeam-Website/about/team" element={<AboutTeam />} />
+                    <Route path="/NeatTeam-Website/about/first" element={<AboutFirst />} />
+                    <Route path="/NeatTeam-Website/calendar" element={<Calendar />} />
+                    <Route path="/NeatTeam-Website/posts" element={<Posts />} />
+                    <Route path="/NeatTeam-Website/sponsors" element={<Sponsors />} />
+                    <Route path="/NeatTeam-Website/community" element={<Community />} />
+                    <Route path="/NeatTeam-Website/sponsor-us" element={<SponsorUs />} />
+                    <Route path="/NeatTeam-Website/contact-us" element={<ContactUs />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Layout>
