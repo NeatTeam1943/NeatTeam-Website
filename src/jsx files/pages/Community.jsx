@@ -298,26 +298,6 @@ export default function Community() {
                                 <span className="activity-icon">🏥</span>
                                 <span className="activity-name">Hospitals</span>
                             </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🎒</span>
-                                <span className="activity-name">Distributing Supplies to Soldiers</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🏖️</span>
-                                <span className="activity-name">Beach Cleanup</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">✈️</span>
-                                <span className="activity-name">Aerospace Industry</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🦽</span>
-                                <span className="activity-name">3D Printed Devices for People with Disabilities</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🕯️</span>
-                                <span className="activity-name">Zikaron BaSalon</span>
-                            </div>
                         </div>
                     </div>
                 )}

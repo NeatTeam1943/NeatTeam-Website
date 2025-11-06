@@ -9,6 +9,8 @@ export default function Nav() {
     const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
     const [teamNewsDropdownOpen, setTeamNewsDropdownOpen] = useState(false);
     const [mobileTeamNewsDropdownOpen, setMobileTeamNewsDropdownOpen] = useState(false);
+    const [sponsorsDropdownOpen, setSponsorsDropdownOpen] = useState(false);
+    const [mobileSponsorsDropdownOpen, setMobileSponsorsDropdownOpen] = useState(false);
 
 
     const toggleMobileMenu = () => {
@@ -16,6 +18,7 @@ export default function Nav() {
         if (mobileMenuOpen) {
             setMobileDropdownOpen(false);
             setMobileTeamNewsDropdownOpen(false);
+            setMobileSponsorsDropdownOpen(false);
         }
     };
 
@@ -31,6 +34,7 @@ export default function Nav() {
         setMobileMenuOpen(false);
         setMobileDropdownOpen(false);
         setMobileTeamNewsDropdownOpen(false);
+        setMobileSponsorsDropdownOpen(false);
     };
 
     const toggleDesktopDropdown = () => {
@@ -47,6 +51,18 @@ export default function Nav() {
 
     const closeTeamNewsDropdown = () => {
         setTeamNewsDropdownOpen(false);
+    };
+
+    const toggleSponsorsDropdown = () => {
+        setSponsorsDropdownOpen(!sponsorsDropdownOpen);
+    };
+
+    const closeSponsorsDropdown = () => {
+        setSponsorsDropdownOpen(false);
+    };
+
+    const toggleMobileSponsorsDropdown = () => {
+        setMobileSponsorsDropdownOpen(!mobileSponsorsDropdownOpen);
     };
 
     return (
@@ -79,7 +95,7 @@ export default function Nav() {
                             </Link>
                         </div>
                     </div>
-                    <Link to="/robot/koren2025">Robot</Link>
+                    <Link to="/robot/koren2025">Our Robots</Link>
                     <div className="dropdown" onMouseLeave={closeTeamNewsDropdown}>
                         <button
                             className="nav-link like-link dropdown-trigger"
@@ -99,13 +115,30 @@ export default function Nav() {
                             <Link to="/calendar" onClick={closeTeamNewsDropdown} className="dropdown-item">
                                 <span className="dropdown-item-title">Calendar</span>
                             </Link>
-                            <Link to="/community" onClick={closeTeamNewsDropdown} className="dropdown-item">
-                                <span className="dropdown-item-title">Our Community</span>
+                        </div>
+                    </div>
+                    <Link to="/community">Our Community</Link>
+                    <div className="dropdown" onMouseLeave={closeSponsorsDropdown}>
+                        <button
+                            className="nav-link like-link dropdown-trigger"
+                            onMouseEnter={() => setSponsorsDropdownOpen(true)}
+                        >
+                            Sponsors
+                            <span className={`dropdown-arrow ${sponsorsDropdownOpen ? 'open' : ''}`}>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div className={`dropdown-content ${sponsorsDropdownOpen ? 'open' : ''}`}>
+                            <Link to="/sponsors" onClick={closeSponsorsDropdown} className="dropdown-item">
+                                <span className="dropdown-item-title">Sponsors</span>
+                            </Link>
+                            <Link to="/sponsor-us" onClick={closeSponsorsDropdown} className="dropdown-item">
+                                <span className="dropdown-item-title">Sponsor Us</span>
                             </Link>
                         </div>
                     </div>
-                    <Link to="/sponsors">Sponsors</Link>
-                    <Link to="/sponsor-us">Sponsor Us</Link>
                     <Link to="/contact-us">Contact Us</Link>
                 </nav>
 
@@ -144,7 +177,7 @@ export default function Nav() {
                         </Link>
                     </div>
                 </div>
-                <Link to="/robot/koren2025" onClick={closeMobileMenu}>Robots</Link>
+                <Link to="/robot/koren2025" onClick={closeMobileMenu}>Our Robots</Link>
                 <div className="mobile-dropdown">
                     <button
                         className="mobile-dropdown-trigger"
@@ -169,8 +202,27 @@ export default function Nav() {
                         </Link>
                     </div>
                 </div>
-                <Link to="/sponsors" onClick={closeMobileMenu}>Sponsors</Link>
-                <Link to="/sponsor-us" onClick={closeMobileMenu}>Sponsor Us</Link>
+                <div className="mobile-dropdown">
+                    <button
+                        className="mobile-dropdown-trigger"
+                        onClick={toggleMobileSponsorsDropdown}
+                    >
+                        <span>Sponsors</span>
+                        <span className={`mobile-dropdown-arrow ${mobileSponsorsDropdownOpen ? 'open' : ''}`}>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div className={`mobile-dropdown-content ${mobileSponsorsDropdownOpen ? 'open' : ''}`}>
+                        <Link to="/sponsors" onClick={closeMobileMenu} className="mobile-dropdown-item">
+                            <span className="mobile-dropdown-item-title">Sponsors</span>
+                        </Link>
+                        <Link to="/sponsor-us" onClick={closeMobileMenu} className="mobile-dropdown-item">
+                            <span className="mobile-dropdown-item-title">Sponsor Us</span>
+                        </Link>
+                    </div>
+                </div>
                 <Link to="/contact-us" onClick={closeMobileMenu}>Contact Us</Link>
             </div>
         </>
