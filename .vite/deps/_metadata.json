@@ -2,33 +2,33 @@
   "hash": "46e7f733",
   "configHash": "d09fe491",
   "lockfileHash": "3964e18b",
-  "browserHash": "d27aa4ac",
+  "browserHash": "17b07ddf",
   "optimized": {
     "react": {
-      "src": "../../node_modules/react/index.js",
+      "src": "../../../NeatTeam-Website/node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "17208463",
+      "fileHash": "93d7c403",
       "needsInterop": true
     },
     "react-dom/client": {
-      "src": "../../node_modules/react-dom/client.js",
+      "src": "../../../NeatTeam-Website/node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "55d3b309",
+      "fileHash": "81a17378",
       "needsInterop": true
     },
     "react-router-dom": {
-      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "src": "../../../NeatTeam-Website/node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "131f6d58",
+      "fileHash": "d8ee46f6",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-QOVZGY7A": {
-      "file": "chunk-QOVZGY7A.js"
+    "chunk-RDDROXF5": {
+      "file": "chunk-RDDROXF5.js"
     },
-    "chunk-5WQJO2FO": {
-      "file": "chunk-5WQJO2FO.js"
+    "chunk-7AQQ6CBO": {
+      "file": "chunk-7AQQ6CBO.js"
     }
   }
 }

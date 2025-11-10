@@ -1,14 +1,14 @@
 import {
   require_react_dom
-} from "./chunk-QOVZGY7A.js";
+} from "./chunk-RDDROXF5.js";
 import {
   __commonJS,
   require_react
-} from "./chunk-5WQJO2FO.js";
+} from "./chunk-7AQQ6CBO.js";
 
-// node_modules/scheduler/cjs/scheduler.development.js
+// ../NeatTeam-Website/node_modules/scheduler/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS({
-  "node_modules/scheduler/cjs/scheduler.development.js"(exports) {
+  "../NeatTeam-Website/node_modules/scheduler/cjs/scheduler.development.js"(exports) {
     "use strict";
     (function() {
       function performWorkUntilDeadline() {
@@ -265,9 +265,9 @@ var require_scheduler_development = __commonJS({
   }
 });
 
-// node_modules/scheduler/index.js
+// ../NeatTeam-Website/node_modules/scheduler/index.js
 var require_scheduler = __commonJS({
-  "node_modules/scheduler/index.js"(exports, module) {
+  "../NeatTeam-Website/node_modules/scheduler/index.js"(exports, module) {
     "use strict";
     if (false) {
       module.exports = null;
@@ -277,9 +277,9 @@ var require_scheduler = __commonJS({
   }
 });
 
-// node_modules/react-dom/cjs/react-dom-client.development.js
+// ../NeatTeam-Website/node_modules/react-dom/cjs/react-dom-client.development.js
 var require_react_dom_client_development = __commonJS({
-  "node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
+  "../NeatTeam-Website/node_modules/react-dom/cjs/react-dom-client.development.js"(exports) {
     "use strict";
     (function() {
       function findHook(fiber, id) {
@@ -18059,9 +18059,9 @@ var require_react_dom_client_development = __commonJS({
   }
 });
 
-// node_modules/react-dom/client.js
+// ../NeatTeam-Website/node_modules/react-dom/client.js
 var require_client = __commonJS({
-  "node_modules/react-dom/client.js"(exports, module) {
+  "../NeatTeam-Website/node_modules/react-dom/client.js"(exports, module) {
     if (false) {
       checkDCE();
       module.exports = null;

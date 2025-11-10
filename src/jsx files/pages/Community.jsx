@@ -10,23 +10,19 @@ export default function Community() {
         { id: 'magazine', label: 'Magazine', icon: '📰' },
         { id: 'peak', label: 'Community Days', icon: '⭐' }
     ];
-    const BASE_URL = import.meta.env.BASE_URL;
+
     const magazineFiles = [
         {
             id: 'magazine-en',
-            title: 'First Steps - English Edition',
-            description: 'Our annual magazine translated for international readers.',
-            path: '/Magazines/Magazine.pdf',
-            downloadName: 'First-Steps-English.pdf',
-            icon: '🇬🇧'
+            label: 'Annual Magazine (English)',
+            description: 'Download the English edition of "First Steps".',
+            href: '/Magazines/Magazine.pdf'
         },
         {
             id: 'magazine-he',
-            title: 'First Steps - Hebrew Edition',
-            description: 'Our annual magazine in Hebrew for our local community.',
-            path: '/Magazines/מגזין.pdf',
-            downloadName: 'First-Steps-Hebrew.pdf',
-            icon: '🇮🇱'
+            label: 'Annual Magazine (Hebrew)',
+            description: 'Download the Hebrew edition of "First Steps".',
+            href: '/Magazines/%D7%9E%D7%92%D7%96%D7%99%D7%9F.pdf'
         }
     ];
 
@@ -303,29 +299,25 @@ export default function Community() {
                             </p>
                             <div className="magazine-files">
                                 <h3>Magazine Files</h3>
-                                <p>Download the latest editions of "First Steps" below.</p>
-                                <div className="magazine-file-grid">
-                                    {magazineFiles.map((file) => {
-                                        const fileUrl = encodeURI(BASE_URL + file.path);
-                                        return (
+                                <ul className="magazine-file-list">
+                                    {magazineFiles.map((file) => (
+                                        <li key={file.id} className="magazine-file-item">
+                                            <span className="magazine-file-icon" aria-hidden="true">📄</span>
+                                            <div className="magazine-file-info">
+                                                <span className="magazine-file-title">{file.label}</span>
+                                                <span className="magazine-file-description">{file.description}</span>
+                                            </div>
                                             <a
-                                                key={file.id}
-                                                className="magazine-file-card"
-                                                href={fileUrl}
+                                                className="magazine-file-link"
+                                                href={file.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                download={file.downloadName}
                                             >
-                                                <div className="magazine-file-icon">{file.icon}</div>
-                                                <div className="magazine-file-info">
-                                                    <h4>{file.title}</h4>
-                                                    <p>{file.description}</p>
-                                                </div>
-                                                <span className="magazine-file-action">Download</span>
+                                                View PDF
                                             </a>
-                                        );
-                                    })}
-                                </div>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     </div>

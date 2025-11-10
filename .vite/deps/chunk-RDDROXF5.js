@@ -1,11 +1,11 @@
 import {
   __commonJS,
   require_react
-} from "./chunk-5WQJO2FO.js";
+} from "./chunk-7AQQ6CBO.js";
 
-// node_modules/react-dom/cjs/react-dom.development.js
+// ../NeatTeam-Website/node_modules/react-dom/cjs/react-dom.development.js
 var require_react_dom_development = __commonJS({
-  "node_modules/react-dom/cjs/react-dom.development.js"(exports) {
+  "../NeatTeam-Website/node_modules/react-dom/cjs/react-dom.development.js"(exports) {
     "use strict";
     (function() {
       function noop() {
@@ -247,9 +247,9 @@ var require_react_dom_development = __commonJS({
   }
 });
 
-// node_modules/react-dom/index.js
+// ../NeatTeam-Website/node_modules/react-dom/index.js
 var require_react_dom = __commonJS({
-  "node_modules/react-dom/index.js"(exports, module) {
+  "../NeatTeam-Website/node_modules/react-dom/index.js"(exports, module) {
     "use strict";
     if (false) {
       checkDCE();
@@ -276,4 +276,4 @@ react-dom/cjs/react-dom.development.js:
    * LICENSE file in the root directory of this source tree.
    *)
 */
-//# sourceMappingURL=chunk-QOVZGY7A.js.map
+//# sourceMappingURL=chunk-RDDROXF5.js.map
