@@ -44,8 +44,8 @@ export default function Posts() {
         {
             id: 1,
             title: 'Mosaic Meeting',
-            text: 'At Eshel Elementary School, we visit once a week and present our magazine, "First Steps," to the 5th-grade students.\n' +
-                'The goal of this volunteer activity is to raise awareness of STEM fields among younger students and inspire the next generation to explore science and technology.',
+            text: 'Today at P’sifas, we ran the “Robot People” activity,'
+            + ' which explains the meaning of the robot’s code!',
             date: 'October 28, 2025',
             image: BASE_URL + '/Volunteering/2025 october 28.jpeg',
         },

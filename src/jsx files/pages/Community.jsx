@@ -10,6 +10,25 @@ export default function Community() {
         { id: 'magazine', label: 'Magazine', icon: '📰' },
         { id: 'peak', label: 'Community Days', icon: '⭐' }
     ];
+    const BASE_URL = import.meta.env.BASE_URL;
+    const magazineFiles = [
+        {
+            id: 'magazine-en',
+            title: 'First Steps - English Edition',
+            description: 'Our annual magazine translated for international readers.',
+            path: '/Magazines/Magazine.pdf',
+            downloadName: 'First-Steps-English.pdf',
+            icon: '🇬🇧'
+        },
+        {
+            id: 'magazine-he',
+            title: 'First Steps - Hebrew Edition',
+            description: 'Our annual magazine in Hebrew for our local community.',
+            path: '/Magazines/מגזין.pdf',
+            downloadName: 'First-Steps-Hebrew.pdf',
+            icon: '🇮🇱'
+        }
+    ];
 
     return (
         <div className="community-page">
@@ -284,7 +303,29 @@ export default function Community() {
                             </p>
                             <div className="magazine-files">
                                 <h3>Magazine Files</h3>
-                                <p>Place where all magazine files will be attached</p>
+                                <p>Download the latest editions of "First Steps" below.</p>
+                                <div className="magazine-file-grid">
+                                    {magazineFiles.map((file) => {
+                                        const fileUrl = encodeURI(BASE_URL + file.path);
+                                        return (
+                                            <a
+                                                key={file.id}
+                                                className="magazine-file-card"
+                                                href={fileUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                download={file.downloadName}
+                                            >
+                                                <div className="magazine-file-icon">{file.icon}</div>
+                                                <div className="magazine-file-info">
+                                                    <h4>{file.title}</h4>
+                                                    <p>{file.description}</p>
+                                                </div>
+                                                <span className="magazine-file-action">Download</span>
+                                            </a>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
                     </div>
