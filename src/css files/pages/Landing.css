@@ -211,7 +211,7 @@
 
 .robot-title {
   font-size: 1.5rem;
-  color: #001f8b !important;
+  color: #001768 !important;
   font-weight: 600;
   border-bottom: 3px solid #fd4e0a;
   display: inline-block;
@@ -221,7 +221,7 @@
 
 .robot-description {
   font-size: 1rem;
-  color: #1a1a1a !important;
+  color: #e0e0e0 !important;
   margin-bottom: 2rem;
   line-height: 1.7;
   max-width: 600px;
