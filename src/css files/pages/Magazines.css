@@ -1,0 +1,352 @@
+/* Modern Premium Magazines Page Design */
+.magazines-page {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+    padding-bottom: 6rem;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+.magazines-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 64, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(253, 78, 10, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.magazines-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12rem 2rem 4rem 2rem;
+    text-align: center;
+    color: #1e293b;
+    position: relative;
+    z-index: 1;
+}
+
+.magazines-title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #0040FF 0%, #002FBD 50%, #fd4e0a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease-out 0.2s forwards;
+    text-shadow: 0 4px 8px rgba(0, 64, 255, 0.1);
+}
+
+.magazines-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, #fd4e0a, #ea580c, #0040FF);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(253, 78, 10, 0.3);
+}
+
+.magazines-subtitle {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #475569;
+    max-width: 800px;
+    margin: 0 auto;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease-out 0.4s forwards;
+    font-weight: 500;
+}
+
+.magazines-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Magazine Section */
+.magazine-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+    padding: 4rem;
+    border-radius: 35px;
+    box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.magazine-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0040FF, #fd4e0a);
+    border-radius: 35px 35px 0 0;
+}
+
+.magazine-section h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #002FBD 0%, #0040FF 50%, #fd4e0a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.magazine-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0040FF, #fd4e0a);
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 64, 255, 0.3);
+}
+
+.magazine-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+}
+
+.magazine-files {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+    padding: 2.5rem;
+    border-radius: 25px;
+    margin-top: 3rem;
+    border: 2px solid #0ea5e9;
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.magazine-files::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0ea5e9, #0284c7, #0369a1);
+}
+
+.magazine-files h3 {
+    color: #0369a1;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.magazine-files p {
+    color: #0c4a6e;
+    margin: 0;
+    font-weight: 500;
+}
+
+.magazine-file-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.magazine-file-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 12px 30px rgba(3, 105, 161, 0.18);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    flex-wrap: nowrap;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.magazine-file-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(3, 105, 161, 0.25);
+}
+
+.magazine-file-icon {
+    font-size: 2rem;
+    color: #0284c7;
+}
+
+.magazine-file-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.magazine-file-title {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0369a1;
+}
+
+.magazine-file-description {
+    display: block;
+    font-size: 0.95rem;
+    color: #0c4a6e;
+    margin-top: 0.25rem;
+}
+
+.magazine-file-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #0284c7, #0ea5e9);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.magazine-file-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(14, 165, 233, 0.35);
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+
+.magazine-file-link::after {
+    content: '↗';
+    font-size: 0.9rem;
+}
+
+@keyframes slideUpFade {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .magazines-header {
+        padding: 10rem 1.5rem 3rem 1.5rem;
+    }
+
+    .magazines-title {
+        font-size: 3.5rem;
+    }
+
+    .magazines-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .magazine-section {
+        padding: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .magazine-section h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .magazine-file-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .magazines-header {
+        padding: 8rem 1rem 2rem 1rem;
+    }
+
+    .magazines-title {
+        font-size: 3rem;
+    }
+
+    .magazines-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .magazines-content {
+        padding: 0 1rem;
+    }
+
+    .magazine-section {
+        padding: 2.5rem;
+        border-radius: 25px;
+    }
+
+    .magazine-section h2 {
+        font-size: 2rem;
+    }
+
+    .magazine-file-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .magazine-file-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .magazines-header {
+        padding: 6rem 1rem 1rem 1rem;
+    }
+
+    .magazines-title {
+        font-size: 2.5rem;
+    }
+
+    .magazine-section {
+        padding: 2rem;
+    }
+
+    .magazine-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+

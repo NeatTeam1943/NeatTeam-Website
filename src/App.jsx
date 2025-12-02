@@ -23,6 +23,7 @@ import Slifer20215 from './jsx files/pages/Robots/Slifer2015.jsx';
 import Obelisk2014 from './jsx files/pages/Robots/Obelisk2014.jsx';
 import TheBrick2012 from './jsx files/pages/Robots/TheBrick2012.jsx';
 import Community from "./jsx files/pages/Community.jsx";
+import Magazines from "./jsx files/pages/Magazines.jsx";
 import SponsorUs from './jsx files/pages/SponsorUs.jsx';
 import ContactUs from './jsx files/pages/ContactUs.jsx';
 
@@ -51,6 +52,7 @@ function App() {
                     <Route path="/posts" element={<Posts />} />
                     <Route path="/sponsors" element={<Sponsors />} />
                     <Route path="/community" element={<Community />} />
+                    <Route path="/magazines" element={<Magazines />} />
                     <Route path="/sponsor-us" element={<SponsorUs />} />
                     <Route path="/contact-us" element={<ContactUs />} />
                     <Route path="*" element={<NotFound />} />

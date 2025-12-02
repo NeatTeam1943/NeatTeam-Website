@@ -610,21 +610,31 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    width: 100%;
 }
 
 .magazine-file-item {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
     padding: 1.25rem 1.5rem;
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0 12px 30px rgba(3, 105, 161, 0.18);
     border: 1px solid rgba(14, 165, 233, 0.2);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.magazine-file-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(3, 105, 161, 0.25);
 }
 
 .magazine-file-icon {
@@ -634,7 +644,7 @@
 
 .magazine-file-info {
     flex: 1;
-    min-width: 220px;
+    min-width: 0;
 }
 
 .magazine-file-title {
@@ -663,6 +673,7 @@
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .magazine-file-link:hover {
@@ -849,6 +860,12 @@
     }
 }
 
+@media (max-width: 900px) {
+    .magazine-file-list {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .community-header {
         padding: 8rem 1rem 2rem 1rem;
@@ -890,6 +907,20 @@
     .peak-days-section {
         padding: 2.5rem;
         border-radius: 25px;
+    }
+
+    .magazine-file-list {
+        grid-template-columns: 1fr;
+    }
+
+    .magazine-file-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .magazine-file-link {
+        width: 100%;
+        justify-content: center;
     }
 
     .section-intro h2,

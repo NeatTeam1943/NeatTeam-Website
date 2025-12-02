@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../css files/pages/Community.css';
+import { getLatestMagazines } from './Magazines.jsx';
 
 export default function Community() {
     const [activeTab, setActiveTab] = useState('weekly');
@@ -11,20 +12,7 @@ export default function Community() {
         { id: 'peak', label: 'Community Days', icon: '⭐' }
     ];
 
-    const magazineFiles = [
-        {
-            id: 'magazine-en',
-            label: 'Annual Magazine (English)',
-            description: 'Download the English edition of "First Steps".',
-            href: '/Magazines/Magazine.pdf'
-        },
-        {
-            id: 'magazine-he',
-            label: 'Annual Magazine (Hebrew)',
-            description: 'Download the Hebrew edition of "First Steps".',
-            href: '/Magazines/%D7%9E%D7%92%D7%96%D7%99%D7%9F.pdf'
-        }
-    ];
+    const magazineFiles = getLatestMagazines(2);
 
     return (
         <div className="community-page">
@@ -68,7 +56,7 @@ export default function Community() {
                                     <span className="stat-label">Organizations</span>
                                 </div>
                                 <div className="stat-item">
-                                    <span className="stat-number">15+</span>
+                                    <span className="stat-number">30+</span>
                                     <span className="stat-label">Team Members</span>
                                 </div>
                                 <div className="stat-item">

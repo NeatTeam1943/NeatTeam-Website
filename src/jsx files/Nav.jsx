@@ -11,6 +11,8 @@ export default function Nav() {
     const [mobileTeamNewsDropdownOpen, setMobileTeamNewsDropdownOpen] = useState(false);
     const [sponsorsDropdownOpen, setSponsorsDropdownOpen] = useState(false);
     const [mobileSponsorsDropdownOpen, setMobileSponsorsDropdownOpen] = useState(false);
+    const [communityDropdownOpen, setCommunityDropdownOpen] = useState(false);
+    const [mobileCommunityDropdownOpen, setMobileCommunityDropdownOpen] = useState(false);
 
 
     const toggleMobileMenu = () => {
@@ -19,6 +21,7 @@ export default function Nav() {
             setMobileDropdownOpen(false);
             setMobileTeamNewsDropdownOpen(false);
             setMobileSponsorsDropdownOpen(false);
+            setMobileCommunityDropdownOpen(false);
         }
     };
 
@@ -35,6 +38,7 @@ export default function Nav() {
         setMobileDropdownOpen(false);
         setMobileTeamNewsDropdownOpen(false);
         setMobileSponsorsDropdownOpen(false);
+        setMobileCommunityDropdownOpen(false);
     };
 
     const toggleDesktopDropdown = () => {
@@ -63,6 +67,18 @@ export default function Nav() {
 
     const toggleMobileSponsorsDropdown = () => {
         setMobileSponsorsDropdownOpen(!mobileSponsorsDropdownOpen);
+    };
+
+    const toggleCommunityDropdown = () => {
+        setCommunityDropdownOpen(!communityDropdownOpen);
+    };
+
+    const closeCommunityDropdown = () => {
+        setCommunityDropdownOpen(false);
+    };
+
+    const toggleMobileCommunityDropdown = () => {
+        setMobileCommunityDropdownOpen(!mobileCommunityDropdownOpen);
     };
 
     return (
@@ -117,7 +133,27 @@ export default function Nav() {
                             </Link>
                         </div>
                     </div>
-                    <Link to="/community">Our Community</Link>
+                    <div className="dropdown" onMouseLeave={closeCommunityDropdown}>
+                        <button
+                            className="nav-link like-link dropdown-trigger"
+                            onMouseEnter={() => setCommunityDropdownOpen(true)}
+                        >
+                            Our Community
+                            <span className={`dropdown-arrow ${communityDropdownOpen ? 'open' : ''}`}>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                    <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div className={`dropdown-content ${communityDropdownOpen ? 'open' : ''}`}>
+                            <Link to="/community" onClick={closeCommunityDropdown} className="dropdown-item">
+                                <span className="dropdown-item-title">Our Community</span>
+                            </Link>
+                            <Link to="/magazines" onClick={closeCommunityDropdown} className="dropdown-item">
+                                <span className="dropdown-item-title">Magazines</span>
+                            </Link>
+                        </div>
+                    </div>
                     <div className="dropdown" onMouseLeave={closeSponsorsDropdown}>
                         <button
                             className="nav-link like-link dropdown-trigger"
@@ -197,9 +233,6 @@ export default function Nav() {
                         <Link to="/calendar" onClick={closeMobileMenu} className="mobile-dropdown-item">
                             <span className="mobile-dropdown-item-title">Calendar</span>
                         </Link>
-                        <Link to="/community" onClick={closeMobileMenu} className="mobile-dropdown-item">
-                            <span className="mobile-dropdown-item-title">Our Community</span>
-                        </Link>
                     </div>
                 </div>
                 <div className="mobile-dropdown">
@@ -220,6 +253,27 @@ export default function Nav() {
                         </Link>
                         <Link to="/sponsor-us" onClick={closeMobileMenu} className="mobile-dropdown-item">
                             <span className="mobile-dropdown-item-title">Sponsor Us</span>
+                        </Link>
+                    </div>
+                </div>
+                <div className="mobile-dropdown">
+                    <button
+                        className="mobile-dropdown-trigger"
+                        onClick={toggleMobileCommunityDropdown}
+                    >
+                        <span>Our Community</span>
+                        <span className={`mobile-dropdown-arrow ${mobileCommunityDropdownOpen ? 'open' : ''}`}>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div className={`mobile-dropdown-content ${mobileCommunityDropdownOpen ? 'open' : ''}`}>
+                        <Link to="/community" onClick={closeMobileMenu} className="mobile-dropdown-item">
+                            <span className="mobile-dropdown-item-title">Our Community</span>
+                        </Link>
+                        <Link to="/magazines" onClick={closeMobileMenu} className="mobile-dropdown-item">
+                            <span className="mobile-dropdown-item-title">Magazines</span>
                         </Link>
                     </div>
                 </div>
