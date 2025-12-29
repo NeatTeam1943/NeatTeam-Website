@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import '../../css files/pages/Community.css';
+import { getLatestMagazines } from './Magazines.jsx';
 
 export default function Community() {
+    const BASE_URL = import.meta.env.BASE_URL;
     const [activeTab, setActiveTab] = useState('weekly');
 
     const tabs = [
@@ -10,6 +12,9 @@ export default function Community() {
         { id: 'magazine', label: 'Magazine', icon: '📰' },
         { id: 'peak', label: 'Community Days', icon: '⭐' }
     ];
+
+    // Get the 2 latest magazines
+    const magazineFiles = getLatestMagazines(BASE_URL, 2);
 
     return (
         <div className="community-page">
@@ -53,7 +58,7 @@ export default function Community() {
                                     <span className="stat-label">Organizations</span>
                                 </div>
                                 <div className="stat-item">
-                                    <span className="stat-number">15+</span>
+                                    <span className="stat-number">30+</span>
                                     <span className="stat-label">Team Members</span>
                                 </div>
                                 <div className="stat-item">
@@ -76,16 +81,12 @@ export default function Community() {
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Mosaic Community Center</span>
-                                        </div>
-                                        <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
                                             <span className="info-value">Every Tuesday, 4:00 PM</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Sarah, David, Maya</span>
+                                            <span className="info-value">Or, David, Liat, Mayan, Noam, Ido</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -114,16 +115,12 @@ export default function Community() {
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Beit Afek Hostel</span>
-                                        </div>
-                                        <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
                                             <span className="info-value">Every Wednesday, 3:30 PM</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Alex, Rachel, Daniel</span>
+                                            <span className="info-value">Orian, Itay, Harel, Yahely, Maya, Ofri</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -150,16 +147,12 @@ export default function Community() {
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Community Center</span>
-                                        </div>
-                                        <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
                                             <span className="info-value">Every Thursday, 2:00 PM</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Tomer, Itai, Yarom</span>
+                                            <span className="info-value">Itai Bashari, Itai Ranan, Yarom, Noam</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -195,16 +188,12 @@ export default function Community() {
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Our Workshop</span>
-                                        </div>
-                                        <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
                                             <span className="info-value">Every Sunday, 5:00 PM</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Ethan, Sophia, Liam</span>
+                                            <span className="info-value">Gil, Yahel, Inon, Shai, Or</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -227,14 +216,13 @@ export default function Community() {
 
                             <div className="org-card">
                                 <div className="org-header">
-                                    <h3>Yitzhak Navon Elementary School</h3>
+                                    <h3>Eshkol Elementary School</h3>
                                     <span className="org-icon">🏫</span>
                                 </div>
                                 <div className="org-details">
                                     <div className="org-info">
                                         <div className="info-item">
-                                            <span className="info-label">📍 Location:</span>
-                                            <span className="info-value">Yitzhak Navon School</span>
+
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🕒 Schedule:</span>
@@ -242,7 +230,7 @@ export default function Community() {
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">👥 Team:</span>
-                                            <span className="info-value">Emma, Noah, Ava</span>
+                                            <span className="info-value">Atalya, Tomer, Almog, Alon, Yam</span>
                                         </div>
                                         <div className="info-item">
                                             <span className="info-label">🎯 Age Group:</span>
@@ -284,11 +272,11 @@ export default function Community() {
 
                 {activeTab === 'magazine' && (
                     <div className="magazine-section">
-                        <h2>Annual Magazine - "The Name"</h2>
+                        <h2>Annual Magazine - "First Steps"</h2>
                         <div className="magazine-content">
                             <p>
                                 Together with the Cypher robotics team, 4661 and the Falcons robotics team, 4338, 
-                                we established our annual magazine - "The Name"
+                                we established our annual magazine - "First Steps"
                             </p>
                             <p>
                                 Our magazine focuses on various STEM topics and is specifically designed for elementary school students 
@@ -301,7 +289,25 @@ export default function Community() {
                             </p>
                             <div className="magazine-files">
                                 <h3>Magazine Files</h3>
-                                <p>Place where all magazine files will be attached</p>
+                                <ul className="magazine-file-list">
+                                    {magazineFiles.map((file) => (
+                                        <li key={file.id} className="magazine-file-item">
+                                            <span className="magazine-file-icon" aria-hidden="true">📄</span>
+                                            <div className="magazine-file-info">
+                                                <span className="magazine-file-title">{file.label}</span>
+                                                <span className="magazine-file-description">{file.description}</span>
+                                            </div>
+                                            <a
+                                                className="magazine-file-link"
+                                                href={file.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                View PDF
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -314,26 +320,6 @@ export default function Community() {
                             <div className="peak-activity">
                                 <span className="activity-icon">🏥</span>
                                 <span className="activity-name">Hospitals</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🎒</span>
-                                <span className="activity-name">Distributing Supplies to Soldiers</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🏖️</span>
-                                <span className="activity-name">Beach Cleanup</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">✈️</span>
-                                <span className="activity-name">Aerospace Industry</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🦽</span>
-                                <span className="activity-name">3D Printed Devices for People with Disabilities</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🕯️</span>
-                                <span className="activity-name">Memory in the Living Room</span>
                             </div>
                         </div>
                     </div>

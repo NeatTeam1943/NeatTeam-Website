@@ -9,7 +9,7 @@ import NotFound from './jsx files/pages/NotFound.jsx';
 import Calendar from './jsx files/pages/Calendar.jsx';
 import Posts from './jsx files/pages/Posts.jsx';
 import Sponsors from './jsx files/pages/Sponsors.jsx';
-import Koren2025 from './jsx files/pages/Robots/koren2025.jsx';
+import Koren2025 from './jsx files/pages/Robots/Koren2025.jsx';
 import Melody2024 from './jsx files/pages/Robots/Melody2024.jsx';
 import Freddy2023 from './jsx files/pages/Robots/Freddy2023.jsx'
 import Sagi2022 from './jsx files/pages/Robots/Sagi2022.jsx';
@@ -23,10 +23,13 @@ import Slifer20215 from './jsx files/pages/Robots/Slifer2015.jsx';
 import Obelisk2014 from './jsx files/pages/Robots/Obelisk2014.jsx';
 import TheBrick2012 from './jsx files/pages/Robots/TheBrick2012.jsx';
 import Community from "./jsx files/pages/Community.jsx";
+import Magazines from "./jsx files/pages/Magazines.jsx";
+import SponsorUs from './jsx files/pages/SponsorUs.jsx';
+import ContactUs from './jsx files/pages/ContactUs.jsx';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/NeatTeam-Website">
             <Layout>
                 <Routes>
                     <Route path="/" element={<Landing />} />
@@ -49,7 +52,9 @@ function App() {
                     <Route path="/posts" element={<Posts />} />
                     <Route path="/sponsors" element={<Sponsors />} />
                     <Route path="/community" element={<Community />} />
-
+                    <Route path="/magazines" element={<Magazines />} />
+                    <Route path="/sponsor-us" element={<SponsorUs />} />
+                    <Route path="/contact-us" element={<ContactUs />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Layout>

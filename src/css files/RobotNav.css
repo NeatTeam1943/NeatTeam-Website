@@ -50,7 +50,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 64, 255, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(54, 19, 230, 0.1), transparent);
     transition: left 0.5s ease;
 }
 
@@ -59,11 +59,12 @@
 }
 
 .robotnav nav a:hover {
-    color: #0040FF;
+    color: #3613e6;
     background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
-    border-color: #0040FF;
+    border-color: #3613e6;
     transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 64, 255, 0.15);
+    box-shadow: 0 5px 15px rgba(54, 19, 230, 0.15);
+    text-decoration: none;
 }
 
 .robotnav nav a:active {
@@ -72,14 +73,15 @@
 
 /* Active state for current robot */
 .robotnav nav a.active {
-    background: linear-gradient(135deg, #0040FF 0%, #002FBD 100%);
+    background: linear-gradient(135deg, #3613e6 0%, #270ea8 100%);
     color: white;
-    box-shadow: 0 5px 15px rgba(0, 64, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(54, 19, 230, 0.3);
 }
 
 .robotnav nav a.active:hover {
-    background: linear-gradient(135deg, #002FBD 0%, #001f8b 100%);
+    background: linear-gradient(135deg, #270ea8 0%, #1b0a73 100%);
     transform: translateX(5px);
+    text-decoration: none;
 }
 
 /* Scrollbar styling */
@@ -93,12 +95,12 @@
 }
 
 .robotnav::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #0040FF, #002FBD);
+    background: linear-gradient(135deg, #3613e6, #270ea8);
     border-radius: 3px;
 }
 
 .robotnav::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #002FBD, #001f8b);
+    background: linear-gradient(135deg, #270ea8, #1b0a73);
 }
 
 /* Responsive Design */
