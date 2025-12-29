@@ -4,15 +4,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     text-align: center;
     color: #1e293b;
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 6rem 1rem 3rem 1rem;
+    padding: 4rem 1rem 3rem 1rem;
     position: relative;
     min-height: 100vh;
-    margin-top: -60px; /* Compensate for navbar */
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
     border-radius: 0 0 30px 30px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
@@ -24,7 +22,7 @@
     right: 0;
     width: 150px;
     height: 150px;
-    background: linear-gradient(45deg, #0040FF, #002FBD);
+    background: linear-gradient(45deg, #3613e6, #270ea8);
     border-radius: 50%;
     opacity: 0.1;
     transform: translate(75px, -75px);
@@ -46,7 +44,7 @@
 .not-found-container h1 {
     font-size: 8rem;
     font-weight: 900;
-    color: #0040FF;
+    color: #3613e6;
     margin-bottom: 1rem;
     position: relative;
     z-index: 2;
@@ -101,7 +99,7 @@
 .shape-1 {
     width: 200px;
     height: 200px;
-    background: #0040FF;
+    background: #3613e6;
     top: 10%;
     right: -50px;
     animation: gentleFloat 12s ease-in-out infinite;
@@ -119,7 +117,7 @@
 .shape-3 {
     width: 100px;
     height: 100px;
-    background: #0040FF;
+    background: #3613e6;
     top: 60%;
     right: 10%;
     animation: gentleFloat 18s ease-in-out infinite;

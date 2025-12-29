@@ -6,6 +6,7 @@ import RobotNav from '../../RobotNav.jsx'
 import "../../../css files/Robot.css"
 
 export default function Melody2024() {
+    const BASE_URL = import.meta.env.BASE_URL;
     return (
         <div className="robot-page">
             <RobotNav />
@@ -34,7 +35,7 @@ export default function Melody2024() {
 
                 <section className='robot-image'>
                     <h1>2024 Group and Robot (Melody)</h1>
-                    <img src="/public/Robots/2024Group.jpeg" alt="2024 Group and Robot (Melody)" />
+                    <img src={BASE_URL + "/Robots/2024Group.jpeg"} alt="2024 Group and Robot (Melody)" />
                 </section>
 
 

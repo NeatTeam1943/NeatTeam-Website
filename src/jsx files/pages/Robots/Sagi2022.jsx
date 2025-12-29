@@ -6,6 +6,7 @@ import RobotNav from '../../RobotNav.jsx'
 import "../../../css files/Robot.css"
 
 export default function Sagi2022() {
+    const BASE_URL = import.meta.env.BASE_URL;
     return (
         <div className="robot-page">
             <RobotNav />
@@ -35,7 +36,7 @@ export default function Sagi2022() {
 
                 <section className='robot-image'>
                     <h1>2022 Group and Robot (Sagi)</h1>
-                    <img src="/public/Robots/Sagi2022.jpg" alt="2022 Group and Robot (Sagi)" />
+                    <img src={BASE_URL + "/Robots/Sagi2022.jpg"} alt="2022 Group and Robot (Sagi)" />
                 </section>
 
                 <section className="robot-timeline">

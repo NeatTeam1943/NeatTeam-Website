@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Posts() {
     const navigate = useNavigate();
+    const BASE_URL = import.meta.env.BASE_URL;
     const [expandedPost, setExpandedPost] = useState(null);
     const [savedPosts, setSavedPosts] = useState([]);
     const [showNotification, setShowNotification] = useState(false);
@@ -45,7 +46,7 @@ export default function Posts() {
             text: 'At Eshel Elementary School, we visit once a week and present our magazine, “First Steps,” to the 5th-grade students.\n' +
                 'The goal of this volunteer activity is to raise awareness of STEM fields among younger students and inspire the next generation to explore science and technology.',
             date: 'October 28, 2025',
-            image: '/Volunteering/2025 october 28.jpeg',
+            image: BASE_URL + '/Volunteering/2025 october 28.jpeg',
         },
 
     ];
@@ -184,7 +185,7 @@ export default function Posts() {
                         <div className="post-card" key={post.id} onClick={() => setExpandedPost(post)}>
                             <div className="post-image-container">
                                 <img 
-                                    src={encodeURI(post.image)} 
+                                    src={post.image} 
                                     alt={post.title}
                                     className="post-image"
                                     onError={(e) => {
@@ -285,7 +286,7 @@ export default function Posts() {
 
                         <div className="modal-image-section">
                             <img 
-                                src={encodeURI(expandedPost.image)} 
+                                src={expandedPost.image} 
                                 alt={expandedPost.title}
                                 className="modal-image"
                                 onError={(e) => {

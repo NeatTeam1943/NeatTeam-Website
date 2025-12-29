@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import '../../css files/pages/Community.css';
+import { getLatestMagazines } from './Magazines.jsx';
 
 export default function Community() {
+    const BASE_URL = import.meta.env.BASE_URL;
     const [activeTab, setActiveTab] = useState('weekly');
 
     const tabs = [
@@ -10,6 +12,9 @@ export default function Community() {
         { id: 'magazine', label: 'Magazine', icon: '📰' },
         { id: 'peak', label: 'Community Days', icon: '⭐' }
     ];
+
+    // Get the 2 latest magazines
+    const magazineFiles = getLatestMagazines(BASE_URL, 2);
 
     return (
         <div className="community-page">
@@ -53,7 +58,7 @@ export default function Community() {
                                     <span className="stat-label">Organizations</span>
                                 </div>
                                 <div className="stat-item">
-                                    <span className="stat-number">15+</span>
+                                    <span className="stat-number">30+</span>
                                     <span className="stat-label">Team Members</span>
                                 </div>
                                 <div className="stat-item">
@@ -284,7 +289,25 @@ export default function Community() {
                             </p>
                             <div className="magazine-files">
                                 <h3>Magazine Files</h3>
-                                <p>Place where all magazine files will be attached</p>
+                                <ul className="magazine-file-list">
+                                    {magazineFiles.map((file) => (
+                                        <li key={file.id} className="magazine-file-item">
+                                            <span className="magazine-file-icon" aria-hidden="true">📄</span>
+                                            <div className="magazine-file-info">
+                                                <span className="magazine-file-title">{file.label}</span>
+                                                <span className="magazine-file-description">{file.description}</span>
+                                            </div>
+                                            <a
+                                                className="magazine-file-link"
+                                                href={file.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                View PDF
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -297,26 +320,6 @@ export default function Community() {
                             <div className="peak-activity">
                                 <span className="activity-icon">🏥</span>
                                 <span className="activity-name">Hospitals</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🎒</span>
-                                <span className="activity-name">Distributing Supplies to Soldiers</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🏖️</span>
-                                <span className="activity-name">Beach Cleanup</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">✈️</span>
-                                <span className="activity-name">Aerospace Industry</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🦽</span>
-                                <span className="activity-name">3D Printed Devices for People with Disabilities</span>
-                            </div>
-                            <div className="peak-activity">
-                                <span className="activity-icon">🕯️</span>
-                                <span className="activity-name">Zikaron BaSalon</span>
                             </div>
                         </div>
                     </div>

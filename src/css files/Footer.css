@@ -1,5 +1,5 @@
 .footer {
-    background-color: #002FBD;
+    background-color: #270ea8;
     color: white;
     padding: 4rem 3rem;
     width: 100%;
@@ -57,6 +57,7 @@
 
 .footer a:hover {
     color: #fd4e0a;
+    text-decoration: none;
 }
 
 .links a {
@@ -66,8 +67,128 @@
 
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid #0040FF;
+    border-top: 1px solid #3613e6;
     padding-top: 1rem;
     font-size: 0.85rem;
     color: #cbd5e1;
+}
+
+/* Mobile Responsive Footer */
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-columns {
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .footer-col {
+        flex: 1 1 100%;
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .footer h3 {
+        font-size: 1.5rem;
+    }
+
+    .footer h4 {
+        font-size: 1.1rem;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links a {
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .footer h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Large Screen Optimizations */
+@media (min-width: 1600px) {
+    .footer {
+        padding: 5rem 4rem;
+        font-size: 1rem;
+    }
+
+    .footer-columns {
+        max-width: 1600px;
+        margin: 0 auto 2.5rem;
+        gap: 4rem;
+    }
+
+    .footer h3 {
+        font-size: 2rem;
+    }
+
+    .footer h4 {
+        font-size: 1.3rem;
+    }
+
+    .footer-bottom {
+        max-width: 1600px;
+        margin: 0 auto;
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .footer {
+        padding: 6rem 5rem;
+    }
+
+    .footer-columns {
+        max-width: 1800px;
+        gap: 5rem;
+    }
+
+    .footer-bottom {
+        max-width: 1800px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .footer {
+        padding: 7rem 6rem;
+        font-size: 1.125rem;
+    }
+
+    .footer-columns {
+        max-width: 2000px;
+        gap: 6rem;
+    }
+
+    .footer h3 {
+        font-size: 2.25rem;
+    }
+
+    .footer h4 {
+        font-size: 1.4rem;
+    }
+
+    .footer-bottom {
+        max-width: 2000px;
+        font-size: 1rem;
+    }
 }
