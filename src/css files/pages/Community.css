@@ -862,6 +862,12 @@
     }
 }
 
+@media (max-width: 900px) {
+    .magazine-file-list {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .community-header {
         padding: 2rem 1rem 2rem 1rem;
@@ -903,6 +909,20 @@
     .peak-days-section {
         padding: 2.5rem;
         border-radius: 25px;
+    }
+
+    .magazine-file-list {
+        grid-template-columns: 1fr;
+    }
+
+    .magazine-file-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .magazine-file-link {
+        width: 100%;
+        justify-content: center;
     }
 
     .section-intro h2,

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css files/pages/Posts.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -30,7 +30,7 @@ export default function Posts() {
         }
     ];
 
-    const posts = [
+    const [posts, setPosts] = useState([
         // how its suppose to look
         // {
         //     id: 1,
@@ -38,18 +38,19 @@ export default function Posts() {
         //     text: 'Cool cool cool cool cool cool cool cool no doubt no doubt no doubt no doubt no doubt no',
         //     date: 'March 9 - 10, 2025',
         //     image: '/NeatTeam/GroupPhoto.jpeg',
+        //     tags: ['Competition', 'Robotics'],
         // },
 
         {
             id: 1,
             title: 'Mosaic Meeting',
-            text: 'At Eshel Elementary School, we visit once a week and present our magazine, “First Steps,” to the 5th-grade students.\n' +
-                'The goal of this volunteer activity is to raise awareness of STEM fields among younger students and inspire the next generation to explore science and technology.',
+            text: 'Today at P’sifas, we ran the “Robot People” activity,'
+            + ' which explains the meaning of the robot’s code!',
             date: 'October 28, 2025',
             image: BASE_URL + '/Volunteering/2025 october 28.jpeg',
         },
 
-    ];
+    ]);
 
     // Handler functions for modal actions
     const handleSavePost = (post) => {
@@ -127,6 +128,17 @@ export default function Posts() {
     const isPostSaved = (post) => {
         return savedPosts.find(saved => saved.id === post.id) !== undefined;
     };
+
+    // Sync expandedPost with posts state when posts change
+    useEffect(() => {
+        if (expandedPost) {
+            const updatedPost = posts.find(p => p.id === expandedPost.id);
+            if (updatedPost && JSON.stringify(updatedPost) !== JSON.stringify(expandedPost)) {
+                setExpandedPost(updatedPost);
+            }
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [posts]);
 
     // Pagination logic
     const totalPages = Math.ceil(posts.length / postsPerPage);
@@ -227,10 +239,6 @@ export default function Posts() {
                                 <p className="post-excerpt">{post.text.slice(0, 120)}...</p>
                                 
                                 <div className="post-footer">
-                                    <div className="post-tags">
-                                        <span className="tag">Team</span>
-                                        <span className="tag">Robotics</span>
-                                    </div>
                                     <div className="post-read-time">3 min read</div>
                                 </div>
                             </div>

@@ -311,7 +311,9 @@ nav a.nav-link.active::after {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 10;
+    z-index: 1001;
+    position: relative;
+    margin-left: auto;
 }
 
 .mobile-menu-btn span {
@@ -461,9 +463,12 @@ nav a.nav-link.active::after {
         display: none;
     }
     
-    /* Show mobile menu button */
+    /* Show mobile menu button on the right */
     .mobile-menu-btn {
         display: flex;
+        order: 2;
+        margin-left: auto;
+        flex-shrink: 0;
     }
     
     /* Show mobile menu */

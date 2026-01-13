@@ -88,6 +88,30 @@ export default function Nav() {
         setActiveMobileDropdown(activeMobileDropdown === dropdownName ? null : dropdownName);
     };
 
+    const toggleSponsorsDropdown = () => {
+        setSponsorsDropdownOpen(!sponsorsDropdownOpen);
+    };
+
+    const closeSponsorsDropdown = () => {
+        setSponsorsDropdownOpen(false);
+    };
+
+    const toggleMobileSponsorsDropdown = () => {
+        setMobileSponsorsDropdownOpen(!mobileSponsorsDropdownOpen);
+    };
+
+    const toggleCommunityDropdown = () => {
+        setCommunityDropdownOpen(!communityDropdownOpen);
+    };
+
+    const closeCommunityDropdown = () => {
+        setCommunityDropdownOpen(false);
+    };
+
+    const toggleMobileCommunityDropdown = () => {
+        setMobileCommunityDropdownOpen(!mobileCommunityDropdownOpen);
+    };
+
     return (
         <>
             <div className="navbar-wrapper">
@@ -330,8 +354,6 @@ export default function Nav() {
                         </Link>
                     </div>
                 </div>
-                <Link to="/sponsors" onClick={closeMobileMenu}>Sponsors</Link>
-                <Link to="/sponsor-us" onClick={closeMobileMenu}>Sponsor Us</Link>
                 <Link to="/contact-us" onClick={closeMobileMenu}>Contact Us</Link>
             </div>
         </>
