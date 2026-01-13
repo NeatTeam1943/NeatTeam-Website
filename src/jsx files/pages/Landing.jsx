@@ -10,17 +10,17 @@ export default function Landing() {
         { 
             src: BASE_URL + "/Events/GroupPhoto.jpeg", 
             alt: "NeatTeam Group Photo At District Event",
-            description: "Needs Writing From ataliya"
+            description: "End of District #1 - Team Group Photo",
         },
         { 
             src: BASE_URL + "/Events/Hanukkah Camp.jpeg", 
             alt: "NeatTeam Hanukkah Camp",
-            description: "Needs Writing From ataliya"
+            description: "Robotics-Themed Hanukkah Activity for 3rd-6th Graders"
         },
         { 
             src: BASE_URL + "/Events/NeatTeam all-nighter .jpeg", 
             alt: "NeatTeam All Nighter",
-            description: "Needs Writing From ataliya"
+            description: "Dec 15th: Team Bonding Night - Just before the season starts"
         }
     ];
 
@@ -160,7 +160,7 @@ export default function Landing() {
                             <img src={BASE_URL + "/Sponsors/FIRST-LOGO.png"} alt="FIRST" />
                         </div>
                         <div className="sponsor-item">
-                            <img src={BASE_URL + "/Sponsors/NimbleWay-Logo.png"} alt="NimbleWay" />
+                            <img src={BASE_URL + "/Sponsors/NimbleWay-LOGO.png"} alt="NimbleWay" />
                         </div>
                         <div className="sponsor-item">
                             <img src={BASE_URL + "/Sponsors/kornit-vertical-logo-01.png"} alt="Kornit" />
@@ -186,7 +186,7 @@ export default function Landing() {
                             <img src={BASE_URL + "/Sponsors/FIRST-LOGO.png"} alt="FIRST" />
                         </div>
                         <div className="sponsor-item">
-                            <img src={BASE_URL + "/Sponsors/NimbleWay-Logo.png"} alt="NimbleWay" />
+                            <img src={BASE_URL + "/Sponsors/NimbleWay-LOGO.png"} alt="NimbleWay" />
                         </div>
                         <div className="sponsor-item">
                             <img src={BASE_URL + "/Sponsors/kornit-vertical-logo-01.png"} alt="Kornit" />
