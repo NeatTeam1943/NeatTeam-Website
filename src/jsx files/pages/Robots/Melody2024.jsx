@@ -5,7 +5,7 @@ import Footer from '../../Footer.jsx';
 import RobotNav from '../../RobotNav.jsx'
 import "../../../css files/Robot.css"
 
-export default function Melody2024() {  
+export default function Melody2024() {
     const BASE_URL = import.meta.env.BASE_URL;
     return (
         <div className="robot-page">

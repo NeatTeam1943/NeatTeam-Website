@@ -8,14 +8,15 @@ export default function Sponsors() {
 
     const sponsors = [
         { id: 1, name: "Rosh Haayin", logo: BASE_URL + '/Sponsors/ROSH-HAAIN-LOGO.png' },
-        { id: 2, name: "Innoviz", logo: BASE_URL +  '/Sponsors/Innoviz-Logo.png' },
-        { id: 3, name: "Begin High School", logo: BASE_URL +  '/Sponsors/logo-final-01-1.png' },
-        { id: 4, name: "FIRST", logo: BASE_URL + '/Sponsors/FIRST-LOGO.png' },
-        { id: 5, name: "IFEL", logo: BASE_URL + '/Sponsors/IFEL-Logo.png' },
+        { id: 2, name: "Begin High School", logo: BASE_URL +  '/Sponsors/logo-final-01-1.png' },
+        { id: 3, name: "FIRST", logo: BASE_URL + '/Sponsors/FIRST-LOGO.png' },
+        { id: 4, name: "Nimble Way", logo: BASE_URL + '/Sponsors/NimbleWay-LOGO.png' },
+        { id: 5, name: "Innoviz", logo: BASE_URL +  '/Sponsors/Innoviz-Logo.png' },
         { id: 6, name: "Kornit", logo: BASE_URL + '/Sponsors/kornit-vertical-logo-01.png' },
         { id: 7, name: "Rosh Electronics", logo: BASE_URL + '/Sponsors/Rosh-Electroptics.png' },
         { id: 8, name: "EID", logo: BASE_URL + '/Sponsors/LOGO-EID.png' },
-    ];
+        { id: 9, name: "IFEL", logo: BASE_URL + '/Sponsors/IFEL-Logo.png' },
+    ].sort((a, b) => a.id - b.id);
 
     return (
         <div className="page">

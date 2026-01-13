@@ -3,6 +3,7 @@ import '../../css files/pages/Community.css';
 import { getLatestMagazines } from './Magazines.jsx';
 
 export default function Community() {
+    const BASE_URL = import.meta.env.BASE_URL;
     const [activeTab, setActiveTab] = useState('weekly');
 
     const tabs = [
@@ -12,7 +13,8 @@ export default function Community() {
         { id: 'peak', label: 'Community Days', icon: '⭐' }
     ];
 
-    const magazineFiles = getLatestMagazines(2);
+    // Get the 2 latest magazines
+    const magazineFiles = getLatestMagazines(BASE_URL, 2);
 
     return (
         <div className="community-page">

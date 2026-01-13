@@ -196,23 +196,18 @@ export default function Posts() {
                     {currentPosts.map(post => (
                         <div className="post-card" key={post.id} onClick={() => setExpandedPost(post)}>
                             <div className="post-image-container">
-                                {post.image && (
-                                    <img 
-                                        src={encodeURI(post.image)} 
-                                        alt={post.title}
-                                        className="post-image"
-                                        onError={(e) => {
-                                            console.error('Image failed to load:', post.image);
-                                            e.target.style.display = 'none';
-                                            const fallback = e.target.nextElementSibling;
-                                            if (fallback) {
-                                                fallback.style.display = 'flex';
-                                            }
-                                        }}
-                                        onLoad={() => console.log('Image loaded successfully:', post.image)}
-                                    />
-                                )}
-                                <div className="post-image-fallback" style={{ display: post.image ? 'none' : 'flex' }}>
+                                <img 
+                                    src={post.image} 
+                                    alt={post.title}
+                                    className="post-image"
+                                    onError={(e) => {
+                                        console.error('Image failed to load:', post.image);
+                                        e.target.style.display = 'none';
+                                        e.target.nextSibling.style.display = 'flex';
+                                    }}
+                                    onLoad={() => console.log('Image loaded successfully:', post.image)}
+                                />
+                                <div className="post-image-fallback">
                                     <div className="fallback-icon">📸</div>
                                     <span>Team Photo</span>
                                 </div>
@@ -299,7 +294,7 @@ export default function Posts() {
 
                         <div className="modal-image-section">
                             <img 
-                                src={encodeURI(expandedPost.image)}
+                                src={expandedPost.image} 
                                 alt={expandedPost.title}
                                 className="modal-image"
                                 onError={(e) => {

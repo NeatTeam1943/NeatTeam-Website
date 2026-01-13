@@ -1,9 +1,69 @@
 import '../../css files/pages/Landing.css'
-import React from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import {Link} from "react-router-dom";
 
 export default function Landing() {
     const BASE_URL = import.meta.env.BASE_URL;
+    
+    // Event photos for carousel
+    const eventPhotos = [
+        { 
+            src: BASE_URL + "/Events/GroupPhoto.jpeg", 
+            alt: "NeatTeam Group Photo At District Event",
+            description: "End of District #1 - Team Group Photo",
+        },
+        { 
+            src: BASE_URL + "/Events/Hanukkah Camp.jpeg", 
+            alt: "NeatTeam Hanukkah Camp",
+            description: "Robotics-Themed Hanukkah Activity for 3rd-6th Graders"
+        },
+        { 
+            src: BASE_URL + "/Events/NeatTeam all-nighter .jpeg", 
+            alt: "NeatTeam All Nighter",
+            description: "Dec 15th: Team Bonding Night - Just before the season starts"
+        }
+    ];
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const intervalRef = useRef(null);
+
+    // Function to reset auto-scroll timer
+    const resetAutoScroll = useCallback(() => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+        intervalRef.current = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % eventPhotos.length);
+        }, 4000);
+    }, [eventPhotos.length]);
+
+    // Auto-scroll through images every 4 seconds
+    useEffect(() => {
+        resetAutoScroll();
+        return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+        };
+    }, [resetAutoScroll]);
+
+    // Navigate to next image
+    const goToNext = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % eventPhotos.length);
+        resetAutoScroll();
+    };
+
+    // Navigate to previous image
+    const goToPrevious = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + eventPhotos.length) % eventPhotos.length);
+        resetAutoScroll();
+    };
+
+    // Navigate to specific image (from dots)
+    const goToImage = (index) => {
+        setCurrentImageIndex(index);
+        resetAutoScroll();
+    };
 
     return (
         <div className="homepage">
@@ -19,12 +79,59 @@ export default function Landing() {
                     </div>
 
                     <div className="image">
-                        <img className="img" src={BASE_URL + "/NeatTeam/GroupPhoto.jpeg"} alt="NEATTEAM Team Photo" />
+                        <div className="image-carousel">
+                            {eventPhotos.map((photo, index) => (
+                                <img
+                                    key={index}
+                                    className={`img carousel-image ${index === currentImageIndex ? 'active' : ''}`}
+                                    src={photo.src}
+                                    alt={photo.alt}
+                                />
+                            ))}
+                            <button 
+                                className="carousel-arrow carousel-arrow-left"
+                                onClick={goToPrevious}
+                                aria-label="Previous image"
+                            >
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </button>
+                            <button 
+                                className="carousel-arrow carousel-arrow-right"
+                                onClick={goToNext}
+                                aria-label="Next image"
+                            >
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </button>
+                            <div className="carousel-indicators">
+                                {eventPhotos.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
+                                        onClick={() => goToImage(index)}
+                                        aria-label={`Go to image ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className="carousel-description">
+                            {eventPhotos.map((photo, index) => (
+                                <p 
+                                    key={index}
+                                    className={`carousel-description-text ${index === currentImageIndex ? 'active' : ''}`}
+                                >
+                                    {photo.description}
+                                </p>
+                            ))}
+                        </div>
                     </div>
                 </section>
 
                 <section className="section-with-img" id="robot">
-                    <div className="robot-image">
+                    <div className="">
                         <img className="img" src={BASE_URL + "/Robots/Koren.jpg"} alt="Koren Robot 2025" />
                     </div>
                     <div className="robot-details">
@@ -53,6 +160,9 @@ export default function Landing() {
                             <img src={BASE_URL + "/Sponsors/FIRST-LOGO.png"} alt="FIRST" />
                         </div>
                         <div className="sponsor-item">
+                            <img src={BASE_URL + "/Sponsors/NimbleWay-LOGO.png"} alt="NimbleWay" />
+                        </div>
+                        <div className="sponsor-item">
                             <img src={BASE_URL + "/Sponsors/kornit-vertical-logo-01.png"} alt="Kornit" />
                         </div>
                         <div className="sponsor-item">
@@ -74,6 +184,9 @@ export default function Landing() {
                         </div>
                         <div className="sponsor-item">
                             <img src={BASE_URL + "/Sponsors/FIRST-LOGO.png"} alt="FIRST" />
+                        </div>
+                        <div className="sponsor-item">
+                            <img src={BASE_URL + "/Sponsors/NimbleWay-LOGO.png"} alt="NimbleWay" />
                         </div>
                         <div className="sponsor-item">
                             <img src={BASE_URL + "/Sponsors/kornit-vertical-logo-01.png"} alt="Kornit" />
