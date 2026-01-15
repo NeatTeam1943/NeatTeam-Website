@@ -21,10 +21,8 @@ export default function ContactUs() {
       .then(
         () => {
           alert('Message sent successfully!');
-          console.log('SUCCESS!');
         },
         (error) => {
-          console.log('FAILED...', error.text);
           alert('Failed to send message, please try again later.');
         }
       );

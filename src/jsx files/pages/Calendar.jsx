@@ -6,75 +6,88 @@ export default function Calendar() {
     const [selectedDate, setSelectedDate] = useState(null);
     const [view, setView] = useState('month');
 
-    const events = [
-        {
-            id: 1,
-            title: "Team Meeting",
-            date: "2025-01-05",
-            time: "17:00",
-            endTime: "21:00",
-            type: "weekly",
-            days: [0, 3], // Sunday and Wednesday
-            description: "Weekly team meeting and planning session",
-            category: "meeting",
-            excludePeriod: {
-                startDate: "2026-01-11",
-                endDate: "2026-03-18"
-            }
-        },
-        {
-            id: 2,
-            title: "Season Kickoff",
-            date: "2026-01-10",
-            time: "19:00",
-            type: "single",
-            description: "Kickoff event to start the season",
-            category: "planning"
-        },
-        {
-            id: 3,
-            title: "Team Meeting",
-            date: "2026-01-11",
-            endDate: "2026-03-17",
-            time: "16:00",
-            endTime: "00:00",
-            type: "range",
-            excludedDays: [5, 6], // Exclude Friday (5) and Saturday (6)
-            excludedDates: ["2026-03-11", "2026-03-12"], // Exclude District 2 Competition dates
-            description: "Daily team meeting during season",
-            category: "meeting",
-        },
-        {
-            id: 4,
-            title: "District 2 Competition",
-            date: "2026-03-11",
-            endDate: "2026-03-12",
-            time: "07:00 - 19:00",
-            type: "range",
-            description: "FIRST Robotics District 2 competition",
-            category: "competition"
-        },
-        {
-            id: 5,
-            title: "District 4 Competition",
-            date: "2026-03-18",
-            endDate: "2026-03-19",
-            time: "07:00 - 19:00",
-            type: "range",
-            description: "FIRST Robotics District 4 competition",
-            category: "competition"
-        },
-        {
-            id: 6,
-            title: "District Championship",
-            date: "2026-03-30",
-            endDate: "2026-03-31",
-            time: "08:00",
-            type: "range",
-            description: "FIRST Robotics District Championship",
-            category: "competition"
-        },
-    ];
+    const [events, setEvents] = useState([]);
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const API_KEY = import.meta.env.VITE_GOOGLE_CALENDAR_API;
+    const CALENDAR_ID = import.meta.env.VITE_GOOGLE_CALENDAR_ID;
+
+    useEffect(() => {
+        const monthStart = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+        const nextMonthStart = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
+        const timeMin = monthStart.toISOString();
+        const timeMax = nextMonthStart.toISOString();
+        const calendarId = encodeURIComponent(CALENDAR_ID);
+
+        const params = new URLSearchParams({
+            key: API_KEY,
+            singleEvents: 'true',
+            orderBy: 'startTime',
+            timeMin: timeMin,
+            timeMax: timeMax
+        });
+
+        const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?${params.toString()}`;
+
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.error) {
+                    setEvents([]);
+                    setErrorMessage(data.error.message || 'Calendar request failed.');
+                    return;
+                }
+                const mappedEvents = (data.items || []).map((item) => {
+                    const start = item.start?.dateTime
+                        ? new Date(item.start.dateTime)
+                        : item.start?.date
+                            ? new Date(`${item.start.date}T00:00:00`)
+                            : null;
+                    const end = item.end?.dateTime
+                        ? new Date(item.end.dateTime)
+                        : item.end?.date
+                            ? new Date(`${item.end.date}T00:00:00`)
+                            : null;
+                    const isAllDay = Boolean(item.start?.date);
+                    const endAdjusted = isAllDay && end
+                        ? new Date(end.getFullYear(), end.getMonth(), end.getDate() - 1)
+                        : end;
+                    const date = start ? formatDateString(start) : '';
+                    const endDate = endAdjusted ? formatDateString(endAdjusted) : '';
+                    const type = endDate && endDate !== date ? 'range' : 'single';
+
+                    return {
+                        id: item.id,
+                        title: item.summary || 'Untitled Event',
+                        date,
+                        endDate: type === 'range' ? endDate : undefined,
+                        time: item.start?.dateTime ? formatTime(start) : 'All day',
+                        endTime: item.end?.dateTime ? formatTime(end) : '',
+                        type,
+                        description: item.description || '',
+                        category: 'planning'
+                    };
+                });
+                setEvents(mappedEvents);
+                setErrorMessage('');
+            })
+            .catch(() => {
+                setEvents([]);
+                setErrorMessage('Calendar request failed.');
+            });
+    }, [currentDate]);
+
+    const formatTime = (date) => {
+        if (!date) return '';
+        return date.toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+    };
+
+    const formatDateString = (date) => {
+        return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    };
 
     // Get current month/year
     const currentMonth = currentDate.getMonth();
@@ -117,51 +130,17 @@ export default function Calendar() {
     const getEventsForDate = (date) => {
         if (!date) return [];
         
-        const dayOfWeek = date.getDay();
         // Format date as YYYY-MM-DD using local timezone to avoid UTC conversion issues
-        const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+        const dateString = formatDateString(date);
         
         return events.filter(event => {
-            // Handle weekly recurring events
-            if (event.type === 'weekly' && event.days.includes(dayOfWeek)) {
-                // Check if date falls within an exclusion period
-                if (event.excludePeriod) {
-                    const [excludeStartYear, excludeStartMonth, excludeStartDay] = event.excludePeriod.startDate.split('-').map(Number);
-                    const [excludeEndYear, excludeEndMonth, excludeEndDay] = event.excludePeriod.endDate.split('-').map(Number);
-                    const excludeStartDate = new Date(excludeStartYear, excludeStartMonth - 1, excludeStartDay);
-                    const excludeEndDate = new Date(excludeEndYear, excludeEndMonth - 1, excludeEndDay);
-                    const currentDateObj = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-                    
-                    // Skip if within exclusion period
-                    if (currentDateObj >= excludeStartDate && currentDateObj <= excludeEndDate) {
-                        return false;
-                    }
-                }
-                return true;
-            }
             // Handle single date events
             if (event.type === 'single' && event.date === dateString) {
                 return true;
             }
             // Handle date range events
             if (event.type === 'range' && event.date && event.endDate) {
-                // Parse dates as local dates (YYYY-MM-DD format)
-                const [startYear, startMonth, startDay] = event.date.split('-').map(Number);
-                const [endYear, endMonth, endDay] = event.endDate.split('-').map(Number);
-                const startDate = new Date(startYear, startMonth - 1, startDay);
-                const endDate = new Date(endYear, endMonth - 1, endDay);
-                const currentDateObj = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-                
-                // Check if date is within range (comparing dates only, not time)
-                if (currentDateObj >= startDate && currentDateObj <= endDate) {
-                    // Check if day of week is not excluded
-                    if (!event.excludedDays || !event.excludedDays.includes(dayOfWeek)) {
-                        // Check if specific date is not excluded
-                        if (!event.excludedDates || !event.excludedDates.includes(dateString)) {
-                            return true;
-                        }
-                    }
-                }
+                return dateString >= event.date && dateString <= event.endDate;
             }
             return false;
         });
@@ -299,7 +278,7 @@ export default function Calendar() {
                             ) : (
                                 <div className="no-events">
                                     <div className="no-events-icon">📅</div>
-                                    <p>No events scheduled for this date.</p>
+                                    <p>{errorMessage || 'No events scheduled for this date.'}</p>
                                     <small>Perfect time to plan something new!</small>
                                 </div>
                             )}
