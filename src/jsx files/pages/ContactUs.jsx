@@ -11,11 +11,11 @@ export default function ContactUs() {
     e.preventDefault(); // Prevent default form submission
     emailjs
       .sendForm(
-        'service_1o5js8m',
-        'template_adde5ch',
-        form.current, 
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
         {
-          publicKey: 'qes6iO9y2RGpmkhBi', 
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
         }
       )
       .then(
