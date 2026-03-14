@@ -160,7 +160,7 @@ export default function Landing() {
                             <img src={BASE_URL + "/Sponsors/FIRST-LOGO.png"} alt="FIRST" />
                         </div>
                         <div className="sponsor-item">
-                            <img src={BASE_URL + "/Sponsors/NimbleWay-LOGO.png"} alt="NimbleWay" />
+                            <img src={BASE_URL + "/Sponsors/Nimble-Logo.png"} alt="Nimble" />
                         </div>
                         <div className="sponsor-item">
                             <img src={BASE_URL + "/Sponsors/kornit-vertical-logo-01.png"} alt="Kornit" />
@@ -186,7 +186,7 @@ export default function Landing() {
                             <img src={BASE_URL + "/Sponsors/FIRST-LOGO.png"} alt="FIRST" />
                         </div>
                         <div className="sponsor-item">
-                            <img src={BASE_URL + "/Sponsors/NimbleWay-LOGO.png"} alt="NimbleWay" />
+                            <img src={BASE_URL + "/Sponsors/Nimble-Logo.png"} alt="Nimble" />
                         </div>
                         <div className="sponsor-item">
                             <img src={BASE_URL + "/Sponsors/kornit-vertical-logo-01.png"} alt="Kornit" />
