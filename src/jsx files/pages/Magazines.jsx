@@ -24,6 +24,13 @@ export function getMagazines(BASE_URL) {
             label: 'מגזין',
             description: 'First Steps Magazine - Hebrew Edition',
             href: BASE_URL + '/Magazines/' + encodeURIComponent('מגזין.pdf')
+        },
+        {
+            id: 4,
+            order: 4,
+            label: 'כריכה מרץ',
+            description: 'First Steps Magazine - March Edition (Cover)',
+            href: BASE_URL + '/Magazines/' + encodeURIComponent('כריכה_מרץ.pdf')
         }
     ].sort((a, b) => a.order - b.order);
 }
