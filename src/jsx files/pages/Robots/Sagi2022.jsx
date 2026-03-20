@@ -19,16 +19,19 @@ export default function Sagi2022() {
                         Robots balls called Cargo and score them into the Hub, a central structure with two levels: <br />
                         • Lower Hub - easier to reach, fewer points. <br />
                         • Upper Hub - more difficult, more points. <br />
+                        <br />
                         Match Structure: <br />
-                        1. Autonomous Period (15 seconds): <br />
+                        Autonomous Period (15 seconds): <br />
                         Robots follow pre-programmed commands to: <br />
                         • Score Cargo into the Hub. <br />
                         • Move out of the starting area (Taxi). <br />
                         Successful actions earn early points and can give an edge in the match. <br />
-                        2. Teleoperated Period (next 2 minute and 15 seconds): <br />
+                        <br />
+                        Teleoperated Period (2 minute and 15 seconds): <br />
                         Drivers may Collect Cargo from the field and Score them into their zones. <br />
                         If the alliance reach a total of 20 Cargo scored (with some coming from auto) they get a Ranking Point bonus. <br />
-                        3. Endgame (30 seconds): <br />
+                        <br />
+                        Endgame (last 30 seconds of Teleoperated Period): <br />
                         Robots climb on the Hangar, a tiered set of horizontal bars: low, middle, high and traversal (higher bars are worth more points). <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>

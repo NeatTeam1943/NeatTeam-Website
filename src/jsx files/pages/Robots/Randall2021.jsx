@@ -13,7 +13,7 @@ export default function Randall2021() {
                 <section className="robot-intro">
                     <h1 className="robot-title">2021 Year's Competition:</h1>
                     <p className="robot-description coming-soon">
-                        In this year, there were covid19, and there were no competition
+                        In this year, there were covid19, and there were no competition.
                     </p>
                 </section>
 

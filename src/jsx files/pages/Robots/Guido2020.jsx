@@ -20,19 +20,22 @@ export default function Guido2020() {
                         • Outer Port - harder, more points. <br />
                         • Inner Port - most difficult, highest reward. <br />
                         Teams also aim to rotate a color wheel (Control Panel) and hang from the Shield Generator in the Endgame to activate it (the Shield Generator) and earn bonus points. <br />
+                        <br />
                         Match Structure: <br />
-                        1. Autonomous Period (15 seconds): <br />
+                        Autonomous Period (15 seconds): <br />
                         Robots run pre-programmed actions to: <br />
                         • Score Power Cells into the Power Port. <br />
                         • Move off the Initiation Line for bonus points. <br />
-                        2. Teleoperated Period (2 minute 15 seconds): <br />
+                        <br />
+                        Teleoperated Period (2 minute 15 seconds): <br />
                         Drivers take over to: <br />
                         • Collect Power Cells from field locations and score them into their zones. <br />
                         • Coordinate to activate Stage 1, Stage 2, or Stage 3 of the Shield Generator by meeting scoring thresholds. <br />
                         • Spin the Control Panel a specific number of times (Rotation Control). <br />
                         • Rotate it to a specific color (Position Control). <br />
                         • Completing stages and control panel tasks earns Ranking Points. <br />
-                        3. Endgame (30 seconds): <br />
+                        <br />
+                        Endgame (last 30 seconds of Teleoperated Period): <br />
                         Robots race to the Shield Generator Switch to climb onto the Rendezvous Point bar.
                         Teams also aim to make their Rendezvous Point bar and make it scales. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />

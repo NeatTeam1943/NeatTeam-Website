@@ -122,8 +122,8 @@ export default function Nav() {
 
                     {/* Desktop Navigation */}
                     <nav>
-                        <div 
-                            className="dropdown" 
+                        <div
+                            className="dropdown"
                             ref={el => dropdownRefs.current['about'] = el}
                             onMouseEnter={() => handleDesktopDropdownEnter('about')}
                             onMouseLeave={handleDesktopDropdownLeave}
@@ -139,7 +139,7 @@ export default function Nav() {
                                     </svg>
                                 </span>
                             </button>
-                            <div 
+                            <div
                                 className={`dropdown-content ${activeDesktopDropdown === 'about' ? 'open' : ''}`}
                                 onMouseEnter={() => handleDesktopDropdownEnter('about')}
                                 onMouseLeave={handleDesktopDropdownLeave}
@@ -152,8 +152,8 @@ export default function Nav() {
                                 </Link>
                             </div>
                         </div>
-                        <Link to="/robot/koren2025" className={`nav-link ${isActive('/robot') ? 'active' : ''}`}>Our Robots</Link>
-                        <div 
+                        <Link to="/robot/arco2026" className={`nav-link ${isActive('/robot') ? 'active' : ''}`}>Our Robots</Link>
+                        <div
                             className="dropdown"
                             ref={el => dropdownRefs.current['teamNews'] = el}
                             onMouseEnter={() => handleDesktopDropdownEnter('teamNews')}
@@ -170,7 +170,7 @@ export default function Nav() {
                                     </svg>
                                 </span>
                             </button>
-                            <div 
+                            <div
                                 className={`dropdown-content ${activeDesktopDropdown === 'teamNews' ? 'open' : ''}`}
                                 onMouseEnter={() => handleDesktopDropdownEnter('teamNews')}
                                 onMouseLeave={handleDesktopDropdownLeave}
@@ -183,7 +183,7 @@ export default function Nav() {
                                 </Link>
                             </div>
                         </div>
-                        <div 
+                        <div
                             className="dropdown"
                             ref={el => dropdownRefs.current['community'] = el}
                             onMouseEnter={() => handleDesktopDropdownEnter('community')}
@@ -200,7 +200,7 @@ export default function Nav() {
                                     </svg>
                                 </span>
                             </button>
-                            <div 
+                            <div
                                 className={`dropdown-content ${activeDesktopDropdown === 'community' ? 'open' : ''}`}
                                 onMouseEnter={() => handleDesktopDropdownEnter('community')}
                                 onMouseLeave={handleDesktopDropdownLeave}
@@ -213,7 +213,7 @@ export default function Nav() {
                                 </Link>
                             </div>
                         </div>
-                        <div 
+                        <div
                             className="dropdown"
                             ref={el => dropdownRefs.current['sponsors'] = el}
                             onMouseEnter={() => handleDesktopDropdownEnter('sponsors')}
@@ -230,7 +230,7 @@ export default function Nav() {
                                     </svg>
                                 </span>
                             </button>
-                            <div 
+                            <div
                                 className={`dropdown-content ${activeDesktopDropdown === 'sponsors' ? 'open' : ''}`}
                                 onMouseEnter={() => handleDesktopDropdownEnter('sponsors')}
                                 onMouseLeave={handleDesktopDropdownLeave}
@@ -249,7 +249,7 @@ export default function Nav() {
                         <Link to="/contact-us" className="nav-button">
                             Contact Us
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ marginLeft: '8px' }}>
-                                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </Link>
                     </div>

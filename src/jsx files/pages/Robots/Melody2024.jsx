@@ -21,14 +21,18 @@ export default function Melody2024() {
                         • Speaker - a high goal near the alliance wall <br />
                         • Trap - a special high goal under the Stage, only available during Endgame <br />
                         Scoring in both the Amp and Speaker can help activate a special stage element for bonus points. <br />
+                        The robots may climb on the chain for extra points, and also put a Note into the Trap while climbing. <br />
+                        <br />
                         Match Structure: <br />
-                        1. Autonomous Period (15 seconds): <br />
+                        Autonomous Period (15 seconds): <br />
                         Robots run pre-programmed actions without driver control. They can score Notes and leave their starting zones for early points. <br />
-                        2. Teleoperated Period (1 minute and 45 seconds): <br />
+                        <br />
+                        Teleoperated Period (2 minute and 15 seconds): <br />
                         Drivers control the robots to pick up Notes from the field and score them in the Amp or Speaker. <br />
                         Teams can also activate a Co-Op Bonus or power up their Stage for the endgame. <br />
-                        3. Endgame (30 seconds): <br />
-                        Robots race to the Stage to climb onto chains. <br />
+                        <br />
+                        Endgame (last 20 seconds of Teleoperated Period): <br />
+                        Robots race to the Stage to climb onto chains, and also put a Note into the Trap for extra points while climbing. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>
                 </section>

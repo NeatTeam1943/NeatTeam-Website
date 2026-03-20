@@ -20,12 +20,15 @@ export default function Migraine2017() {
                         • Geers - mini geer. <br />
                         Scoring to the hiegh basker earn 1 point for each 3 Fuel and for the low basket it's 9 Fuel for each point. <br />
                         Teams may also score the Geers in the airship to earn points. <br />
+                        <br />
                         Match Structure: <br />
-                        1. Autonomous Period (15 seconds): <br />
+                        Autonomous Period (15 seconds): <br />
                         Robots run pre-programmed actions without driver control. They can score Fuels and go to the base line for early points. <br />
-                        2. Teleoperated Period (2 minute and 15 seconds): <br />
+                        <br />
+                        Teleoperated Period (2 minute and 15 seconds): <br />
                         Drivers control the robots to pick up Fuel and Geers from the field and score them in their places. <br />
-                        3. Endgame (30 seconds): <br />
+                        <br />
+                        Endgame (last 30 seconds of Teleoperated Period): <br />
                         Robots race to the Stage to climb onto aboard. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>

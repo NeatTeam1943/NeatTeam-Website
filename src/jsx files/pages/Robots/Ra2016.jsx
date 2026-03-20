@@ -18,12 +18,15 @@ export default function Ra2016() {
                         Robots collect Boulders (mini balls) and score them into their zones. <br />
                         Scoring to the hiegh basker earn more points than scoring to the low basket. <br />
                         Teams may also cross diffenses to earn more points. <br />
+                        <br />
                         Match Structure: <br />
-                        1. Autonomous Period (15 seconds): <br />
+                        Autonomous Period (15 seconds): <br />
                         Robots run pre-programmed actions without driver control. They can score Boulders to their places and go to the base line for early points and cross diffenses. <br />
-                        2. Teleoperated Period (2 minute and 15 seconds): <br />
+                        <br />
+                        Teleoperated Period (2 minute and 15 seconds): <br />
                         Drivers control the robots to pick up Bounders from the field and score them in their places. <br />
-                        3. Endgame (20 seconds): <br />
+                        <br />
+                        Endgame (last 30 seconds of Teleoperated Period): <br />
                         Robots race to the Stage to climb onto the casle or surrounding the calse. <br />
                         If all alliance's robots climb or surround the team get bounos points. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
