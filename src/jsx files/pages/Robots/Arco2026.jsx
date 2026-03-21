@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Nav from "../../Nav";
 import Footer from '../../Footer.jsx';
 import RobotNav from '../../RobotNav.jsx'
@@ -47,7 +47,9 @@ export default function Arco2026() {
                         Robots may also continue scoring as in the Teleoperated Period. <br />
                         Additionally, during the Endgame, both HUBs are active. <br />
                     </p>
+                    <h4><a className='kickoff-url' href="https://www.youtube.com/watch?v=_fybREErgyM">For more details about the competition, check out the year's kickoff!</a></h4>
                 </section>
+
 
                 <section className="robot-timeline">
                     <h2>Year Milestones</h2>
