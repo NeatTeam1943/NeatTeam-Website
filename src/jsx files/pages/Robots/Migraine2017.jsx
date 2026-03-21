@@ -31,6 +31,7 @@ export default function Migraine2017() {
                         Endgame (last 30 seconds of Teleoperated Period): <br />
                         Robots race to the Stage to climb onto aboard. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
+                        <h4 className='kickoff-url-text'><a className='kickoff-url' href="https://www.youtube.com/watch?v=EMiNmJW7enI&t">For more details about the competition, check out the year's kickoff!</a></h4>
                     </p>
                 </section>
 

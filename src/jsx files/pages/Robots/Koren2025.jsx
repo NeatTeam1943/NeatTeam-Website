@@ -36,7 +36,7 @@ export default function Koren2025() {
                         Robots try to climb a central structure or hang inside special cages. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>
-
+                    <h4><a className='kickoff-url' href="https://www.youtube.com/watch?v=YWbxcjlY9JY">For more details about the competition, check out the year's kickoff!</a></h4>
                 </section>
                 <section className='robot-image'>
                     <h1>2025 Group and Robot (Koren)</h1>

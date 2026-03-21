@@ -40,6 +40,7 @@ export default function Guido2020() {
                         Teams also aim to make their Rendezvous Point bar and make it scales. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>
+                    <h4><a className='kickoff-url' href="https://www.youtube.com/watch?v=gmiYWTmFRVE">For more details about the competition, check out the year's kickoff!</a></h4>
                 </section>
 
                 <section className="robot-timeline">

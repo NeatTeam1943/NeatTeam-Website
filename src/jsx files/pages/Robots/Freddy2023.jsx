@@ -35,6 +35,7 @@ export default function Freddy2023() {
                         Robots attempt to balance on a Charging Station (a tilting platform) for big bonus points. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>
+                    <h4><a className='kickoff-url' href="https://www.youtube.com/watch?v=0zpflsYc4PA&t">For more details about the competition, check out the year's kickoff!</a></h4>
                 </section>
 
                 <section className="robot-timeline">

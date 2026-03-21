@@ -31,6 +31,7 @@ export default function Ra2016() {
                         If all alliance's robots climb or surround the team get bounos points. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>
+                    <h4 className='kickoff-url-text'><a className='kickoff-url' href="https://www.youtube.com/watch?v=VqOKzoHJDjA">For more details about the competition, check out the year's kickoff!</a></h4>
                 </section>
 
                 <section className="robot-timeline">

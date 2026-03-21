@@ -35,6 +35,7 @@ export default function Melody2024() {
                         Robots race to the Stage to climb onto chains, and also put a Note into the Trap for extra points while climbing. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>
+                    <h4><a className='kickoff-url' href="https://www.youtube.com/watch?v=9keeDyFxzY4">For more details about the competition, check out the year's kickoff!</a></h4>
                 </section>
 
                 <section className='robot-image'>

@@ -45,6 +45,7 @@ export default function Deoys2019() {
                         If the alliance scores 15 hab climb Points, they earn an additional Ranking Point. <br />
                         Teams may also continue scoring and doing what they did in the Teleoperated Period. <br />
                     </p>
+                    <h4><a className='kickoff-url' href="https://www.youtube.com/watch?v=Mew6G_og-PI">For more details about the competition, check out the year's kickoff!</a></h4>
                 </section>
 
                 <section className="robot-timeline">
