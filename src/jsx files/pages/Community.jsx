@@ -266,6 +266,10 @@ export default function Community() {
                                 In the competition, they build a robot and face various tasks and challenges. As mentors, 
                                 we help them develop innovative ideas and guide them to help them achieve their goals.
                             </p>
+                            <figure className="ftc-photo">
+                                <img src={BASE_URL + "/Community/MecanicMakers.png"} alt="Mecanic Makers FTC team with their robot" />
+                                <figcaption>The Mecanic Makers FTC team with their robot</figcaption>
+                            </figure>
                         </div>
                     </div>
                 )}

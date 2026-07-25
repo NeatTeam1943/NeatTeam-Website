@@ -16,6 +16,7 @@ export default function RobotNav() {
     return (
         <section className={"robotnav"}>
             <nav>
+                <Link to="/robot/phoenix2026" className={isActive("/robot/phoenix2026") ? "active" : ""}>Gabi 2026</Link>
                 <Link to="/robot/koren2025" className={isActive("/robot/koren2025") ? "active" : ""}>Koren 2025</Link>
                 <Link to="/robot/melody2024" className={isActive("/robot/melody2024") ? "active" : ""}>Melody 2024</Link>
                 <Link to="/robot/freddy2023" className={isActive("/robot/freddy2023") ? "active" : ""}>Freddy 2023</Link>

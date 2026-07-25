@@ -27,7 +27,7 @@ export default function Footer() {
       
                     <div className={"links"}>
                         <Link to="/about/team">About</Link>
-                        <Link to="/robot/koren2025">Our Robots</Link>
+                        <Link to="/robot/phoenix2026">Our Robots</Link>
                         <Link to="/sponsors">Sponsors</Link>
                         <Link to="/community">Our Community</Link>
                     </div>

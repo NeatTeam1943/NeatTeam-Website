@@ -511,6 +511,28 @@
     font-weight: 500;
 }
 
+.ftc-photo {
+    margin: 2.5rem auto 0;
+    max-width: 800px;
+}
+
+.ftc-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 25px;
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.12),
+        0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+.ftc-photo figcaption {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #64748b;
+}
+
 /* Magazine Section */
 .magazine-section {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);

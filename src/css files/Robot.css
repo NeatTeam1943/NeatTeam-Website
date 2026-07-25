@@ -1,4 +1,4 @@
-/* Modern Premium Robot Page Design */
+/* Robot Page — Skeuomorphic depth on existing palette */
 .robot-page {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -14,11 +14,8 @@
 .robot-page::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
         radial-gradient(circle at 20% 80%, rgba(0, 64, 255, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(253, 78, 10, 0.05) 0%, transparent 50%);
     pointer-events: none;
@@ -31,13 +28,21 @@
     overflow-y: auto;
 }
 
-/* Robot Intro Section */
+/* Robot Intro Section — Skeuomorphic raised card */
 .robot-intro {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    background: linear-gradient(160deg, #ffffff 0%, #fafcff 50%, #f8fafc 100%);
     border-radius: 30px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-top-color: rgba(255, 255, 255, 0.95);
+    border-bottom-color: rgba(200, 210, 230, 0.4);
     padding: 3rem 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.06),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 20px 60px rgba(0, 64, 255, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(200, 210, 240, 0.1);
     position: relative;
     overflow: hidden;
     color: #1e293b;
@@ -46,27 +51,25 @@
 .robot-intro::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 150px;
+    top: 0; right: 0;
+    width: 150px; height: 150px;
     background: linear-gradient(45deg, #0040FF, #002FBD);
     border-radius: 50%;
-    opacity: 0.1;
+    opacity: 0.06;
     transform: translate(75px, -75px);
+    pointer-events: none;
 }
 
 .robot-intro::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
+    bottom: 0; left: 0;
+    width: 100px; height: 100px;
     background: linear-gradient(45deg, #fd4e0a, #ea580c);
     border-radius: 50%;
-    opacity: 0.1;
+    opacity: 0.06;
     transform: translate(-50px, 50px);
+    pointer-events: none;
 }
 
 .robot-title {
@@ -79,6 +82,9 @@
     transform: translateY(20px);
     opacity: 0;
     animation: slideUpFade 0.8s ease-out 0.2s forwards;
+    text-shadow:
+        0 2px 8px rgba(0, 64, 255, 0.2),
+        0 4px 16px rgba(0, 64, 255, 0.1);
 }
 
 .robot-title::after {
@@ -90,6 +96,7 @@
     height: 4px;
     background: linear-gradient(90deg, #fd4e0a, #ea580c);
     border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(253, 78, 10, 0.35);
 }
 
 .robot-description {
@@ -108,11 +115,14 @@
     color: #64748b;
     font-weight: 500;
     padding: 2rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: linear-gradient(160deg, #f8fafc 0%, #f0f4ff 50%, #e8eeff 100%);
     border-radius: 20px;
-    border: 2px dashed #cbd5e1;
+    border: 2px dashed rgba(54, 19, 230, 0.25);
     position: relative;
     overflow: hidden;
+    box-shadow:
+        inset 0 2px 6px rgba(54, 19, 230, 0.05),
+        0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .robot-description.coming-soon::before {
@@ -130,29 +140,19 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 64, 255, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0, 64, 255, 0.06), transparent);
     animation: shimmer 3s infinite;
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
 }
 
 @keyframes shimmer {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 .robot-description br {
@@ -161,11 +161,19 @@
 
 /* Robot Image Section */
 .robot-image {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    background: linear-gradient(160deg, #ffffff 0%, #fafcff 50%, #f8fafc 100%);
     border-radius: 30px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-top-color: rgba(255, 255, 255, 0.95);
+    border-bottom-color: rgba(200, 210, 230, 0.4);
     padding: 3rem 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.06),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 20px 60px rgba(0, 64, 255, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(200, 210, 240, 0.1);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -178,11 +186,12 @@
 .robot-image::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0040FF, #fd4e0a);
+    border-radius: 30px 30px 0 0;
+    opacity: 0.6;
+    pointer-events: none;
 }
 
 .robot-image h1 {
@@ -194,6 +203,9 @@
     text-align: center;
     width: 100%;
     order: 1;
+    text-shadow:
+        0 2px 8px rgba(0, 64, 255, 0.2),
+        0 4px 16px rgba(0, 64, 255, 0.08);
 }
 
 .robot-image h1::after {
@@ -206,13 +218,20 @@
     height: 4px;
     background: linear-gradient(90deg, #0040FF, #fd4e0a);
     border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 64, 255, 0.3);
 }
 
 .robot-image img {
     max-width: 90%;
     height: auto;
-    border-radius: 25px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    border: 2px solid transparent;
+    border-top-color: rgba(255, 255, 255, 0.8);
+    border-bottom-color: rgba(0, 0, 50, 0.1);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12),
+        0 20px 60px rgba(0, 64, 255, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
     transition: all 0.4s ease;
     margin: 0 auto;
     display: block;
@@ -221,15 +240,25 @@
 
 .robot-image img:hover {
     transform: scale(1.03);
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15),
+        0 28px 70px rgba(0, 64, 255, 0.08);
 }
 
 /* Robot Timeline Section */
 .robot-timeline {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    background: linear-gradient(160deg, #ffffff 0%, #fafcff 50%, #f8fafc 100%);
     border-radius: 30px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-top-color: rgba(255, 255, 255, 0.95);
+    border-bottom-color: rgba(200, 210, 230, 0.4);
     padding: 3rem 2rem;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.06),
+        0 8px 24px rgba(0, 0, 0, 0.08),
+        0 20px 60px rgba(0, 64, 255, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(200, 210, 240, 0.1);
     position: relative;
     overflow: hidden;
     color: #1e293b;
@@ -238,11 +267,12 @@
 .robot-timeline::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0040FF, #fd4e0a);
+    border-radius: 30px 30px 0 0;
+    opacity: 0.6;
+    pointer-events: none;
 }
 
 .robot-timeline h2 {
@@ -252,6 +282,7 @@
     margin-bottom: 2rem;
     text-align: center;
     position: relative;
+    text-shadow: 0 2px 8px rgba(0, 47, 189, 0.15);
 }
 
 .robot-timeline h2::after {
@@ -264,6 +295,7 @@
     height: 4px;
     background: linear-gradient(90deg, #0040FF, #fd4e0a);
     border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 64, 255, 0.25);
 }
 
 .robot-timeline ul {
@@ -278,14 +310,20 @@
 }
 
 .robot-timeline ul li {
-    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    background: linear-gradient(160deg, #ffffff 0%, #f8fafc 100%);
     padding: 1.5rem;
-    border-radius: 20px;
+    border-radius: 16px;
     font-size: 1rem;
     color: #1e293b;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.7);
+    border-top-color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgba(200, 210, 230, 0.35);
     border-left: 5px solid #0040FF;
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.07),
+        0 6px 18px rgba(0, 64, 255, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -293,11 +331,9 @@
 .robot-timeline ul li::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(0, 64, 255, 0.05), rgba(253, 78, 10, 0.05));
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(0, 64, 255, 0.03), rgba(253, 78, 10, 0.03));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -307,8 +343,10 @@
 }
 
 .robot-timeline ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(0, 64, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.1),
+        0 12px 32px rgba(0, 64, 255, 0.1);
     border-left-color: #fd4e0a;
 }
 
@@ -318,9 +356,9 @@
     font-size: 1.1rem;
     display: block;
     margin-bottom: 0.5rem;
+    text-shadow: 0 1px 4px rgba(0, 64, 255, 0.15);
 }
 
-/* Animations */
 @keyframes slideUpFade {
     to {
         transform: translateY(0);
@@ -334,46 +372,38 @@
         max-width: calc(100vw - 250px);
         padding: 1.5rem;
     }
-    
-    .robot-intro,
-    .robot-image,
-    .robot-timeline {
+
+    .robot-intro, .robot-image, .robot-timeline {
         border-radius: 25px;
         padding: 2.5rem 1.5rem;
     }
-    
-    .robot-title {
-        font-size: 2.25rem;
-    }
-    
+
+    .robot-title { font-size: 2.25rem; }
+
     .robot-description.coming-soon {
         font-size: 1.1rem;
         padding: 1.5rem;
     }
-    
-    .robot-description.coming-soon::before {
-        font-size: 2.5rem;
-    }
-    
+
+    .robot-description.coming-soon::before { font-size: 2.5rem; }
+
     .robot-image h1 {
         font-size: 2.25rem;
         margin-bottom: 2.5rem;
         order: 1;
     }
-    
+
     .robot-image h1::after {
         width: 100px;
         bottom: -12px;
     }
-    
+
     .robot-image img {
         max-width: 95%;
         order: 2;
     }
-    
-    .robot-timeline h2 {
-        font-size: 1.75rem;
-    }
+
+    .robot-timeline h2 { font-size: 1.75rem; }
 }
 
 @media (max-width: 1024px) {
@@ -381,172 +411,125 @@
         max-width: calc(100vw - 250px);
         padding: 1.25rem;
     }
-    
-    .robot-intro,
-    .robot-image,
-    .robot-timeline {
+
+    .robot-intro, .robot-image, .robot-timeline {
         border-radius: 20px;
         padding: 2rem 1.25rem;
     }
-    
-    .robot-title {
-        font-size: 2rem;
-    }
-    
+
+    .robot-title { font-size: 2rem; }
+
     .robot-image h1 {
         font-size: 2rem;
         margin-bottom: 2rem;
         order: 1;
     }
-    
-    .robot-image h1::after {
-        width: 80px;
-        bottom: -10px;
-    }
-    
+
     .robot-image img {
         max-width: 100%;
         order: 2;
     }
-    
-    .robot-timeline h2 {
-        font-size: 1.5rem;
-    }
-    
-    .robot-timeline ul {
-        grid-template-columns: 1fr;
-    }
+
+    .robot-timeline h2 { font-size: 1.5rem; }
+    .robot-timeline ul { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
-    .robot-page {
-        flex-direction: column;
-    }
-    
+    .robot-page { flex-direction: column; }
+
     .robot-page main {
         max-width: 100%;
         padding: 1rem;
     }
-    
-    .robot-intro,
-    .robot-image,
-    .robot-timeline {
+
+    .robot-intro, .robot-image, .robot-timeline {
         border-radius: 15px;
         padding: 1.5rem 1rem;
         margin-bottom: 1.5rem;
     }
-    
+
     .robot-title {
         font-size: 1.75rem;
         margin-bottom: 1rem;
     }
-    
+
     .robot-description.coming-soon {
         font-size: 1rem;
         padding: 1.25rem;
     }
-    
+
     .robot-description.coming-soon::before {
         font-size: 2rem;
         margin-bottom: 0.75rem;
     }
-    
+
     .robot-image h1 {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
         order: 1;
     }
-    
-    .robot-image h1::after {
-        width: 60px;
-        bottom: -8px;
-    }
-    
+
     .robot-image img {
         max-width: 100%;
-        border-radius: 15px;
+        border-radius: 12px;
         order: 2;
     }
-    
+
     .robot-timeline h2 {
         font-size: 1.25rem;
         margin-bottom: 1.5rem;
     }
-    
-    .robot-description {
-        font-size: 0.95rem;
-    }
-    
+
+    .robot-description { font-size: 0.95rem; }
+
     .robot-timeline ul li {
         padding: 1.25rem;
         font-size: 0.95rem;
     }
-    
-    .robot-timeline ul li strong {
-        font-size: 1rem;
-    }
-    
+
+    .robot-timeline ul li strong { font-size: 1rem; }
+
     .robot-intro::before {
-        width: 100px;
-        height: 100px;
+        width: 100px; height: 100px;
         transform: translate(50px, -50px);
     }
-    
+
     .robot-intro::after {
-        width: 75px;
-        height: 75px;
+        width: 75px; height: 75px;
         transform: translate(-37.5px, 37.5px);
     }
 }
 
 @media (max-width: 480px) {
-    .robot-page main {
-        padding: 0.75rem;
-    }
-    
-    .robot-intro,
-    .robot-image,
-    .robot-timeline {
+    .robot-page main { padding: 0.75rem; }
+
+    .robot-intro, .robot-image, .robot-timeline {
         border-radius: 12px;
         padding: 1.25rem 0.75rem;
         margin-bottom: 1rem;
     }
-    
-    .robot-title {
-        font-size: 1.5rem;
-    }
-    
+
+    .robot-title { font-size: 1.5rem; }
+
     .robot-image h1 {
         font-size: 1.25rem;
         margin-bottom: 1rem;
         order: 1;
     }
-    
-    .robot-image h1::after {
-        width: 50px;
-        bottom: -6px;
-    }
-    
+
     .robot-image img {
         max-width: 100%;
         border-radius: 10px;
         order: 2;
     }
-    
-    .robot-timeline h2 {
-        font-size: 1.125rem;
-    }
-    
-    .robot-description {
-        font-size: 0.9rem;
-    }
-    
+
+    .robot-timeline h2 { font-size: 1.125rem; }
+    .robot-description { font-size: 0.9rem; }
+
     .robot-timeline ul li {
         padding: 1rem;
         font-size: 0.9rem;
     }
-    
-    .robot-timeline ul li strong {
-        font-size: 0.95rem;
-    }
+
+    .robot-timeline ul li strong { font-size: 0.95rem; }
 }

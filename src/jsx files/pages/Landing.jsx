@@ -8,9 +8,9 @@ export default function Landing() {
     // Event photos for carousel
     const eventPhotos = [
         { 
-            src: BASE_URL + "/Events/GroupPhoto.jpeg", 
+            src: BASE_URL + "/NeatTeam/GroupPhoto2026.jpeg", 
             alt: "NeatTeam Group Photo At District Event",
-            description: "End of District #1 - Team Group Photo",
+            description: "End of District #2 - Team Group Photo 2026",
         },
         { 
             src: BASE_URL + "/Events/Hanukkah Camp.jpeg", 
@@ -132,15 +132,15 @@ export default function Landing() {
 
                 <section className="section-with-img" id="robot">
                     <div className="">
-                        <img className="img" src={BASE_URL + "/Robots/Koren.jpg"} alt="Koren Robot 2025" />
+                        <img className="img" src={BASE_URL + "/Robots/Gabi.jpeg"} alt="Gabi Robot 2026" />
                     </div>
                     <div className="robot-details">
-                        <h1 className="robot-name">Koren</h1>
-                        <h2 className="robot-title">Our 2025 Robot for Reefscape</h2>
+                        <h1 className="robot-name">Gabi</h1>
+                        <h2 className="robot-title">Our 2026 Robot</h2>
                         <div className="robot-description">
-                            This is Koren, our 2025 Robot. He was named after the fallen soldier Koren Bitan.
+                            This is Gabi, our 2026 Robot.
                         </div>
-                        <Link to="/robot/koren2025" className="button-decoration">Past Competition Robots</Link>
+                        <Link to="/robot/phoenix2026" className="button-decoration">Our Competition Robots</Link>
                     </div>
                 </section>
 

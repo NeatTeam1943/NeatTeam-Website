@@ -9,6 +9,7 @@ import NotFound from './jsx files/pages/NotFound.jsx';
 import Calendar from './jsx files/pages/Calendar.jsx';
 import Posts from './jsx files/pages/Posts.jsx';
 import Sponsors from './jsx files/pages/Sponsors.jsx';
+import Phoenix2026 from './jsx files/pages/Robots/Phoenix2026.jsx';
 import Koren2025 from './jsx files/pages/Robots/Koren2025.jsx';
 import Melody2024 from './jsx files/pages/Robots/Melody2024.jsx';
 import Freddy2023 from './jsx files/pages/Robots/Freddy2023.jsx'
@@ -33,6 +34,7 @@ function App() {
             <Layout>
                 <Routes>
                     <Route path="/" element={<Landing />} />
+                    <Route path="/robot/phoenix2026" element={<Phoenix2026 />} />
                     <Route path="/robot/koren2025" element={<Koren2025 />} />
                     <Route path='/robot/melody2024' element={<Melody2024 />} />
                     <Route path='/robot/freddy2023' element={<Freddy2023 />} />

@@ -152,7 +152,7 @@ export default function Nav() {
                                 </Link>
                             </div>
                         </div>
-                        <Link to="/robot/koren2025" className={`nav-link ${isActive('/robot') ? 'active' : ''}`}>Our Robots</Link>
+                        <Link to="/robot/phoenix2026" className={`nav-link ${isActive('/robot') ? 'active' : ''}`}>Our Robots</Link>
                         <div 
                             className="dropdown"
                             ref={el => dropdownRefs.current['teamNews'] = el}
@@ -290,7 +290,7 @@ export default function Nav() {
                         </Link>
                     </div>
                 </div>
-                <Link to="/robot/koren2025" onClick={closeMobileMenu} className={isActive('/robot') ? 'active' : ''}>Our Robots</Link>
+                <Link to="/robot/phoenix2026" onClick={closeMobileMenu} className={isActive('/robot') ? 'active' : ''}>Our Robots</Link>
                 <div className="mobile-dropdown">
                     <button
                         className={`mobile-dropdown-trigger ${(isActive('/posts') || isActive('/calendar')) ? 'active' : ''}`}
