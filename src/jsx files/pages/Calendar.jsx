@@ -65,7 +65,7 @@ export default function Calendar() {
                         endTime: item.end?.dateTime ? formatTime(end) : '',
                         type,
                         description: item.description || '',
-                        category: 'planning'
+                        category: 'outreach'
                     };
                 });
                 setEvents(mappedEvents);
