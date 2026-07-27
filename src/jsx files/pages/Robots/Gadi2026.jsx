@@ -2,7 +2,7 @@ import React from 'react'
 import RobotNav from '../../RobotNav.jsx'
 import "../../../css files/Robot.css"
 
-export default function Phoenix2026() {
+export default function Gadi2026() {
     const BASE_URL = import.meta.env.BASE_URL;
 
     return (
@@ -15,7 +15,7 @@ export default function Phoenix2026() {
                         FRC 2026 — Rebuilt Season <br />
                         <br />
                         After a competitive 2025 campaign with Koren, Team 1943 made the decision to
-                        enter a full rebuild cycle before the 2026 season. The result is Gabi —
+                        enter a full rebuild cycle before the 2026 season. The result is Gadi —
                         representing everything the team learned, discarded, and rebuilt from the ground up. <br />
                         <br />
                         Competition Overview: <br />
@@ -50,20 +50,20 @@ export default function Phoenix2026() {
                         Higher climbing levels award more points. A full alliance climb at the highest
                         level earns a ranking point bonus. <br />
                         <br />
-                        Gabi's Design Focus: <br />
+                        Gadi's Design Focus: <br />
                         The rebuild centered on three engineering pillars — intake reliability, shooter
                         consistency, and climb speed. The team redesigned the drivetrain for improved
                         traction and weight distribution, replaced the previous arm mechanism with a
                         wrist-pivot shooter that reduced cycle time, and engineered a two-stage telescoping
-                        climber capable of reaching the highest gantry bar. Software improvements included
+                        capable of reaching the highest gantry bar. Software improvements included
                         full PathPlanner autonomous routing, vision-assisted targeting using PhotonVision,
                         and a driver-assist mode for automatic game-piece alignment. <br />
                     </p>
                 </section>
 
                 <section className='robot-image'>
-                    <h1>2026 Group and Robot (Gabi)</h1>
-                    <img src={BASE_URL + "/NeatTeam/GroupPhoto2026.jpeg"} alt="2026 Group and Robot (Gabi)" />
+                    <h1>2026 Group and Robot (Gadi)</h1>
+                    <img src={BASE_URL + "/NeatTeam/GroupPhoto2026.jpeg"} alt="2026 Group and Robot (gadi)" />
                 </section>
             </main>
         </div>

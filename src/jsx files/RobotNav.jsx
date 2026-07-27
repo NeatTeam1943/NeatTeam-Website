@@ -5,18 +5,18 @@ import "../css files/RobotNav.css"
 export default function RobotNav() {
     const location = useLocation();
     const BASE_URL = import.meta.env.BASE_URL;
-    
+
     const isActive = (path) => {
         // Remove trailing slash from BASE_URL if present, then compare
         const basePath = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;
         const fullPath = basePath + path;
         return location.pathname === fullPath || location.pathname === path;
     };
-    
+
     return (
         <section className={"robotnav"}>
             <nav>
-                <Link to="/robot/phoenix2026" className={isActive("/robot/phoenix2026") ? "active" : ""}>Gabi 2026</Link>
+                <Link to="/robot/gadi2026" className={isActive("/robot/gadi2026") ? "active" : ""}>Gadi 2026</Link>
                 <Link to="/robot/koren2025" className={isActive("/robot/koren2025") ? "active" : ""}>Koren 2025</Link>
                 <Link to="/robot/melody2024" className={isActive("/robot/melody2024") ? "active" : ""}>Melody 2024</Link>
                 <Link to="/robot/freddy2023" className={isActive("/robot/freddy2023") ? "active" : ""}>Freddy 2023</Link>
