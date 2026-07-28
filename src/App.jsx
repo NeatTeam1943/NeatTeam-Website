@@ -26,6 +26,7 @@ import Community from "./jsx files/pages/Community.jsx";
 import Magazines from "./jsx files/pages/Magazines.jsx";
 import SponsorUs from './jsx files/pages/SponsorUs.jsx';
 import ContactUs from './jsx files/pages/ContactUs.jsx';
+import Gadi2026 from './jsx files/pages/Robots/Gadi2026.jsx';
 
 function App() {
     return (
@@ -33,6 +34,7 @@ function App() {
             <Layout>
                 <Routes>
                     <Route path="/" element={<Landing />} />
+                    <Route path="/robot/gadi2026" element={<Gadi2026 />} />
                     <Route path="/robot/koren2025" element={<Koren2025 />} />
                     <Route path='/robot/melody2024' element={<Melody2024 />} />
                     <Route path='/robot/freddy2023' element={<Freddy2023 />} />
