@@ -24,10 +24,10 @@ export default function Footer() {
 
                 <div className="footer-col">
                     <h4>Quick Links</h4>
-      
+
                     <div className={"links"}>
                         <Link to="/about/team">About</Link>
-                        <Link to="/robot/phoenix2026">Our Robots</Link>
+                        <Link to="/robot/gadi2026">Our Robots</Link>
                         <Link to="/sponsors">Sponsors</Link>
                         <Link to="/community">Our Community</Link>
                     </div>

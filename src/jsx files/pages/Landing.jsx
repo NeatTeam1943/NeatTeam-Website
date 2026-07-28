@@ -1,24 +1,24 @@
 import '../../css files/pages/Landing.css'
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
     const BASE_URL = import.meta.env.BASE_URL;
-    
+
     // Event photos for carousel
     const eventPhotos = [
-        { 
-            src: BASE_URL + "/NeatTeam/GroupPhoto2026.jpeg", 
+        {
+            src: BASE_URL + "/NeatTeam/GroupPhoto2026.jpeg",
             alt: "NeatTeam Group Photo At District Event",
             description: "End of District #2 - Team Group Photo 2026",
         },
-        { 
-            src: BASE_URL + "/Events/Hanukkah Camp.jpeg", 
+        {
+            src: BASE_URL + "/Events/Hanukkah Camp.jpeg",
             alt: "NeatTeam Hanukkah Camp",
             description: "Robotics-Themed Hanukkah Activity for 3rd-6th Graders"
         },
-        { 
-            src: BASE_URL + "/Events/NeatTeam all-nighter .jpeg", 
+        {
+            src: BASE_URL + "/Events/NeatTeam all-nighter .jpeg",
             alt: "NeatTeam All Nighter",
             description: "Dec 15th: Team Bonding Night - Just before the season starts"
         }
@@ -71,7 +71,7 @@ export default function Landing() {
                 <section className="section-with-img">
                     <div className="text">
                         <div className="logo-wrapper">
-                            <img src={BASE_URL + "/NeatTeam/NeatTeam-banner-dark.png"} alt="NEATTEAM Logo"/>
+                            <img src={BASE_URL + "/NeatTeam/NeatTeam-banner-dark.png"} alt="NEATTEAM Logo" />
                         </div>
                         <h2 className="title-underline subtitle">FIRST Robotics Competition Team 1943</h2>
                         <p>We are NeatTeam, Begin High School's award-winning FIRST Robotics team. We seek to impact young adults by cultivating skills in engineering, programming, and business through FIRST.</p>
@@ -88,22 +88,22 @@ export default function Landing() {
                                     alt={photo.alt}
                                 />
                             ))}
-                            <button 
+                            <button
                                 className="carousel-arrow carousel-arrow-left"
                                 onClick={goToPrevious}
                                 aria-label="Previous image"
                             >
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </button>
-                            <button 
+                            <button
                                 className="carousel-arrow carousel-arrow-right"
                                 onClick={goToNext}
                                 aria-label="Next image"
                             >
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </button>
                             <div className="carousel-indicators">
@@ -119,7 +119,7 @@ export default function Landing() {
                         </div>
                         <div className="carousel-description">
                             {eventPhotos.map((photo, index) => (
-                                <p 
+                                <p
                                     key={index}
                                     className={`carousel-description-text ${index === currentImageIndex ? 'active' : ''}`}
                                 >
@@ -132,15 +132,15 @@ export default function Landing() {
 
                 <section className="section-with-img" id="robot">
                     <div className="">
-                        <img className="img" src={BASE_URL + "/Robots/Gabi.jpeg"} alt="Gabi Robot 2026" />
+                        <img className="img" src={BASE_URL + "/Robots/Gadi.jpeg"} alt="Gadi Robot 2026" />
                     </div>
                     <div className="robot-details">
-                        <h1 className="robot-name">Gabi</h1>
+                        <h1 className="robot-name">Gadi</h1>
                         <h2 className="robot-title">Our 2026 Robot</h2>
                         <div className="robot-description">
-                            This is Gabi, our 2026 Robot.
+                            This is Gadi, our 2026 Robot.
                         </div>
-                        <Link to="/robot/phoenix2026" className="button-decoration">Our Competition Robots</Link>
+                        <Link to="/robot/gadi2026" className="button-decoration">Our Competition Robots</Link>
                     </div>
                 </section>
 
